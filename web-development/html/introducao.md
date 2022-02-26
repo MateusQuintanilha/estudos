@@ -4,7 +4,7 @@ HTML significa **HyperText Markup Linguage** - em português quer dizer **Lingua
 
 **HiperTexto** são **textos que possuem ligações** com outros textos, imagens, sons ou vídeos.
 
-HTML não é uma linguagem de programação, é uma ***linguagem de marcação*** utilizada para dizer ao seu navegador como estrutuar um documento/página web.
+HTML não é uma linguagem de programação, é uma ***linguagem de marcação*** utilizada para dizer ao seu navegador como estruturar um documento/página web.
 
 ## Exibindo textos no navegador
 
