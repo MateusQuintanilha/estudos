@@ -99,3 +99,23 @@ div {
   border: 10px solid red;
 }
 ```
+
+### Margin
+
+A margem é o espaço externo da caixa, com ela podemos controlar a distance entre as caixas.
+
+- ***margin-top*** - adiciona na parte superior
+- ***margin-right*** - adiciona no lado direito
+- ***margin-bottom*** - adiciona inferior
+- ***margin-left*** - adicionar no lado esquerdo
+- ***margin***: Podemos usar de duas formas diferentes, adicionar um tamanho para a parte superior e inferior e outro tamanho para a esquerda e direita, ou, podemos adicionar o tamanho para cada lado individualmente.
+
+### Box sizing (tamanho da caixa)
+
+Devemos sempre prestar atenção às definições do CSS: se estivermos fazendo uma retângulo com largura de 400px ( width: 400px; ) e altura de 300px ( height: 300px; ), esperamos que o elemento tenha exatamente o tamanho que foi definido, Neste caso, possuirá exatamente o tamanho que foi definido.
+
+Mas se aplicarmos um padding de 20px para todos os lados, o tamanho do nosso retângulo será alterado pois acrescentamos 20px para o lado esquerdo e 20px para o lado direito e também aplicamos 20px para o topo e para a parte inferior, com isso o nosso retângulo passará a ter 440px de largura e 340px de altura. 
+
+Isso acontece porque o navegador o navegador usa por padrão o ***box-sizing: content-box*** que calcula o valor de borda margin e padding separadamente e não inclui ao tamanho da caixa. Isso pode complicar a vida do desenvolvedor, pois precisará calcular e ter essa diferença em mente.
+
+Mas com o CSS3 veio o ***box-sizing: border-box***, que considera os valores das propriedades border e padding para calcular o tamanho que o elemento ocupa na tela, isso irá alterar os cálculos padrão que conhecemos, fazendo co  que o navegador passe a considerar a altura e largura do elemento contando o padding e border do elemento.
