@@ -8,4 +8,4 @@
 
 Resultado:
 
-><p>Testando a <small>o elemento small dentro</small> de um parágrafo</p>
+<p>Testando  <small>o elemento small dentro</small> de um parágrafo</p>
