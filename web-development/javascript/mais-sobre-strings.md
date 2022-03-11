@@ -172,3 +172,22 @@ console.log(umaString.split(' '));
 ```
 
 Nesse caso dividimos a string pelo espaço.
+
+
+## Deixa toda a string em maiúscula
+
+```js
+let umaString = "O rato roeu a roupa do rei de roma.";
+
+console.log(umaString.toLocaleUpperCase()); 
+// saída: O RATO ROEU A ROUPA DO REI DE ROMA.
+```
+
+## Deixa toda a string em minúscula
+
+```js
+let umaString = "O rato roeu a roupa do rei de roma.";
+
+console.log(umaString.toLocaleLowerCase()); 
+// saída: o rato roeu a roupa do rei de roma.
+```
