@@ -71,3 +71,104 @@ console.log(umaString.lastIndexOf('texto')); // saída: 3
 ```
 
 ---
+
+## Concatenando Strings
+
+Podemos concatenar uma string de três formas diferentes.
+
+```js
+let umaString = 'Um texto';
+
+console.log(umaString.concat(' em um lindo dia.'));
+// saída: Um texto em um lindo dia
+
+console.log(umaString + ' em um lindo dia.');
+// saída: Um texto em um lindo dia
+
+console.log(`${umaString} em um lindo dia.`);
+// saída: Um texto em um lindo dia
+```
+
+## Procurando dentro da string
+
+
+### Retorna todas as letra minúsculas
+
+```js
+let umaString = "Um texto";
+
+console.log(umaString.match(/[a-z]/g)); 
+// saída: [ 'm', 't', 'e', 'x', 't', 'o' ]
+```
+
+
+### Retorna todas as letras maiúsculas
+
+```js
+let umaString = "Um texto";
+
+console.log(umaString.match(/[A-Z]/g)); 
+// saída: [ 'U' ]
+```
+
+### Retorna todas as letras
+
+```js
+let umaString = "Um texto";
+
+console.log(umaString.match(/[A-z]/g)); 
+// saída: [ 'U', 'm', 't','e', 'x', 't','o']
+```
+
+## Retornar o índice do conteúdo
+
+```js
+let umaString = "Um texto";
+
+console.log(umaString.search(/x/)); // saída: 5
+```
+
+## Substitui uma palavra por outro conteúdo
+
+```js
+let umaString = "Um texto";
+
+console.log(umaString.replace('Um', 'Outro')); // saída: Outro texto
+```
+
+também podemos usar expressão regular (utilize o g para repetir para todo o texto).
+
+```js
+let umaString = "O rato roeu a roupa do rei de roma.";
+
+console.log(umaString.replace(/r/g, '#')); 
+// saída: O #ato #oeu a #oupa do #ei de #oma.
+```
+
+## Retorna o tamanho do índice
+
+```js
+let umaString = "O rato roeu a roupa do rei de roma.";
+
+console.log(umaString.length); // saída: 35
+```
+
+## Pega parte de um conteúdo através do índice
+
+```js
+let umaString = "O rato roeu a roupa do rei de roma.";
+
+console.log(umaString.slice(2, 6)); // saída: rato
+```
+
+## divide uma string em arrays através de um caractere
+
+```js
+let umaString = "O rato roeu a roupa do rei de roma.";
+
+console.log(umaString.split(' ')); 
+// saída: [ 'O', 'rato', 'roeu', 'a', 'roupa', 'do', 'rei', 'de', 'roma.' ]
+
+```
+
+Nesse caso dividimos a string pelo espaço.
