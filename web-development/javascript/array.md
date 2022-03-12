@@ -269,3 +269,44 @@ sorvetes.push('Frutas Vermelhas', 'Ninho Trufado');
 console.log(sorvetes); // saída: ['Morango', 'Chocolate', 'Limão', 'Flocos', 'Ninho']
 ```
 Como podemos ver na saída, os valores `'Flocos'` e `'Ninho'` foram adicionados ao final do array.
+
+## Fatiando um Array
+
+```js
+const alunos = ['Luiz', 'Maria', 'João', 'Luíza', 'Eduardo'];
+const pegandoAlunos = alunos.slice(0, 3);
+
+console.log(pegandoAlunos); // saída: [ 'Luiz', 'Maria', 'João' ]
+console.log(alunos); // saída: [ 'Luiz', 'Maria', 'João', 'Luíza', 'Eduardo' ]
+```
+
+Podemos pegar os dados dos índices de um array sem alterar o array em si.
+
+## Verificando se estamos trabalhando com um array
+
+Podemos verificar se estamos trabalhando com um array usando o instanceof Array, irá retornar false ou true.
+
+```js
+const alunos = ['Luiz', 'Maria', 'João', 'Luíza', 'Eduardo'];
+
+console.log(alunos instanceof Array) // saída: true
+```
+
+## Iterando arrays
+
+Podemos utilizar diferentes formas de **iterar** os elementos de um array. Uma das formas mai utilizadas é a estrutura de repetição **for**, podemos utilizar a propriedade **length()** que possui a função de informar a quantidade de elementos existentes em um array, para controlar o momento de interrupção do loop.
+
+Vamos utilizar um array games com alguns nomes de jogos como exemplo:
+
+```js
+let games = ['GTA', 'Need For Speed', 'Call Of Duty'];
+
+for (let i = 0; i < games.length; i++) {
+  console.log(`O item ${i} é o jogo ${games[i]}`);
+}
+/*  saída:
+* O item 0 é o jogo GTA
+* O item 1 é o jogo Need For Speed
+* O item 2 é o jogo Call Of Duty
+ */
+```
