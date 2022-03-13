@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <form action="" method="get" id="form">
+            <div class="input-field">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome">
+            </div>
+            <div class="input-field">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome" id="sobrenome">
+            </div>
+            <div class="input-field">
+                <label for="peso">Peso</label>
+                <input type="number" name="peso" id="peso">
+            </div>
+            <div class="input-field">
+                <label for="altura">Altura</label>
+                <input type="number" name="altura" id="altura">
+            </div>
+            <div class="input-field">
+                <button type="submit">ENVIAR</button>
+            </div>
+        </form>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Peso</th>
+                    <th>Altura</th>
+                </tr>
+            </tbody>
+            <tbody id="body">
+                
+            </tbody>
+        </table>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
