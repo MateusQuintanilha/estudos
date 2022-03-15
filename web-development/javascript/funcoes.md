@@ -21,3 +21,33 @@ Para chamar/executar uma função precisamos utilizar o nome da função seguido
 ```js
 NomeDaFunction(argumentos);
 ```
+
+## Parâmetros e Argumentos
+
+Ao ***criar uma função***. podemos definir  ***parâmetros***.  
+Ao ***executar uma função***, podemos passar ***argumentos***.
+
+Ao criar uma função definimos os parâmetros, no exemplo abaixo definimos os parâmetros peso e altura.
+
+```js
+function imc(peso, altura) {
+ const imc = peso / (altura ** 2);
+ return imc;
+}
+
+imc(94, 1.73) // 31.40
+```
+
+Ao executar a função estamos passando argumentos dentro desses parâmetros
+Para simplificar vamos fazer uma analogia:
+
+Ao criar um função podemos definir parâmetros, imagine os parâmetros como se fossem ruas. Ao executar essa função iremos passar os argumentos, imagine que esses argumentos são carros. São coisas diferentes, o carro não é a rua, o carro utiliza a rua para passar e o mesmo vale para os parâmetros e os argumentos.
+
+```js
+function areaQuadrado(lado) {
+ return lado * lado;
+};
+areaQuadrado(4); // 16
+areaQuadrado(10); // 100
+areaQuadrado(5); // 25
+```
