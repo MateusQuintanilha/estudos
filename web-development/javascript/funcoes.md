@@ -51,3 +51,30 @@ areaQuadrado(4); // 16
 areaQuadrado(10); // 100
 areaQuadrado(5); // 25
 ```
+
+## Adicionando valores padrões aos parâmetros em uma função
+
+Podemos adicionar valores padrões aos parâmetros em uma função caso não seja informado um valor em sua execução. Para isso iremos atribuir os valores nos parâmetros da função
+
+Exemplo de função com parâmetros sem um valor padrão:
+
+```js
+function soma(x, y) {
+    const resultado = x + y;
+    return resultado;
+}
+console.log(soma()); // saída: NaN
+```
+
+Tentamos fazer a soma de dois parâmetros sem valores, e tudo que não é atribuído um valor no javascript por padrão terá o valor undefined e como a suma de undefined com undefined não resultará em um valor valido, a função retorna NaN.
+
+Agora vamos atribuir valores padrões para os parâmetros:
+
+```js
+function soma(x = 0, y = 0) {
+    const resultado = x + y;
+    return resultado;
+}
+console.log(soma()); // saída: 0
+```
+Atribuímos o valor de 0 para os dois parâmetros da função soma e a soma de 0 com 0 resultará em 0.
