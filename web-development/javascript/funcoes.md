@@ -78,3 +78,39 @@ function soma(x = 0, y = 0) {
 console.log(soma()); // saída: 0
 ```
 Atribuímos o valor de 0 para os dois parâmetros da função soma e a soma de 0 com 0 resultará em 0.
+
+## Criando uma função anonima
+
+```js
+const raiz = function (numero) {
+    return numero ** 0.5;
+};
+
+console.log(raiz(9)); // saída: 3
+```
+
+## Criando uma arrow function
+
+```js
+const raiz = (numero) => {
+    return numero ** 0.5;
+};
+
+console.log(raiz(16)); // saída: 4
+```
+
+Quando temos apenas uma linha de conteúdo em uma arrow function podemos eliminar os colchetes e a palavra return
+
+```js
+const raiz = (numero) => numero ** 0.5;
+
+console.log(raiz(16)); // saída: 4
+```
+
+E quando temos apenas um parâmetro também podemos eliminar os parênteses:
+
+```js
+const raiz = numero => numero ** 0.5;
+
+console.log(raiz(16)); // saída: 4
+```
