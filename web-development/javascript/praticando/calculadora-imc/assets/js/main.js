@@ -1,10 +1,8 @@
 ( function() {
-    const btnImc = document.querySelector('#btn-imc');
-    btnImc.addEventListener('click', EventoDeClick);
+    const form = document.querySelector('#form');
 
-    function EventoDeClick(evento){
-        evento.preventDefault();
-        const form = document.querySelector('#form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
         const formPeso = form.querySelector('#peso');
         const formAltura = form.querySelector('#altura');
         const peso = Number(formPeso.value);
@@ -15,7 +13,7 @@
         } else {
             mostrarResultado('Você digitou um valor Invalido', 'erro');
         }
-    }
+    });
 
     function calcularImc(peso, altura) {
         const calculoImc = (peso / (altura * altura)).toFixed(2);
