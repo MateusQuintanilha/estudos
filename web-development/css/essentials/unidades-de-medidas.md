@@ -103,3 +103,42 @@ Como o próprio nome já diz, essa medida corresponde a 1/4 de milímetro.
 ```css
 16q
 ```
+## Unidade de Medidas Relativas
+
+Essas medidas variam dependendo do tamanho da área útil disponibilizada ou pelo tamanho da tela e são calculadas tendo como base uma outra unidade de medida.
+
+### M (em)
+
+É uma unidade de medida tipográfica. (Seu nome está relacionada com a letra “M”, onde o tamanho base dessa unidade deriva-se da largura da letra M em maiúscula). Mas no css essa unidade atua como um multiplicador do atributo font-size e por padrão 1em equivale  a 16px, pois os navegadores usam 16px como tamanho padrão para as fontes.
+
+Ela utiliza o tamanho da fonte do elemento pai como referencia, então se mudarmos o tamanho da fonte do elemento pai para 10px então 1em passará a valer 10px e 2em terá o valor de 20px.
+
+```css
+1em
+```
+
+### Root M (rem)
+
+Possui a mesma funcionalidade da unidade de medida em, mas ao invés de se basear no elemento pai, ela irá se basear no elemento root(raiz) que no caso será o elemento html, então se definirmos um valor para o elemento html de 10px então um rem passará a valer 10px, isso vale para todos os elementos descendentes
+
+```css
+1rem
+```
+
+### (ex)
+
+Essa é uma unidade tipográfica que calcula a altura de uma letra minúscula em sua linha de base, ela utiliza a letra “x” minuscula para calcular a altura (x-height) de uma fonte especificada em (font-family).
+
+Como o browser sabe esse valor? Esse valor pode vir diretamente com a fonte, o browser pode medir o caractere em caixa baixa ( lower case) e se esses dois não funcionarem, o browser estipula um valor de 0.5em para 1ex.
+
+```css
+1ex
+```
+
+### Character unit (ch)
+
+Unidade de caractere ou character unit em inglês é definida na documentação como sendo a “medida avançada” da largura do caractere zero (“0”). A ideia é que um elemento com, por exemplo 40ch de largura poderá comportar uma string de 40 caracteres dessa determinada fonte, caso essa fonte seja monospace (todos os caracteres possuem o mesmo tamanho).
+
+```css
+1ch
+```
