@@ -70,3 +70,36 @@ Sintaxe:
 ```css
 1pc
 ```
+
+### Inches/Polegadas (in)
+
+Polegada ou inch em inglês é mais uma unidade de medida que conhecemos do mundo das medidas absolutas - geralmente vemos elas quando queremos comprar uma nova TV ou Monitor, mas essa unidade também existe no mundo web.
+
+Apesar de existirem, elas não costumam ser utilizadas em projetos, uma vez que não existem um uso prático para elas (podemos atingir os mesmo resultados utilizando outras unidades)
+
+```css
+1in
+```
+
+### Centímetro (cm)
+Como nosso país utiliza o sistema de unidade métrico, somos bem familiarizados com essa unidade de medida.
+
+```css
+1cm
+```
+
+### Milimetro (mm)
+Como nosso país utiliza o sistema de unidade métrico, somos bem familiarizados com essa unidade de medida.
+
+Sintaxe:
+
+```css
+10mm
+```
+
+### Quarto de milímetro (q)
+Como o próprio nome já diz, essa medida corresponde a 1/4 de milímetro.
+
+```css
+16q
+```
