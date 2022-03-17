@@ -36,3 +36,37 @@ São as medidas mais comuns que vemos no dia a dia.  São medidas que possuem um
 
 
 **As medidas absolutas não são recomendadas para uso em telas porque o tamanho e a densidade de pixels nas telas variam muito, imagine você criar um layout com medidas fixas para uma tela de 40in e um usuário acessá-la com o celular que possui uma tela de 6.5in**
+
+### Pixels (px)
+
+Provavelmente você já conhece ou ouviu falar sobre Pixel. Mas caso não conheça, um pixel  nada mais é do que pequenos pontos luminosos que formam as telas de monitores, televisões, celulares, etc. Então o pixel é a menor e mais precisa unidade de medida em um dispositivo de exibição!
+
+O pixel é uma das principais medidas utilizadas por web designers, grande parte dos desenvolvedores web usam o pixel como unidade principal de seus projetos.
+
+Um detalhe que poucos conhecem é que na verdade, o pixel do CSS não é realmente um pixel da tela do dispositivo, e sim o que chamamos de pixel de referencia que geralmente é maior do que o pixel real. O que acaba por torná-lo uma medida abstrata onde é necessário controlar o mapeamento desse pixel de referencia para o pixel do hardware(acontece por debaixo dos planos).
+
+Sintaxe:
+
+```css
+16px
+```
+
+### Pontos (pt)
+
+Essa unidade é a mais conhecida pelos designers, principalmente os que estudam tipografia, você também muito provavelmente já usou e nem sabia, ela é geralmente utilizada em propriedades relacionadas a fonte, e a maioria dos editores de texto utilizam essa medida como tamanho da fonte.
+
+Geralmente espera-se que essa medida seja utilizada em folhas de estilo para impressões,quando se precisa ter certeza do tamanho da fonte utilizada. Não é recomendada para a estilização em tela.
+
+```css
+12pt
+```
+
+### Paica (pc)
+
+Também é uma unidade pouco usada no mundo web, a Paica também vem para o CSS sendo herdada da tipografia. Por não ser uma unidade amplamente conhecida, ela acaba sendo fadada ao esquecimento, mas é sempre importante conhecermos todas as ferramentas que estão à nossa disposição.
+
+Sintaxe:
+
+```css
+1pc
+```
