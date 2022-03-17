@@ -75,3 +75,80 @@ Segue abaixo os valores alpha decrescentes em 5%.
 |10% | 1A|
 |05% | 0D|
 |00% | 00|
+
+## RGB
+
+<span style="color: #F00;">RR</span>
+<span style="color: #0F0;">GG</span>
+<span style="color: #00F;">BB</span>
+
+As cores RGB são definidas por meio de uma função CSS chamada `rgb()`. Ela utiliza valores correspondentes à intensidade das cores <span style="color: #F00;">Red</span>, <span style="color: #0F0;">Green</span> e <span style="color: #00F;">Blue</span>.
+
+Sintaxe:
+
+```css
+rgb(red, green, blue);
+```
+
+* <span style="color: #F00;">red</span>: corresponde à intensidade da cor <span style="color: #F00;">vermelho</span> e seu valor pode variar entre 0 e 255
+* <span style="color: #0F0;">green</span>: corresponde à intensidade da cor <span style="color: #0F0;">Verde</span> e seu valor pode variar entre 0 e 255
+* <span style="color: #00F;">blue</span>: corresponde à intensidade da cor <span style="color: #00F;">Azul</span> e seu valor pode variar entre 0 e 255
+
+<br>
+
+<span style="display: inline-block; width: 150px; text-align: center; background-color: #FFF; color: black;">rgb(255, 255, 255)</span>
+<span style="display: inline-block; width: 150px; text-align: center; background-color: #000; color: white;">rgb(0, 0, 0)</span>
+<span style="display: inline-block; width: 150px; text-align: center; background-color: #F00; color: white;">rgb(255, 0, 0) </span>
+<span style="display: inline-block; width: 150px; text-align: center; background-color: #0F0; color: white;">rgb(0, 255, 0)</span>
+<span style="display: inline-block; width: 150px; text-align: center; background-color: #00F; color: white;">rgb(0, 0, 255)</span>
+
+<br>
+
+Também podemos adicionar alpha(transparência) mas a função irá mudar para `rgba()`.
+
+Sintaxe:
+
+```css
+rgba(red, green, blue, alpha)
+```
+
+A transparência varia entre (0 e 1), 0 sendo totalmente transparente e 1 totalmente sem transparência.
+
+**50% de transparência é 0.5**
+
+
+## HSL
+
+As cores são adicionadas por meio de uma função CSS chamada de `hsl()`, que utiliza um sistema de coordenadas cilíndricas para determinar a cor. A função utiliza três parâmetros, são eles:
+* `hue`: que significa matiz e identifica a cor conforme o grau da roda de cores que pode variar de 0º a 360º;
+* `saturation`: equivale à saturação da cor e é representado por um valor percentual, no qual 0% corresponde à tonalidade cinza e 100% equivale à cor total;
+* `lightness`: significa à luminosidade e também é representado por um valor percentual, em qual 0% equivale à cor preta e 100% equivale à cor branca.
+
+
+Sintaxe:
+
+```css
+hsl(hue, saturation, lightness);
+```
+
+<br>
+
+<span style="display: inline-block; width: 150px; text-align: center; background-color: #FFF; color: black;">hsl(0, 100%, 100%)</span>
+<span style="display: inline-block; width: 150px; text-align: center; background-color: #000; color: white;">hsl(0, 0%, 0%)</span>
+<span style="display: inline-block; width: 150px; text-align: center; background-color: #F00; color: white;">hsl(0, 100%, 50%)</span>
+<span style="display: inline-block; width: 150px; text-align: center; background-color: #0F0; color: white;">hsl(120, 100%, 50%)</span>
+<span style="display: inline-block; width: 150px; text-align: center; background-color: #00F; color: white;">hsl(240, 100%, 50%)</span>
+
+<br>
+
+Também podemos adicionar alpha(transparência) mas a função irá mudar:
+
+Sintaxe: 
+
+```css
+hsl(hue, saturation, lightness, alpha)
+```
+
+A transparência varia entre (0 a 1), 0 sendo totalmente transparente e 1 totalmente sem transparência.
+
+50% de transparência é 0.5
