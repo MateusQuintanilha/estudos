@@ -268,3 +268,48 @@ Representa o ângulo em grado que é representado por (grad), onde se divide um 
 * 180° = 0.5turn
 * 270° = 0.75turn
 * 360° = 1turn
+
+
+## Unidades de duração `<time>`
+
+Representa um valor de tempo expresso em segundo ou milissegundos. É usado em animações, transições e propriedades relacionadas.
+
+### Segundo (s)
+
+Representa um tempo em segundos. Exemplos: 0s, 1.5s, -60s
+
+```css
+1.5s
+```
+
+### Milissegundo (ms)
+
+Representa um tempo em milissegundos. Exemplos: 0ms, 150.25ms, -60000ms
+
+A conversão entre (s) e (ms) segue a proporção de 1s = 1000ms
+
+```css
+1000ms
+```
+
+## Unidades para frequências `<frequency>`
+
+Representa uma dimensão de frequência, como o tom de uma voz falando.
+
+Atualmente não é usado em nenhuma propriedade CSS
+
+### Hertz (Hz)
+
+Representa uma frequência em hertz. Exemplo: 0Hz, 1500Hz, 10000Hz.
+
+```css
+1500hz
+```
+
+### KiloHertz (kHz)
+
+Representa uma frequência em kilohertz. Exemplo: 0kHz, 1.5kHz, 10kHz.
+
+```css
+1.5khz
+```
