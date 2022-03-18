@@ -87,3 +87,106 @@ const data = new Date(2011,11,17,5,24,0);
 
 console.log(data); // saída: 2011-12-17T07:24:00.000Z
 ```
+
+## Métodos mais usados
+
+### Converter a data em uma string legível
+
+Usamos o método `toString()` para converte a data em uma string que facilita a leitura humana.
+
+```js
+const data = new Date('2022-03-17 16:13:23.700');
+console.log(data); // saída: 2022-03-17T19:13:23.700Z
+
+let dataEmString = data.toString();
+console.log(dataEmString); // saída: Thu Mar 17 2022 16:13:23 GMT-0300 (Horário Padrão de Brasília)
+```
+
+### Dia do mês
+
+Usamos o método `getDate()` para pegar o dia do mês. Retorna um valor inteiro entre 1 e 31. Não confundir com `getDay()` que retorna o dia da semana.
+
+```js
+const data = new Date('2022-03-17 16:13:23.700');
+let diaDoMes = data.getDate();
+console.log(diaDoMes); // saída: 17
+```
+
+### Dia da semana
+
+Usamos o método `getDay()` para pegar o dia da semana. Retorna o dia da semana, inteiro entre 0 e 6 (0 para Domingo).
+
+```js
+const data = new Date('2022-03-17 16:13:23.700');
+let diaDaSemana = data.getDay();
+console.log(diaDaSemana); // saída: 4
+```
+
+### Mês
+
+Usamos o método `getMonth()` para pegar o mês. Retorna um valor inteiro entre 0 e 11 (0 para Janeiro).
+
+```js
+const data = new Date('2022-03-17 16:13:23.700');
+let mes = data.getMonth();
+console.log(mes); // saída: 2
+```
+
+### Ano
+
+Usamos o método `getFullYear()` para pegar o ano. Retorna o ano com 4 dígitos.
+
+```js
+const data = new Date('2022-03-17 16:13:23.700');
+let ano = data.getFullYear();
+console.log(ano); // saída: 2022
+```
+
+### Hora
+
+Usamos o método `getHours()` para pegar a hora. Retorna um valor inteiro entre 0 e 23.
+
+```js
+const data = new Date('2022-03-17 16:13:23.700');
+let hora = data.getHours();
+console.log(hora); // saída: 16
+```
+
+### Minuto
+
+Usamos o método `getMinutes()` para pegar os minutos. Retorna um valor inteiro entre 0 e 59.
+
+```js
+const data = new Date('2022-03-17 16:13:23.700');
+let minuto = data.getMinutes();
+console.log(minuto); // saída: 13
+```
+
+### Segundo
+
+Usamos o método `getSeconds()` para pegar os segundos. Retorna um valor inteiro entre 0 e 59.
+
+```js
+const data = new Date('2022-03-17 16:13:23.700');
+let segundos = data.getSeconds();
+console.log(segundos); // saída: 23
+```
+
+### Milissegundo
+
+Usamos o método `getMilliseconds()` para pegar os milissegundos. Retorna um valor inteiro entre 0 e 999.
+
+```js
+const data = new Date('2022-03-17 16:13:23.700');
+let milissegundos = data.getMilliseconds();
+console.log(milissegundos); // saída: 700
+```
+
+### Data Atual
+
+Podemos usar o método `Date.now()` para pegar a data atual em milissegundos. Retorna os milissegundos decorridos desde 1 de janeiro de 1970 00:00:00 UTC até agora como um  Number.
+
+```js
+let dataAtual = Date.now()
+console.log(); // saída: 1647543756616
+```
