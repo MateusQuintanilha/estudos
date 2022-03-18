@@ -45,3 +45,45 @@ const data = new Date(-400000000000);
 
 console.log(data); // saída: 1843-03-31T16:53:20.000Z
 ```
+
+### Calculando minutos, horas e dias em milissegundos
+* 1s são 1000 milissegundos, então 1s é a mesma coisa que 1 * 1000
+* 1min são 60s, então 1min é a mesma coisa que 60 * 1000
+* 1h são 60 min, então 1h é a mesma coisa que 60 * 60 * 1000
+* 1 dia são 24h. então 1 dia é a mesma coisa que 60 * 60 * 24 * 1000
+
+### String de data
+
+Podemos passar uma string como argumento:
+
+```js
+const data = new Date('March 17, 2022 16:13:23.700');
+console.log(data); // saída: 2022-03-17T19:13:23.700Z
+```
+
+```js
+const data = new Date('2022-03-17 16:13:23.700');
+console.log(data); // saída: 2022-03-17T19:13:23.700Z
+```
+
+```js
+const data = new Date('2022-03-17T16:13:23.700');
+console.log(data); // saída: 2022-03-17T19:13:23.700Z
+```
+
+### Números
+
+Podemos passar números como argumentos n a seguente ordem: ano, mes, dia, hora, minuto, segundo, milissegundo.
+
+```js
+const data = new Date(2022,2,17);
+console.log(data); // saída: 2022-03-17T03:00:00.000Z
+```
+
+ou
+
+```js
+const data = new Date(2011,11,17,5,24,0);
+
+console.log(data); // saída: 2011-12-17T07:24:00.000Z
+```
