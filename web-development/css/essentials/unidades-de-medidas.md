@@ -313,3 +313,38 @@ Representa uma frequência em kilohertz. Exemplo: 0kHz, 1.5kHz, 10kHz.
 ```css
 1.5khz
 ```
+## Unidades para resolução `<resolution>`
+
+Usado para descrever resoluções e densidade de pixels de um dispositivo de saída em uma mídia queries.
+
+Nas telas, as unidade estão relacionadas a polegadas, centímetros ou pixels CSS, não a valores físicos.
+
+### Pontos por polegada - dots per inch (dpi)
+
+Representa o número de pontos por polegadas. As telas normalmente contêm 72 ou 96 pontos por polegadas, mas o dpi para documentos impressos geralmente é muito maior.
+
+Como 1 polegada é 2,54 cm 1dpi ≈ 0.39dpcm.
+
+```css
+96dpi
+```
+
+### Pontos por centímetro - dots per centimeter (dpcm)
+
+Representa o número de pontos por centímetro.
+
+Como 1 polegada é 2,54cm 1dpcm ≈ 2.54dpi.
+
+```css
+1dpcm
+```
+
+### Pontos por pixel - dots per pixel (dppx)
+
+Representa o número de pontos por px. Devido à proporção fixa de 1:96 de CSS in para CSS px.
+
+1 dppx é equivalente a 96dpi.
+
+```css
+1dppx
+```
