@@ -203,3 +203,68 @@ A porcentagem permite que criemos módulos que sempre vão se readaptar para ocu
 ```css
 50%
 ```
+
+## Unidades para ângulos `<angle>`
+
+### Graus / Degrees (deg)
+
+Representa o ângulo em graus que podem ser representados com ( ° ou deg), onde se divide um círculo em 360 partes e cada uma das 360 divisões do círculo corresponde a um grau.
+
+Sintaxe:
+
+```css
+360deg
+```
+
+* 1/12 partes do círculo =  30º = 30deg
+* 1/8 partes do círculo =  45° = 45deg
+* 1/6 partes do círculo =  60° = 60deg
+* 1/4 partes do círculo =  90° = 90deg
+* 1/3 partes do círculo = 180° = 180deg
+* 1/2 partes do círculo = 270° = 270deg
+* 1/1 círculo = 360° = 360deg
+
+### Grado / Gradians (grad)
+
+Representa o ângulo em grado que é representado por (grad), onde se divide um círculo em 400 partes e cada uma das 400 divisões do circulo corresponde a 1grad
+
+```css
+400grad
+```
+
+* 30º = 33,3333grad
+* 45° = 50grad
+* 60° = 66,6667grad
+* 90° = 100grad
+* 180° = 200grad
+* 270° = 300grad
+* 360° = 400grad
+
+
+### Radiano / Radians (rad) 
+
+```css
+2rad
+```
+
+* 30° = 0,523599rad = 0.1666 π rad
+* 45° = 0,785398rad = 0.25 π rad
+* 60° = 1,0472rad = 0.3333 π rad
+* 90° = 1,5708rad = 0.5 π rad
+* 180° = 3,14159rad = 1 π rad
+* 270° = 4,71239rad = 1.5 π rad
+* 360° = 6,28319rad = 2 π rad
+
+### Volta / Turns (turn) 
+
+```css
+1turn
+```
+
+* 30° = 0.0833333turn
+* 45° = 0.125turn
+* 60° = 0.166667turn
+* 90° = 0.25turn
+* 180° = 0.5turn
+* 270° = 0.75turn
+* 360° = 1turn
