@@ -190,3 +190,48 @@ Podemos usar o método `Date.now()` para pegar a data atual em milissegundos. Re
 let dataAtual = Date.now()
 console.log(); // saída: 1647543756616
 ```
+
+## Outros Métodos
+
+O objeto Date não possui propriedades, por outro lado, possui muitos métodos, vamos ver os principais métodos:
+
+- getDate(): devolve o dia do mês, um inteiro entre 1 e 31. Não confundir com getDay que retorna o dia da semana.
+- getDay() : devolve o dia da semana, inteiro entre 0 e 6 (0 para Domingo).
+- getFullYear(): retorna o ano com 4 dígitos.
+- getHours(): retorna a hora, inteiro entre 0 e 23.
+- getMilliseconds(): retorna os milissegundos, inteiro entre 0 e 999.
+- getMinutes(): devolve os minutos, inteiro entre 0 e 59.
+- getMonth(): devolve o mês, um inteiro entre 0 e 11 (0 para Janeiro).
+- getSeconds(): devolve os segundos, inteiro entre 0 e 59.
+- getTime(): devolve os segundos transcorridos entre o dia 1 de janeiro de 1970 e a data correspondente ao objeto ao que se passa a mensagem.
+- getTimezoneOffset(): Devolva a diferença entre a hora local e a hora GMT (Greenwich, UK Mean Time) sob a forma de um inteiro representando o número de minutos (e não em horas).
+
+- getUTCDate(): retorna o dia (data) do mês na data especificada de acordo com o horário universal. Um número inteiro, entre 1 e 31, representando o dia do mês na data especificada de acordo com o horário universal.
+- getUTCDay(): retorna o dia da semana na data especificada de acordo com o horário universal, onde 0 representa domingo.
+- getUTCFullYear(): retorna o ano na data indicada de acordo com o horário universal. um número absoluto compatível com ano 2000, por exemplo, 1995.
+- getUTCHours(): retorna o número de horas na data especificada de acordo com o horário universal (UTC). Um número inteiro, entre 0 e 23, representando as horas em uma data de acordo com o horário universal (UTC).
+- getUTCMilliseconds(): retorna os milissegundos na data especificada, de acordo com o horário universal (UTC). Um número inteiro, entre 0 e 999, representando os milissegundos na data especificada de acordo com o horário universal (UTC).
+- getUTCMinutes(): retorna os minutos na data especificada de acordo com o tempo universal. Um número inteiro, entre 0 e 59, representando os minutos na data especificada de acordo com o horário universal (UTC).
+- getUTCMonth(): retorna o mês da data especificada de acordo com o horário universal, como um valor iniciado em zero (aonde zero indica o primeiro mês do ano).  Um número inteiro, entre 0 e 11, correspondente ao mês da data informada de acordo com o horário universal. 0 para Janeiro
+- getUTCSeconds(): retorna os segundos na data informada de acordo com a hora universal. Um número inteiro, entre 0 e 59, representando os segundos da data informada de acordo com a hora universal.
+
+- Date.now(): retorna os milissegundos decorridos desde 1 de janeiro de 1970 00:00:00 UTC até agora como um  Number.
+- Date.parse(): Não é recomendado, mas retorna o número de milissegundos desde 01 de Janeiro de 1970, 00:00:00 UTC ou NaN se a string não for reconhecida ou, em alguns casos, contiver valores inválidos de data (ex. 2015-02-31).
+
+
+- setDate(d): atualiza o dia do mês.
+- setHours(h): atualiza a hora.
+- setMinutes(m): muda os minutos.
+- setMonth(m): muda o mês (atenção ao mês que começa por 0).
+- setSeconds(s): muda os segundos.
+- setTime(t): atualiza a data completa. Recebe um número de segundos desde 1 de janeiro de 1970.
+- setYear(y): Muda o ano, recebe um número, ao que lhe soma 1900 antes de colocá-lo como ano data. Por exemplo, se receber 95 colocará o ano 1995. Este método está obsoleto a partir de Javascript 1.3 em Netscape. Agora se utiliza setFullYear(), indicando o ano com todos os dígitos.
+- setFullYear(): muda o ano da data ao número que recebe por parâmetro. O número se indica completo ex: 2005 ou 1995. Utilizar este método para estar certo de que tudo funciona para datas posteriores a 2000.
+
+
+- toDateString(): retorna a data num formato legível para humanos em inglês dos Estados Unidos.
+- toGMTString(): devolva o valor do atual em hora GMT (Greenwich Mean Time)
+- toString(): retorna uma string com a representação de Date no formato especificado na ECMA-262 // Wed Mar 16 2022 20:06:36 GMT-0300 (Horário Padrão de Brasília)
+
+
+- getYear(): retorna o ano, os últimos dois números do ano. Por exemplo, para o 2006 retorna 06. Este método está obsoleto em Netscape a partir da versão 1.3 de Javascript e agora se utiliza getFullYear().
