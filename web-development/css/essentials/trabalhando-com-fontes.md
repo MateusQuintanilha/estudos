@@ -90,3 +90,106 @@ Podemos usar fontes diretamente da web usando uma das opções abaixo:
         ```
 
 ---
+
+## color
+
+Podemos usar a propriedade `color` para alterar a cor da fonte.
+
+* Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: 1.5rem; color: red;">O rato roeu a roupa do rei de Roma</span>
+* CSS
+    ```css
+    color: red;
+    color: #FF0000;
+    color: rgb(255,0,0);
+    color: hsl(0, 100%, 50%);
+    ```
+
+---
+
+## font-size
+
+Podemos usar a propriedade `font-size` para alterar o tamanho da fonte.
+
+### Valores
+
+As medidas adotados podem ser qualquer uma utilizada no css, vamos ver algumas a seguir:
+
+#### Valores `<absolute-size>`
+* small
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: small;">O rato roeu a roupa do rei de Roma</span>
+* x-small
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: x-small;">O rato roeu a roupa do rei de Roma</span>
+* xx-small
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: xx-small;">O rato roeu a roupa do rei de Roma</span>
+* medium
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: medium;">O rato roeu a roupa do rei de Roma</span>
+* large
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: large;">O rato roeu a roupa do rei de Roma</span>
+* x-large
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: x-large;">O rato roeu a roupa do rei de Roma</span>
+* xx-large
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: xx-large;">O rato roeu a roupa do rei de Roma</span>
+
+#### Valores `<relative-size>`
+* smaller
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: smaller;">O rato roeu a roupa do rei de Roma</span>
+* larger
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: larger;">O rato roeu a roupa do rei de Roma</span>
+
+#### Valores `<length>`
+* pixel
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: 16px;">O rato roeu a roupa do rei de Roma</span>
+* pontos
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: 12pt;">O rato roeu a roupa do rei de Roma</span>
+* em
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: 1em;">O rato roeu a roupa do rei de Roma</span>
+* rem
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: 1.2rem;">O rato roeu a roupa do rei de Roma</span>
+* Entre outros...
+
+#### Valores `<percentage>`
+* porcentagem (%)
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: 100%;">O rato roeu a roupa do rei de Roma</span>
+
+#### Valores Globais
+* inherit
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: inherit;">O rato roeu a roupa do rei de Roma</span>
+* initial
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: initial;">O rato roeu a roupa do rei de Roma</span>
+* unset
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: unset;">O rato roeu a roupa do rei de Roma</span>
+
+Agora vamos ver a sintaxe de cada valor usado nos exemplos:
+
+Sintaxe:
+
+```css
+/* Valores <absolute-size> */
+font-size: small;
+font-size: x-small;
+font-size: xx-small;
+font-size: medium;
+font-size: large;
+font-size: x-large;
+font-size: xx-large;
+
+/* Valores <relative-size> */
+font-size: smaller;
+font-size: larger;
+
+/* Valores <length> */
+font-size: 16px;
+font-size: 12pt;
+font-size: 1em;
+font-size: 1rem;
+
+/* Valores <percentage> */
+font-size: 100%;
+
+/* Valores Globais */
+font-size: inherit;
+font-size: initial;
+font-size: unset;
+```
+
+---
