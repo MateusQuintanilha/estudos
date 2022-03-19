@@ -252,3 +252,93 @@ Também podemos usar valores numéricos como podemos ver a seguir:
 |700| Bold (Negrito)
 |800| Extra Bold (Ultra Bold, Super Negrito)
 |900| Black (Heavy)
+
+
+## font-style
+
+Podemos usar a propriedade `font-style` para definir o estilo da fonte. Ela pode receber o valor normal, italic e oblique.
+
+* normal 
+    * É o estilo normal/padrão.
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: 1.5rem; font-style: normal;">O rato roeu a roupa do rei de Roma</span>
+    * CSS
+        ```css
+        .p-normal {
+        font-style: normal;
+        }
+        ```
+* italic
+    * O estilo itálico serve para destacarmos nomes, palavras estrangeiras e frases.
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: 1.5rem; font-style: italic;">O rato roeu a roupa do rei de Roma</span>
+    * CSS
+        ```css
+        .p-italic {
+        font-style: italic;
+        }
+        ```
+* oblique
+    * Assim como o estilo itálico, o oblíquo serve para destacarmos nomes, palavras estrangeiras e frases, pode ser usado da mesma forma, mas tem uma “voz” mais suave.
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: 1.5rem; font-style: oblique;">O rato roeu a roupa do rei de Roma</span>
+    * CSS
+        ```css
+        .p-oblique {
+        font-style: oblique;
+        }
+        ```
+
+---
+
+## font-variant
+
+A propriedade `font-variant` é usada para escolher as variantes normal ou small-caps.
+
+* normal
+    * É o tamanho normal da fonte.
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-variant: normal;">O rato roeu a roupa do rei de Roma</span>
+    * CSS
+        ```css
+        font-variant: normal;
+        ```
+    
+* small-caps
+    * Uma fonte small-caps transforma todas as letras em maiúsculas e deixa texto em tamanho reduzido.
+    * Exemplo: <span style="font-family: Helvetica, Arial, Verdana, sans-serif; font-variant: small-caps;">O rato roeu a roupa do rei de Roma</span>
+    * CSS
+        ```css
+        font-variant: small-caps;
+        ```
+
+---
+
+## font-stretch
+
+A propriedade `font-stretch` permite deixar o texto mais estreito (condensed) ou mais largo (expanded).
+
+
+Sintaxe:
+
+```css
+/* Keyword values */
+font-stretch: ultra-condensed;
+font-stretch: extra-condensed;
+font-stretch: condensed;
+font-stretch: semi-condensed;
+font-stretch: normal;
+font-stretch: semi-expanded;
+font-stretch: expanded;
+font-stretch: extra-expanded;
+font-stretch: ultra-expanded;
+
+/* Percentage values */
+font-stretch: 50%;
+font-stretch: 100%;
+font-stretch: 200%;
+
+/* Global values */
+font-stretch: inherit;
+font-stretch: initial;
+font-stretch: revert;
+font-stretch: unset;
+
+```
+---
