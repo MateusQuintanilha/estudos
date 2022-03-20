@@ -8,7 +8,30 @@ CSS significa **Cascading Style Sheets** - em português quer dizer **Folha de E
 
 A CSS descreve como os elementos devem ser renderizados na tela, no papel, na fala ou em outra mídia.
 
+## Adicionando css inline
+
+Podemos adicionar um código css na linha do elemento que desejamos fazer alterações usando a propriedade `style=""`. (Não é recomendado)
+
+```html
+<p style="font-size: 26px;">Parágrafo</p>
+```
+
+## Adicionando um bloco css no HTML
+
+Dentro do elemento head podemos usar o elemento `<style>` para adicionar os comandos CSS.
+
+```html
+<head>
+  <style>
+  p {
+    color: blue;
+  }
+  </style>
+</head>
+```
+
 ## Criando um arquivo css
+
 Abra o editor, crie um arquivo novo e salve como style.css no diretório para arquivos do tipo css.
 
 ## Adicionando um arquivo css no HTML
