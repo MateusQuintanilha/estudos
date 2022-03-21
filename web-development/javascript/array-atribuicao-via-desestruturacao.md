@@ -63,3 +63,34 @@ let [valorA = 10, valorB = 15, valorC = 20, valorD = 25, valorE = 30, valorF = 3
 
 console.log(valorA, valorB, valorC, valorD, valorE, valorF); // saída: 100 150 200 25 30 35
 ```
+
+
+## Pegando o resto dos elementos usando o Rest (...)
+
+Podemos pegar o restante dos elementos que seriam descartados e criar um novo array usando o rest (repouso) que é representado por 3 pontos (...), observe o exemplo a seguir:
+
+```js
+let valores = [100, 150, 200, 250, 300];
+
+let [valorA, valorB, ...valoresRestantes] = valores;
+
+console.log(valorA, valorB, valoresRestantes); // saída: 100 150 [ 200, 250, 300 ]
+```
+
+As variáveis `valorA` e `valorB` recebem os dois primeiros elementos do array. Já a variável após os 3 pontos (...) que nesse caso é a variável `valoresRestantes` recebe um array com todos os elementos restantes.
+
+## Pulando alguns valores
+
+Caso queira ignorar algum elemento basta adicionar um espaço vazio no nome e adicionar o próximo nome em seguida.
+
+Vamos ignorar os valores 150 e 250.
+
+```js
+let valores = [100, 150, 200, 250, 300];
+
+let [valorA, , valorC, , valorE] = valores;
+
+console.log(valorA, valorC, valorE); // saída: 100 200 300
+```
+
+Como podemos ver, nos elementos que adicionamos o espaço em branco foi pulado.
