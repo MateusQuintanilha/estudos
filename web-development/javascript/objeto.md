@@ -198,3 +198,73 @@ console.log(contato)
  *  }
  */
 ```
+
+
+### Excluir uma propriedade de um objeto
+
+Para excluir uma propriedade de um objeto, use o operador `delete`:
+
+```js
+delete.NomeDoObjeto.NomeDaPropriedade
+```
+
+Vamos continuar utilizando o objeto do exemplo anterior, Vamos excluir a propriedade instagram do objeto contato:
+
+```js
+delete contato.instagram
+```
+
+Resultado:
+
+```js
+console.log(contato)
+/* saída:
+ *  {
+ *    nome: 'Irineu',
+ *    email: 'irineuvocenaosabenemeu@gmail.com',
+ *    tel: '(99)-9-9999-9999',
+ *  }
+ */
+```
+
+### Verificando se uma propriedade existe
+
+Utilizamos o operador `in` para verificar se uma propriedade existe em um objeto:
+
+```js
+nomeDaPropriedade in nomeDoObjeto
+```
+
+Vamos verificar se as propriedades ***tel*** e ***instagram*** existem no objeto ***contato***:
+
+```js
+'tel' in contato
+'instagram' in contato
+```
+
+Resultado:
+
+```js
+console.log('tel' in contato) // saída: true
+console.log('instagram' in contato) // saída: false
+```
+
+### Iterar sobre um objeto usando loop for...in
+
+Vamos imprimir no console todos os dados do objeto contato:
+
+```js
+for (const propriedade in contato) {
+  console.log(contato[propriedade])
+}
+```
+
+Resultado:
+
+```js
+Irineu
+irineuvocenaosabenemeu@irineu.com
+(00)-0-0000-0000
+```
+
+---
