@@ -129,3 +129,72 @@ console.log(pessoa1.nome, pessoa2.nome); // saída: Rodrigo Fernando
 ```
 
 ---
+
+
+## Editando dados de um objeto
+
+Podemos alterar o valor de uma propriedade, adicionar uma nova uma propriedade, excluir uma propriedade e verificar se uma propriedade existe ou não. Vamos ver sobre cada um a seguir:
+
+### Alterando o valor de uma propriedade
+
+Para alterar o valor de uma propriedade, utilize o nome do objeto, a notação, o nome da propriedade que deseja alterar e utilize o operador de atribuição com o novo valor desejado, Exemplo:
+
+```js
+nomeDoObjeto.nomeDaPropriedade = novoValorDaPropriedade
+```
+
+Vamos continuar utilizando o objeto contato como exemplo:
+
+```js
+let contato = {
+  nome: 'Irineu',
+  email: 'irineuvocenaosabenemeu@irineu.com',
+  tel: '(00)-0-0000-0000'
+}
+```
+
+Vamos alterar a propriedade ***tel***, vamos trocar todos os dígitos ***0*** por ***9***
+
+```js
+contato.tel = '(99)-9-9999-9999'
+```
+
+Resultado:
+
+```js
+console.log(contato.tel) // saída: (99)-9-9999-9999
+```
+
+Se tentar acessar uma propriedade que não existe resultará em `undefined`, como no exemplo a seguir:
+
+```js
+console.log(contato.sobreNome) // saída: undefined
+```
+
+### Adicionando uma nova propriedade em um objeto
+
+Para criar uma nova propriedade iremos usar o nome do objeto, a notação, o nome da nova propriedade em seguida iremos atribuir um valor para a nova propriedade, como no exemplo a seguir:
+
+```js
+nomeDoObjeto.NomeDoNovoAtributo = ValorDoNovoAtributo
+```
+
+Iremos adicionar a propriedade instagram para o objeto contato.
+
+```js
+contato.instagram = '@irineuvocenaosabe'
+```
+
+Resultado:
+
+```js
+console.log(contato)
+/* saída:
+ *  {
+ *    nome: 'Irineu',
+ *    email: 'irineuvocenaosabenemeu@gmail.com',
+ *    tel: '(99)-9-9999-9999',
+ *    instagram: '@irineuvocenaosabe'
+ *  }
+ */
+```
