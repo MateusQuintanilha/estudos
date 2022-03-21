@@ -74,3 +74,58 @@ ReferenceError: Name is not defined
 ```
 
 A notação por ponto não aceita strings ou identificadores que não são validos, para conseguir acessar essa propriedade iremos utilizar a notação por colchetes.
+
+
+### Notação por colchetes (notação do tipo array)
+
+Para utilizar a notação por colchetes iremos utilizar o nome do objeto com um par de colchetes `[]` e dentro dos colchetes iremos colocar o nome da propriedade entre aspas simples ou duplas, como no exemplo a seguir:
+
+```js
+nomeDoObjeto['NomeDaPropriedade']
+```
+
+Geralmente utilizamos essa notação quando o nome da propriedade que possui espaço ou possui identificadores inválidos como por exemplo o hífen `-`, a seguir veremos um exemplo:
+
+Para acessar a propriedade `last-Name` do objeto `person`, utilize a expressão a seguir:
+
+```js
+person['last-Name']
+```
+
+---
+
+## Criando objeto usando uma função
+
+Podemos criar vários objetos similares usando uma função, no exemplo a seguir vamos criar objetos com nome, sobrenome e idade.
+
+Esse tipo de função damos o nome de Factory Function
+
+```js
+function criarPessoa (nome, sobrenome, idade) {
+    return {
+        nome: nome,
+        sobrenome: sobrenome,
+        idade: idade
+    };
+}
+
+const pessoa1 = criarPessoa('Rodrigo', 'Rodrigues', 38);
+const pessoa2 = criarPessoa('Fernando', 'Fernandes', 48);
+
+console.log(pessoa1.nome, pessoa2.nome); // saída: Rodrigo Fernando
+```
+
+Quando criamos funções e retornamos um objeto, se o parâmetro e a chave da propriedade do objeto possuírem o mesmo nome, não precisamos repeti-los, ao adicionar apenas uma vez o javascript irá entender que queremos atribuir o nome ao nome.
+
+```js
+function criarPessoa (nome, sobrenome, idade) {
+    return { nome, sobrenome, idade };
+}
+
+const pessoa1 = criarPessoa('Rodrigo', 'Rodrigues', 38);
+const pessoa2 = criarPessoa('Fernando', 'Fernandes', 48);
+
+console.log(pessoa1.nome, pessoa2.nome); // saída: Rodrigo Fernando
+```
+
+---
