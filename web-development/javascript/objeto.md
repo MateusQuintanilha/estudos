@@ -268,3 +268,58 @@ irineuvocenaosabenemeu@irineu.com
 ```
 
 ---
+
+## Métodos
+
+Um método é uma função associada a um objeto, ou, uma função que é valor de uma propriedade de um objeto. Exemplo:
+
+```js
+let nomeDoObjeto = {
+  nomeDoMetado: function (parametros) {
+    // ... faça algo
+  }
+}
+```
+
+Para chamar o método no contexto do objeto, podemos fazer da seguinte forma:
+
+```js
+nomeDoObjeto.nomeDoMetado(argumentos)
+```
+
+Vamos utilizar um personagem fictício como exemplo:
+
+```js
+let personagemFicticio = {
+  filme: 'Falcão: o campeão dos campeões',
+  nome: 'Lincoln',
+  sobrenome: 'Falcão',
+  profissao: 'Caminhoneiro',
+  interesses: ['Caminhão', 'Quedas de Braço']
+}
+```
+
+Vamos criar um método que retorne a frase ***Virando o boné***.
+
+```js
+let personagemFicticio = {
+  filme: 'Falcão: o campeão dos campeões',
+  nome: 'Lincoln',
+  sobrenome: 'Falcão',
+  profissao: 'Caminhoneiro',
+  interesses: ['Caminhão', 'Quedas de Braço'],
+  virandoBone: function () {
+    console.log('Virando o boné')
+  }
+}
+```
+
+Vamos chamar o método e ver qual foi o resultado.
+
+```js
+personagemFicticio.frase()
+```
+
+Resultado:
+
+Virando o boné
