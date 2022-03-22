@@ -323,3 +323,119 @@ personagemFicticio.frase()
 Resultado:
 
 Virando o boné
+
+
+### Adicionando uma função externa no objeto
+
+Também podemos criar a função fora do objeto e depois atribuir a função a uma propriedade do objeto.
+
+```js
+nomeDoObjeto.nomeDaPropriedade = nomeDaFuncao
+```
+
+```js
+let personagemFicticio = {
+  filme: 'Falcão: o campeão dos campeões',
+  nome: 'Lincoln',
+  sobrenome: 'Falcão',
+  profissao: 'Caminhoneiro',
+  interesses: ['Caminhão', 'Quedas de Braço']
+}
+
+function virandoBone() {
+  console.log('Virando o boné')
+}
+```
+
+Podemos adicionar em uma propriedade existente, ou criar uma nova, vamos criar em uma nova propriedade com o mesmo nome da função:
+
+```js
+personagemFicticio.virandoBone = virandoBone
+```
+
+Vamos chamar a função e ver o resultado:
+
+```js
+personagemFicticio.virandoBone() // saída: Virando o boné
+```
+
+Também podemos criar uma propriedade com o nome diferente:
+
+```js
+personagemFicticio.chapeu = virandoBone
+```
+
+Vamos chamar a função, mas lembre-se que devemos utilizar o nome da propriedade e não da função:
+
+```js
+personagemFicticio.chapeu() // saída: Virando o boné
+```
+
+### Método Abreviado
+
+Podemos utilizar o método abreviado que surgiu na versão ES6, essa forma de escrita pode tornar o código mais curto:
+
+Método usando a sintaxe literal:
+
+```js
+let personagemFicticio = {
+  filme: 'Falcão: o campeão dos campeões',
+  nome: 'Lincoln',
+  sobrenome: 'Falcão',
+  profissao: 'Caminhoneiro',
+  interesses: ['Caminhão', 'Quedas de Braço'],
+  virandoBone: function () {
+    console.log('Virando o boné')
+  }
+}
+```
+
+Método usando a sintaxe abreviado:
+
+```js
+let personagemFicticio = {
+  filme: 'Falcão: o campeão dos campeões',
+  nome: 'Lincoln',
+  sobrenome: 'Falcão',
+  profissao: 'Caminhoneiro',
+  interesses: ['Caminhão', 'Quedas de Braço'],
+  virandoBone: function () {
+    console.log('Virando o boné')
+  }
+}
+```
+
+### O valor `this`
+
+Normalmente os métodos precisam acessar os dados armazenado no objeto, Por exemplo, você pode desenvolver um método que retorne o nome completo do ***personagemFicticio***, concatenando ***nome*** e ***sobrenome***.
+
+Dentro do método, o valor `this` faz referência ao objeto que contém o método, então podemos acessar uma propriedade do objeto usando a notação por ponto.
+
+```js
+this.nomeDaPropriedade
+```
+
+Vamos utilizar o objeto anterior como exemplo e vamos fazer um método que retorne o nome completo.
+
+```js
+let personagemFicticio = {
+  filme: 'Falcão: o campeão dos campeões',
+  nome: 'Lincoln',
+  sobrenome: 'Falcão',
+  profissao: 'Caminhoneiro',
+  interesses: ['Caminhão', 'Quedas de Braço'],
+  virandoBone: function () {
+    console.log('Virando o boné')
+  },
+  nomeCompleto() {
+    return this.nome + ' ' + this.sobrenome
+  }
+
+}
+```
+
+Vamos chamar a função usando um console.log para imprimir o valor no console:
+
+```js
+console.log(personagemFicticio.nomeCompleto()) // saída: Lincoln Falcão
+```
