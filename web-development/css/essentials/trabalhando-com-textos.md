@@ -7,19 +7,18 @@ A propriedade `direction` é usada para definir a direção do texto, em alguns 
 * `ltr`
   * ltr (left to right) define que o texto será exibido da esquerda para a direita.
   * CSS
-
-        ```css
-        direction: ltr;
-        ```
+     ```css
+    direction: ltr;
+    ```
   * Exemplo:
     <div style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: 1.5rem; direction: ltr;">O rato roeu a roupa do rei de Roma</div>
 * `rtl`
   * rtl (right to left) define que o texto será exibido da direita para a esquerda.
   * CSS
 
-        ```css
-        direction: rtl;
-        ```
+    ```css
+    direction: rtl;
+    ```
   * Exemplo:
 
 <div style="font-family: Helvetica, Arial, Verdana, sans-serif; font-size: 1.5rem; direction: rtl;">O rato roeu a roupa do rei de Roma</div>
@@ -53,7 +52,6 @@ letter-spacing: unset;
 ```
 
 ---
-
 
 ## line-height
 
