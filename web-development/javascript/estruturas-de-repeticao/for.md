@@ -23,10 +23,9 @@ for (inicializacao; condicao; iteracao) {
 Exemplo: Vamos criar um for que irá imprimir no console o valor de 0 a 10.
 
 ```js
-for (let i =0; i <= 10; i++) {
+for (let i = 0; i <= 10; i++) {
  console.log(i)
 } // saída: 0 1 2 3 4 5 6 7 8 9 10
-
 ```
 
 * `let i =0`: é a inicializacao, criamos uma variável de nome (i) e com atribuímos um valor de (0), esse valor irá mudar a cada loop pela iteração.
@@ -36,10 +35,25 @@ for (let i =0; i <= 10; i++) {
 Também podemos fazer a contagem de 10 a 0.
 
 ```js
-for (let i =10; i >= 0; i--) {
+for (let i = 10; i >= 0; i--) {
  console.log(i)
 } // saída: 10 9 8 7 6 5 4 3 2 1 0
+```
 
+Também podemos iteração com valores diferentes de 1 em 1, para isso iremos usar o += valor, vamos fazer pular de 2 em 2:
+
+```js
+for (let i = 0; i <= 10; i += 2) {
+     console.log(i)
+    } // saída: 0 2 4 6 8 10
+```
+
+Também podemos iniciar com valores diferentes de 0, vamos iniciar com o valor 1:
+
+```js
+for (let i = 1; i <= 10; i += 2) {
+     console.log(i)
+    } // saída: 1 3 5 7 9
 ```
 
 Neste caso atribuímos um valor de 10 para a inicialização, na condição invertemos, agora o loop será executando enquanto (i) for menor ou igual a (0) e trocamos a condição da iteração que antes era de incremento e agora passou a ser de decremento, agora a cada loop o valor da inicialização será diminuído por (1).
@@ -50,8 +64,7 @@ Vamos criar uma array com nomes de animais em seguida vamos criar um (for), na i
 
 ```js
 let animais = ['Gato', 'Cachorro', 'Cavalo', 'Porco', 'Galinha', 'Pato']
-for(let i=0; i < animais.length; i++) {
+for(let i= 0; i < animais.length; i++) {
  console.log(animais[i])
 }// saída: Gato Cachorro Cavalo Porco Galinha Pato
-
 ```
