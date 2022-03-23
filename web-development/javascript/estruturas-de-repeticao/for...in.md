@@ -32,3 +32,43 @@ for (const i in frutas) {
 ```
 
 A diferença do `for` clássico para o `for...in` é que no clássico precisamos criar uma variável para fazer a contagem e depois verificar a quantidade de itens com o length, já o for...in lê o índice diretamente, então não precisamos criar uma variável para fazer essa contagem.
+
+### Mas tome cuidado ao utilizar o for...in em array, pois ele pode retornar valores diferentes do esperado
+
+Vamos fazer um teste com o for clássico:
+
+```js
+Array.prototype.foo = 1;
+let testandoArray = [];
+testandoArray[3] = "abc";
+
+let contador = 0;
+for (let i = 0; i < testandoArray.length; i++) {
+    console.log(contador + ":", testandoArray[i]);
+    contador++;
+} // saída:   0: undefined  1: undefined  2: undefined  3: abc
+```
+
+Foi mostrado 4 resultados:  
+0: undefined  
+1: undefined  
+2: undefined  
+3: abc
+
+Agora usar o mesmo exemplo mas usando o for...in:
+
+```js
+Array.prototype.foo = 1;
+let testandoArray = [];
+testandoArray[3] = "abc";
+
+contador = 0;
+for (let item in testandoArray) {
+    console.log(contador + ":", item);
+    contador++;
+} // saída:     0: 3  1: foo
+```
+
+Foi mostrado 2 resultados:  
+0: 3  
+1: foo  
