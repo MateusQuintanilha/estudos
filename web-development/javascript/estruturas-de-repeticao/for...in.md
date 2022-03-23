@@ -72,3 +72,30 @@ for (let item in testandoArray) {
 Foi mostrado 2 resultados:  
 0: 3  
 1: foo  
+
+## Usando for...in em um objeto
+
+Ao usar o for...in em um objeto, ele irá ler as chaves(key) do objeto. Vamos criar um objeto carro com algumas características de algum carro para usar de exemplo:
+
+```js
+const carro = {
+    marca: 'dodge',
+    modelo: 'charger',
+    ano: 1970
+};
+```
+
+Agora vamos usar o for..in para acessar as keys do objeto:
+
+```js
+const carro = {
+    marca: 'dodge',
+    modelo: 'charger',
+    ano: 1970
+};
+
+for (key in carro) {
+    console.log(key) // saída: marca modelo ano
+    console.log(carro[key]) // saída: dodge charger 1970
+}
+```
