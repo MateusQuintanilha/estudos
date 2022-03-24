@@ -45,7 +45,7 @@ for (const i in nome) {
 }
 ```
 
-Já com o for...of isso não é necessário, pois o for...of retorna o valor do elemento daquele índice e não o valor do índice em sí:
+Já com o for...of isso não é necessário, pois o for...of retorna o valor do elemento daquele índice e não o valor do índice em si:
 
 ```js
 const nome = 'Fernando Fernandes';
