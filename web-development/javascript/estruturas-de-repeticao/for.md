@@ -68,3 +68,34 @@ for(let i= 0; i < animais.length; i++) {
  console.log(animais[i])
 }// saída: Gato Cachorro Cavalo Porco Galinha Pato
 ```
+
+## Checando de um valor é par ou impar
+
+Podemos chegar se um valor é par ou impar usando o operador de resto da divisão.
+
+```js
+for (let i = 0; i <= 5; i++) {
+     const par = i % 2 === 0;
+        console.log(i); // saída: 0 true, 1 false, 2 true, 3 false, 4 true, 5 false
+    } 
+```
+
+### Imprimindo valores par
+
+```js
+for (let i = 0; i <= 10; i++) {
+     const par = i % 2 === 0;
+    
+    if(par) console.log(i); // saída: 0 2 4 6 8 10
+    } 
+```
+
+### Imprimindo valores impar
+
+```js
+for (let i = 0; i <= 10; i++) {
+     const impar = i % 2 === 1;
+    
+    if(impar) console.log(i); // saída: 1 3 5 7 9
+    } 
+```
