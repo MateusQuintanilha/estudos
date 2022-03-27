@@ -23,7 +23,7 @@ function salvaTarefa() {
     const tarefas = document.querySelectorAll('.tarefa');
     const listaDeTarefas = [];
 
-    for (const tarefa of tarefas) {
+    for(let tarefa of tarefas) {
         const tarefaCompleta = tarefa.querySelector('.tarefa-texto');
         const textoTarefa = tarefaCompleta.innerText;
         listaDeTarefas.push(textoTarefa);
@@ -31,3 +31,24 @@ function salvaTarefa() {
     const tarefasJSON = JSON.stringify(listaDeTarefas);
     localStorage.setItem('tarefas', tarefasJSON);
 }
+btnAdicionar.addEventListener('click', (event) => {
+    event.preventDefault();
+    if (!inputTarefa.value) return;
+    adicionaTarefa(criaTarefa(inputTarefa.value));
+    salvaTarefa();
+});
+document.addEventListener('click', (event) => {
+    const elemento = event.target;
+    if(elemento.classList.contains('btn-apagar')) {
+        elemento.parentElement.parentElement.remove();
+        salvaTarefa();
+    };
+});
+function tarefasSalvas() {
+    const tarefasJSON = localStorage.getItem('tarefas');
+    const listaDeTarefas = JSON.parse(tarefasJSON);
+    for(let tarefa of listaDeTarefas) {
+        adicionaTarefa(criaTarefa(tarefa));
+    }
+}
+tarefasSalvas();
