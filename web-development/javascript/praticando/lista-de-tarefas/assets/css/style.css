@@ -36,3 +36,32 @@ form {
 .input-tarefa {
     padding: 5px 10px;
 }
+button {
+    padding: 5px 10px;
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--color-02);
+    background-color: var(--color-05);
+}
+button:hover {
+    background-color: var(--color-01);
+}
+.main-container {
+    background-color: var(--color-04);
+    width: 80%;
+    max-width: 0 auto;
+    padding: 20px;
+}
+table {
+    font-size: 1rem;
+    margin: 0 auto;
+}
+.tarefa {
+    display: flex;
+    gap: 10px;
+    color: var(--color-02);
+    font-family: Helvetica, sans-serif;
+}
+.tarefa-texto {
+    width: 200px;
+}
