@@ -183,3 +183,108 @@ text-align: unset;
   * Semelhante a justify, porém força a última linha a ser justificada.
 
 ---
+
+## text-transform
+
+A propriedade `text-transform` é usada para definir os efeitos de capitalização (maiúsculas e minúsculas) do texto.
+
+Sintaxe:
+
+```css
+/* Keyword values */
+text-transform: capitalize;
+text-transform: uppercase;
+text-transform: lowercase;
+text-transform: none;
+text-transform: full-width;
+
+/* Global values */
+text-transform: inherit;
+text-transform: initial;
+text-transform: unset;
+```
+
+### Valores
+
+* capitalize
+  * Causa o efeito de transformar as primeiras letras das palavras do texto em maiúscula.
+* uppercase
+  * Causa o efeito de transformar todas as letras das palavras do texto em maiúscula.
+* lowercase
+  * Causa o efeito de transformar todas as letras das palavras do texto em minúsculas.
+* none
+  * Não causa qualquer efeito de transformação.
+* full-width
+  * É uma palavra-chave que força a escrita de um caractere – principalmente ideogramas e escritas latinas – dentro de um quadrado, permitindo que eles sejam alinhados nas escritas usuais do leste asiático (como chinês ou japonês).
+
+---
+
+## text-decoration
+
+A propriedade `text-decoration` é a forma reduzida (shorthand) das propriedades `text-decoration-line`, `text-decoration-color` e `text-decoration-style`. Ela é usada para definir uma linha decorativa no texto.
+
+### Valores
+
+* `text-decoration-line`
+  * none
+    * nenhuma linha é desenhada e qualquer decoração existente é removida.
+  * underline
+    * Causa o efeito sublinhado. A linha decorativa é desenhada sob o texto.
+  * overline
+    * Causa o efeito superlinhado. A linha decorativa é desenhada sobre o texto.
+  * line-through
+    * Causa o efeito de uma linha decorativa passando pelo meio das letras.
+  * Podemos usar mais de uma delas ao mesmo tempo
+* `text-decoration-color`
+  * Aceita todas as formas de escritas de cor.
+* `text-decoration-style`
+  * solid
+    * Desenha uma linha solida
+  * double
+    * Desenha uma linha dupla
+  * dotted
+    * Desenha uma linha pontilhada
+  * dashed
+    * Desenha uma linha tracejada
+  * wavy
+    * Desenha uma linha ondulada
+
+Sintaxe:
+
+```css
+/* Valores Chave */
+text-decoration: none;
+text-decoration: underline;
+text-decoration: overline;
+text-decoration: line-through;
+text-decoration: underline overline line-through;
+text-decoration: red underline overline wavy;
+
+/* Valores Globais */
+text-decoration: inherit;
+text-decoration: initial;
+text-decoration: unset;
+```
+
+---
+
+## text-overflow
+
+A propriedade `text-overflow` trata de situações em que o texto é cortado quando transborda da caixa do elemento.
+
+```css
+text-overflow: clip;
+text-overflow: ellipsis;
+text-overflow: "string";
+```
+
+### Valores
+
+* clip
+  * Corta o texto exatamente na linha vertical que passa pelo lado direito do container. Neste caso é possível até mesmo que uma letra do texto seja cortada na vertical. Este é o valor padrão da propriedade.
+* ellipsis
+  * Insere três pontos (...) antes do corte do texto. É a convenção típica indicativa de interrupção de texto.
+* string
+  * Este valor insere uma string antes do corte do texto.
+
+---
