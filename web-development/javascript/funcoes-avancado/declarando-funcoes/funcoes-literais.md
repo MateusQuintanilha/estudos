@@ -5,28 +5,28 @@ São funções comuns, sua sintaxe é parecida com a de várias outras linguagen
 Sintaxe:
 
 ```js
-function nomeDaFuncao() {
-    // Conteúdo da função
+function nomeDaFuncao(parametro01, parametro02) {
+    return parametro01 + parametro02;
 }
 ```
 
 Funções Literais sofrem hoisting ou seja, a engine do JavaScript irá elevar a declaração da função para o topo do escopo, então podemos chamar a função após declarar a função como podemos ver no exemplo a seguir:
 
 ```js
-function falaOi() {
-    console.log('Oi');
+function soma(valorA, valorB) {
+    return valorA + valorB;
 }
 
-falaOi(); // saída: Oi
+soma(10, 5); // saída: 15
 ```
 
 Como também podemos chamar a função antes de sua declaração:
 
 ```js
-falaOi(); // saída: Oi
+soma(10, 5); // saída: 15
 
-function falaOi() {
-    console.log('Oi');
+function soma(valorA, valorB) {
+    return valorA + valorB;
 }
 ```
 
