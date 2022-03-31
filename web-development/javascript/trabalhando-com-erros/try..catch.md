@@ -32,3 +32,45 @@ O catch pode receber um parâmetro que normalmente é nomeado como error. Os dad
 ## finally
 
 Essa parte é opcional, o código dentro do bloco `finally` será executado independente de dar erro ou não, então se você precisa executar algum bloco de código independente se der erro ou não, poderá utilizar o finally.
+
+Exemplos:
+
+Vamos criar um try catch com uma função que não existe:
+
+```js
+try {
+    funcaoInexistente();
+} catch(error) {
+    console.log(error.name + ' : ' + error.message);
+} finally {
+    console.log('Execução finalizada');
+}
+
+/* 
+    // saída:
+    ReferenceError : funcaoInexistente is not defined
+    Execução finalizada
+*/
+```
+
+Agora vamos criar essa função e quando ela for executada, vamos mandar a mensagem: Agora essa função existe.
+
+```js
+function funcaoInexistente() {
+    console.log('Agora essa Função Existe');
+}
+
+try {
+    funcaoInexistente();
+} catch(error) {
+    console.log(error.name + ' : ' + error.message);
+} finally {
+    console.log('Execução finalizada');
+}
+
+/* 
+    // saída:
+    Agora essa Função Existe
+    Execução finalizada
+*/
+```
