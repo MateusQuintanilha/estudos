@@ -72,6 +72,7 @@ Na computação o termo atribuição refere-se a definir ou redefinir o valor ar
 Utilizamos o operador de atribuição básico ***igual*** ( ***=*** )  para atribuir o valor do operando à ***direita*** ao operando à ***esquerda***.
 
 Exemplo:
+
 ```js
 x = y; // estamos atribuindo o valor de y a x
 ```

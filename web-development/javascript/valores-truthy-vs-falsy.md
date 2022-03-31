@@ -1,6 +1,6 @@
 # Valores considerados Truthy e Falsy no JavaScript
 
-### Valores Truthy
+## Valores Truthy
 
 São valores considerados verdadeiros.
 
@@ -16,7 +16,7 @@ true
 {} // object
 ```
 
-### Valores Falsy
+## Valores Falsy
 
 São valores considerados falsos.
 
