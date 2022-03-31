@@ -79,7 +79,6 @@ ReferenceError: quantidadeDeBananas is not defined
 
 ### Utilizando a palavra reservada ***const***
 
-
 ## Hasteamento de Funções
 
 Assim como nas variáveis, o motor JavaScript também eleva as declarações de funções. Ele move as declarações para o topo do script.
@@ -95,7 +94,6 @@ function calculo(a, b) {
   return a - b;
 }
 ```
-
 
 <!-- https://ricardo-reis.medium.com/hoisting-javascript-aa2642bd715e
  -->

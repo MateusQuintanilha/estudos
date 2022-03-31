@@ -64,7 +64,6 @@ let [valorA = 10, valorB = 15, valorC = 20, valorD = 25, valorE = 30, valorF = 3
 console.log(valorA, valorB, valorC, valorD, valorE, valorF); // saída: 100 150 200 25 30 35
 ```
 
-
 ## Pegando o resto dos elementos usando o Rest (...)
 
 Podemos pegar o restante dos elementos que seriam descartados e criar um novo array usando o rest (repouso) que é representado por 3 pontos (...), observe o exemplo a seguir:

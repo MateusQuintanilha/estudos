@@ -91,4 +91,3 @@ let pi = Math.PI;
 
 console.log(pi) // saída: 3.141592653589793
 ```
-

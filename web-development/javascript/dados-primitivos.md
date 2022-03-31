@@ -120,16 +120,18 @@ vamos simplificar 1 bilhão.
 ```js
 let bilhao = 1000000000;
 ```
+
 vamos colocar o número 1 adicionar a letra `e` e adicionar o número 9, pois 1 bilhão é 1 x 10⁹ ou 1 x 10 multiplicado por 10 nove vezes.
 
 Podemos escrever tanto em minúsculo como em maiúsculo:
+
 ```js
 let bilhaoe = 1e9;
 let bilhaoE = 1E9;
 ```
 
 Também podemos fazer com números quebrados como por exemplo 1.3 bilhões:
-vamos utilizar o 1.3 seguido da letra `e` e iremos adicionar o número 9, pois 1.3 bilhões é a mesma coisa que 1.3 x 10⁹ ou 1.3 x 10 multiplicado por 10 nove vezes. 
+vamos utilizar o 1.3 seguido da letra `e` e iremos adicionar o número 9, pois 1.3 bilhões é a mesma coisa que 1.3 x 10⁹ ou 1.3 x 10 multiplicado por 10 nove vezes.
 
 ```js
 let bilhaoe = 1.3e9;

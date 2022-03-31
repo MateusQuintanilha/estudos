@@ -1,3 +1,5 @@
+# Mais sobre Numbers 2
+
 ## Transformando number em string
 
 ```js
@@ -59,6 +61,7 @@ let num2 = 0.1;
 
 console.log(num1 + num2) // saída: 0.7999999999999999
 ```
+
 E o resultado foi : 0.7999999999999999
 
 Agora vamos somar até chegar a 1
@@ -73,6 +76,7 @@ num1 += num2 // 1
 
 console.log(num1) // saída: 0.9999999999999999
 ```
+
 Teve o mesmo problema de precisão, para resolver isso devemos utilizar parseInt, parseFloat ou Number junto com o toFixed.
 
 ```js
@@ -108,6 +112,7 @@ let raiz = num1 ** (1/2)
 
 console.log(raiz) // saída: 3
 ```
+
 ou dessa maneira:
 
 ```js

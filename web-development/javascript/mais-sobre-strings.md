@@ -91,7 +91,6 @@ console.log(`${umaString} em um lindo dia.`);
 
 ## Procurando dentro da string
 
-
 ### Retorna todas as letra minúsculas
 
 ```js
@@ -100,7 +99,6 @@ let umaString = "Um texto";
 console.log(umaString.match(/[a-z]/g)); 
 // saída: [ 'm', 't', 'e', 'x', 't', 'o' ]
 ```
-
 
 ### Retorna todas as letras maiúsculas
 
@@ -172,7 +170,6 @@ console.log(umaString.split(' '));
 ```
 
 Nesse caso dividimos a string pelo espaço.
-
 
 ## Deixa toda a string em maiúscula
 

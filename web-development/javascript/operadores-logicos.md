@@ -1,6 +1,6 @@
 # Operadores Lógicos
 
-O JavaScript fornece esses operadores lógicos 
+O JavaScript fornece esses operadores lógicos.
 
 ## `&&` AND
 
@@ -35,7 +35,7 @@ let teste = (5 >= 5) || (3 < 6); // true
 
 Retorna o primeiro valor (true) que encontrar
 
-## `!`	NOT
+## `!` NOT
 
 O operador (!), irá trocar o valor de uma operação boolean. Ou seja, (!true) o valor true agora passa a valer (false)
 

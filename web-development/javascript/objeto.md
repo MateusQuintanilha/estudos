@@ -75,7 +75,6 @@ ReferenceError: Name is not defined
 
 A notação por ponto não aceita strings ou identificadores que não são validos, para conseguir acessar essa propriedade iremos utilizar a notação por colchetes.
 
-
 ### Notação por colchetes (notação do tipo array)
 
 Para utilizar a notação por colchetes iremos utilizar o nome do objeto com um par de colchetes `[]` e dentro dos colchetes iremos colocar o nome da propriedade entre aspas simples ou duplas, como no exemplo a seguir:
@@ -129,7 +128,6 @@ console.log(pessoa1.nome, pessoa2.nome); // saída: Rodrigo Fernando
 ```
 
 ---
-
 
 ## Editando dados de um objeto
 
@@ -198,7 +196,6 @@ console.log(contato)
  *  }
  */
 ```
-
 
 ### Excluir uma propriedade de um objeto
 
@@ -323,7 +320,6 @@ personagemFicticio.frase()
 Resultado:
 
 Virando o boné
-
 
 ### Adicionando uma função externa no objeto
 

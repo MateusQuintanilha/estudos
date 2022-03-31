@@ -11,4 +11,3 @@ Um operador de atribuição atribui um valor ao operando à sua esquerda baseado
 |   `*=`    |   `x *= y`    |       `x = x * y`     |
 |   `/=`    |   `x /= y`    |       `x = x / y`     |
 |   `%=`    |   `x %= y`    |       `x = x % y`     |
-

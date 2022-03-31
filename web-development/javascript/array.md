@@ -9,13 +9,13 @@ Podemos criar um array utilizando **a declaração direta ou a declaração lite
 
 Veja a seguir a sintaxe para cada uma das formas de criar um array:
 
-**Declaração Direta**
+### **Declaração Direta**
 
 ```js
 let arrayDireta = new Array();
 ```
 
-**Declaração Literal**
+### **Declaração Literal**
 
 ```js
 let arrayLiteral = [];
@@ -23,13 +23,13 @@ let arrayLiteral = [];
 
 Criamos os arrays vazio, agora vamos criar os mesmos arrays mas com elementos dentro, quando for inserir mais de um elemento é necessário separa-los e para fazer isso utilizamos a vírgula `,`.
 
-**Declaração Direta**
+### **Adicionando elementos na declaração Direta**
 
 ```js
 let arrayDireta = new Array(elemento01, elemento02, elemento03);
 ```
 
-**Declaração Literal**
+### **Adicionando elementos na declaração Literal**
 
 ```js
 let arrayLiteral = [elemento01, elemento02, elemento03];
@@ -37,7 +37,7 @@ let arrayLiteral = [elemento01, elemento02, elemento03];
 
 ## Utilizando um array
 
-**Como vimos, existem formas diferentes para se declarar um array, a mais recomenda é a declaração do tipo literal, uma vez que essa forma é mais prática, tem maior legibilidade e velocidade de execução**
+Como vimos, existem formas diferentes para se declarar um array, a mais recomenda é a declaração do tipo literal, uma vez que essa forma é mais prática, tem maior legibilidade e velocidade de execução
 
 Então a partir de agora irei utilizar apenas a forma literal.
 
@@ -157,6 +157,7 @@ Podemos remover elementos a partir de uma posição específica de um array util
 ```js
 nomeDaArray.splice(position, num);
 ```
+
 > **position** determina a posição do índice inicial  
 > **num** determina a quantidade de elementos que serão excluídos  
 
@@ -198,7 +199,6 @@ Os dois itens excluídos foram armazenados na variável `itensExcluidos`.
 
 Agora vamos ver como adicionar elementos no array.
 
-
 ## Adicionando um elemento em uma posição específica de um array
 
 Também podemos utilizar o método `splice()`  para adicionar um ou mais elementos em um array passando três ou mais argumentos.
@@ -218,7 +218,7 @@ let itensExcluidos = motos.splice(1,1, 'Hayabusa', 'Falcon');
 
 console.log(motos); // saída: [ 'CG 160', 'Hayabusa', 'Falcon', 'Ténéré 700' ]
 console.log(itensExcluidos); // saída: [ 'Biz 125' ]
-``` 
+```
 
 ## Adicionando elementos no início de um array
 
@@ -227,8 +227,8 @@ Utilizamos o método `unshift()` para adicionar um ou mais elementos ao início 
 ```js
 nomeDoArray.unshift(valor);
 ```
-> **valor** é o elemento que desejamos adicionar  no inicio do array, se caso for passar mais de um elemento, separe eles com uma vírgula `(,)`.
 
+> **valor** é o elemento que desejamos adicionar  no inicio do array, se caso for passar mais de um elemento, separe eles com uma vírgula `(,)`.
 
 Para este exemplo iremos utilizar um array com modelos de carros.
 
@@ -258,6 +258,7 @@ Utilizamos o método `push()` para adicionar um ou mais elementos ao final de um
 ```js
 nomeDoArray.push(valor);
 ```
+
 > **valor** é o elemento que desejamos adicionar  no inicio do array, se caso for passar mais de um elemento, separe eles com uma vírgula `(,)`.
 
 Nesse exemplo iremos utilizar o array sorvetes para armazenar os nomes de alguns tipos de sorvetes.
@@ -268,6 +269,7 @@ sorvetes.push('Frutas Vermelhas', 'Ninho Trufado');
 
 console.log(sorvetes); // saída: ['Morango', 'Chocolate', 'Limão', 'Flocos', 'Ninho']
 ```
+
 Como podemos ver na saída, os valores `'Flocos'` e `'Ninho'` foram adicionados ao final do array.
 
 ## Fatiando um Array

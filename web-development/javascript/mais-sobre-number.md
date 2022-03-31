@@ -1,3 +1,5 @@
+# Mais sobre Numbers
+
 ## converter números do tipo string para tipo number
 
 ### parseInt()
@@ -29,6 +31,7 @@ console.log(typeof num1, num1) // saída: number 5.5
 ```
 
 ### Number()
+
 Converte o número em string para o tipo number, não tem distinção do tipo do número.
 
 ```js

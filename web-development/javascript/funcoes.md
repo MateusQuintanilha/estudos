@@ -77,6 +77,7 @@ function soma(x = 0, y = 0) {
 }
 console.log(soma()); // saída: 0
 ```
+
 Atribuímos o valor de 0 para os dois parâmetros da função soma e a soma de 0 com 0 resultará em 0.
 
 ## Criando uma função anonima
