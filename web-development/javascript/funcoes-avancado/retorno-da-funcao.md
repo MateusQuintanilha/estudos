@@ -91,3 +91,95 @@ Como um parâmetro não recebeu um argumento em sua iniciação, ele continuou c
 
 Para evitar esse tipo de erro podemos adicionar valores padrões para os parâmetros e vamos ver como a seguir.
 
+## Adicionando valor padrão ao parâmetro
+
+Podemos adicionar valores padrões para parâmetros em uma variável no momento em que declaramos uma função, para fazer isso só precisamos atribuir um valor usando o simbolo de igual `=` ao parâmetro desejado:
+
+```js
+function soma(x = 0, y = 0) {
+    console.log(x + y);
+}
+soma(); // saída: 0
+```
+
+Agora vamos criar uma função de soma com três valores:
+
+```js
+function soma(x = 0, y = 3, z = 0) {
+    console.log(x + y + z);
+}
+```
+
+Quero passar o valor x e o valor z, mas quero que o valor y seja o valor padrão, como podemos fazer isso?
+
+Podemos passar o valor `undefined` no argumento que será responsável por passar o valor para o parâmetro y, como isso o valor a ser calculado será o seu valor padrão:
+
+```js
+function soma(x = 0, y = 3, z = 0) {
+    console.log(x + y + z);
+}
+soma(5, undefined, 2); // saída: 10
+```
+
+O ideal seria refazer a sua lógica, pois esse tipo de código não é legal, mas é uma maneira, caso precise que um argumento assuma o valor padrão do parâmetro.
+
+## Atribuição via desestruturação usando parâmetros
+
+Podemos fazer a atribuição via desestruturação de objeto usando os parâmetros, como podemos ver no exemplo abaixo:
+
+```js
+const person = {
+    nome: 'Terry',
+    sobrenome: 'Steele',
+    idade: 29
+}
+
+function funcao({nome, sobrenome, idade}) {
+    console.log(nome, sobrenome, idade);
+}
+
+funcao(person) // saída: Terry Steele 29
+```
+
+Também podemos fazer a atribuição via desestruturação de arrays usando os parâmetros:
+
+```js
+const frutas = ['Uva', 'Morango', 'Laranja']
+
+function funcao([valor0, valor1, valor2]) {
+    console.log(valor0, valor1, valor2);
+}
+
+funcao(frutas) // saída: Uva Morango Laranja
+
+```
+
+## Usando rest no parâmetro
+
+Podemos usar o rest para pegar o restante dos argumentos, vamos criar um contador que irá somar todos os valores inseridos como argumento.
+
+```js
+function contador(...numeros) {
+    let contador = 0;
+    for(numero of numeros){
+        contador += numero;
+    }
+    console.log(contador);
+}
+contador(0, 10, 20, 30 , 40, 50, 100); // saída: 250
+```
+
+Também podemos passar parâmetros antes do rest e os argumentos que excedem a quantidade de parâmetros irão cair no rest.
+
+```js
+function contador(operador, acumulador, ...numeros) {
+    for(let numero of numeros) {
+        if(operador === '+') acumulador += numero;
+        if(operador === '-') acumulador -= numero;
+        if(operador === '*') acumulador *= numero;
+        if(operador === '/') acumulador /= numero;
+    }
+    console.log(acumulador)
+}
+contador('+', 0, 10, 20, 30 , 40, 50); // saída: 150
+```
