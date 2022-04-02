@@ -1,8 +1,27 @@
 # Arrow Functions
 
-Arrow function é uma forma diferente de declarar uma função, ela não utiliza a palavra function ao invés disso adicionamos um igual seguido do sinal de maior após os parentes `() =>`, a junção do igual e do sinal de maior se parece com uma seta/flecha e dai que veio o nome de arrow function.
+Uma expressão arrow function possui uma sintaxe mais curta quando comparada a uma expressão de função. A palavra `function` não é utilizada, no lugar dela é adicionado os símbolos de igual e maior após os parenteses `() =>`, como podemos ver nos exemplos a seguir:
 
-Exemplo:
+Exemplo de algumas funções:
+
+```js
+// Função literal
+function literal() {
+
+}
+
+// Função de expressão (function expression)
+const expression = function() {
+
+};
+
+// Arrow Function
+const arrow = () => {
+    
+};
+```
+
+Exemplo pratico de arrow function:
 
 ```js
 const raizQuadrada = (parametro) => {
@@ -10,8 +29,12 @@ const raizQuadrada = (parametro) => {
 }
 ```
 
-Quando uma arrow function possui só uma linha de código, podemos retirar os parenteses e a palavra return que irá funcionar da mesma forma, como no exemplo a seguir:
+Quando o conteúdo de uma arrow function possuir só uma linha de código, podemos retirar os parenteses e a palavra return que irá funcionar da mesma forma, como no exemplo a seguir:
 
 ```js
 const raizQuadrada = (parametro) => parametro * parametro;
 ```
+
+## Diferenças de uma arrow function para uma function expression
+
+A arrow function não tem o seu próprio `this`, `arguments`, `super` ou `new.target`.
