@@ -108,3 +108,7 @@ let exemplo = 'Exemplo';
     }
 }
 ```
+
+## Estruturas que usam o escopo de bloco
+
+O escopo de bloco é usado por `if`, `for`, `while`.
