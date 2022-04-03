@@ -4,7 +4,7 @@
 
 Como o seu próprio nome diz, o escopo global engloba toda a aplicação, então todo conteúdo inserido no escopo global poderá ser acessada em qualquer lugar do código. Então tenha cuidado ao declarar variáveis globais, pois dependendo da forma que for utilizada poderá gerar conflitos que não desejamos.
 
-O escopo global é tudo que está fora de qualquer outro escopo, ou para ser mais preciso, todos os outros escopos são criados no escopo global, podemos imaginar o escopo global sendo o arquivo do script.
+O escopo global é tudo que está fora de qualquer outro escopo, ou para ser mais preciso, todos os outros escopos são criados dentro do escopo global.
 
 ```js
 let variavelGlobal = 'Estou no Escopo Global';
