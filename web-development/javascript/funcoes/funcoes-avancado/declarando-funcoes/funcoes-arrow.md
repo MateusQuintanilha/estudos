@@ -34,7 +34,3 @@ Quando o conteúdo de uma arrow function possuir só uma linha de código, podem
 ```js
 const raizQuadrada = (parametro) => parametro * parametro;
 ```
-
-## Diferenças de uma arrow function para uma function expression
-
-A arrow function não tem o seu próprio `this`, `arguments`, `super` ou `new.target`.
