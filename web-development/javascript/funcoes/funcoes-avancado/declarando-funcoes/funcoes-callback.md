@@ -30,3 +30,25 @@ function myName(qualquerNome) {
 
 myName(mensagem); // saída: Olá mateus
 ```
+
+Outro Exemplo:
+
+```js
+const fabricaDeUsuarios = function() {
+    let id = 0;
+
+    function criaUsuario(nome) {
+        id++;
+        return {id, nome};
+    };
+
+    return criaUsuario;
+}
+
+const novoUsuario = fabricaDeUsuarios();
+
+console.log(novoUsuario('João')); // saída: { id: 1, nome: 'João' }
+console.log(novoUsuario('Jorge')); // saída: { id: 2, nome: 'Jorge' }
+console.log(novoUsuario('Paulo')); // saída: { id: 3, nome: 'Paulo' }
+console.log(novoUsuario('Lucas')); // saída: { id: 4, nome: 'Lucas' }
+```
