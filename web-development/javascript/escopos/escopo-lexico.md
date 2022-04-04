@@ -94,7 +94,7 @@ console.log(variavel01); // saída: [Function: filho]
 variavel01(); // saída: Variável criada na função pai
 ```
 
-Não sei se você percebeu, mas estamos acessando uma variável que está dentro da função pai sem executa-la, estamos tendo acesso a essa variável através da função filho dentro dela e podemos fazer isso diversas vezes:
+Não sei se você percebeu, mas estamos acessando uma variável que está dentro da função pai, estamos tendo acesso a essa variável através da função filho dentro dela e podemos fazer isso diversas vezes:
 
 ```js
 function pai() {
