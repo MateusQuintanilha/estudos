@@ -4,7 +4,9 @@ O escopo serve para delimitar uma região do código, onde o conteúdo em seu in
 
 Podemos usar os seguintes escopos no JavaScript:
 
+* Escopo Local
 * Escopo Global
+* Escopo Interno
 * Escopo de Bloco
 * Escopo de Função
 * Escopo de Módulo
