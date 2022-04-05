@@ -131,3 +131,50 @@ funcao01(function() {
     Todas as funções foram executadas
 */
 ```
+
+```js
+function tempoAleatorio(min = 2000, max = 4000) {
+    const numeroAleatorio = Math.random() * (max - min) + min;
+    return Math.floor(numeroAleatorio);
+}
+
+function funcao01(callback) {
+    setTimeout(()=>{
+        console.log('Executando a primeira função');
+        if(callback) callback();
+    }, tempoAleatorio());
+}
+function funcao02(callback) {
+    setTimeout(()=>{
+        console.log('Executando a segunda função');
+        if(callback) callback();
+    }, tempoAleatorio());
+}
+function funcao03(callback) {
+    setTimeout(()=>{
+        console.log('Executando a terceira função');
+        if(callback) callback();
+}, tempoAleatorio());
+}
+
+funcao01(funcao01Callback);
+
+function funcao01Callback() {
+    funcao02(funcao02Callback);
+}
+
+function funcao02Callback() {
+    funcao03(funcao03Callback);
+}
+
+function funcao03Callback() {
+    console.log('Todas as funções foram executadas');
+}
+
+/* saída de todas as execuções em ordem:
+    Executando a primeira função
+    Executando a segunda função
+    Executando a terceira função
+    Todas as funções foram executadas
+*/
+```
