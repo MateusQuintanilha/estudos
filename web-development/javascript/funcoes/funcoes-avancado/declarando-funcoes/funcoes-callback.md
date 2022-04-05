@@ -86,3 +86,48 @@ console.log('Todas as funções foram executadas');
     Executando a segunda função
 */
 ```
+
+Perceba que a segunda função foi executada por ultimo, pois ela teve um atraso de dois segundos, mas existem casos em que isso não poderá acontecer e para resolver isso iremos usar a callback.
+
+Possuímos 3 funções que precisam ser executadas em sequência mas não sabemos quanto tempo o javascript levar para acessar o banco de dados ou para receber os dados de uma API, na internet precisamos fazer coisas que não conseguimos controlar quanto tempo, para simular esse tempo de forma aleatória, vamos criar uma função que irá gerar um valor randômico entre 2 e 4 segundos.
+
+```js
+function tempoAleatorio(min = 2000, max = 4000) {
+    const numeroAleatorio = Math.random() * (max - min) + min;
+    return Math.floor(numeroAleatorio);
+}
+
+function funcao01(callback) {
+    setTimeout(()=>{
+        console.log('Executando a primeira função');
+        if(callback) callback();
+    }, tempoAleatorio());
+}
+function funcao02(callback) {
+    setTimeout(()=>{
+        console.log('Executando a segunda função');
+        if(callback) callback();
+    }, tempoAleatorio());
+}
+function funcao03(callback) {
+    setTimeout(()=>{
+        console.log('Executando a terceira função');
+        if(callback) callback();
+}, tempoAleatorio());
+}
+
+funcao01(function() {
+    funcao02(function(){
+        funcao03(function(){
+            console.log('Todas as funções foram executadas');
+        });
+    });
+});
+
+/* saída de todas as execuções em ordem:
+    Executando a primeira função
+    Executando a segunda função
+    Executando a terceira função
+    Todas as funções foram executadas
+*/
+```
