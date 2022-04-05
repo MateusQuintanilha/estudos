@@ -1,0 +1,1 @@
+# Funções fábrica (Factory Functions)
