@@ -31,6 +31,12 @@ function myName(qualquerNome) {
 myName(mensagem); // saída: Olá mateus
 ```
 
+Se já utilizou o método de addEventListener, então você já usou callback, pois no segundo argumento desse método é preciso passar uma função de callback:
+
+```js
+addEventListener('click', function(){ /* Função de Callback */ } )
+```
+
 Outro Exemplo:
 
 Vamos criar 3 funções:
@@ -115,7 +121,13 @@ function funcao03(callback) {
         if(callback) callback();
 }, tempoAleatorio());
 }
+```
 
+Podemos executar essa funções callback de duas maneiras:
+
+A primeira maneira é chamada callback hell:
+
+```js
 funcao01(function() {
     funcao02(function(){
         funcao03(function(){
@@ -132,31 +144,11 @@ funcao01(function() {
 */
 ```
 
+Mas ela tem um problema, pois criamos várias funções uma dentro da e em momentos em que precisarmos criar muitas funções uma dentro da outra será complicado para localizar um funções pois as linhas de códigos ficarão gigantes.
+
+Para resolver esse problema podemos executar as funções da maneira abaixo:
+
 ```js
-function tempoAleatorio(min = 2000, max = 4000) {
-    const numeroAleatorio = Math.random() * (max - min) + min;
-    return Math.floor(numeroAleatorio);
-}
-
-function funcao01(callback) {
-    setTimeout(()=>{
-        console.log('Executando a primeira função');
-        if(callback) callback();
-    }, tempoAleatorio());
-}
-function funcao02(callback) {
-    setTimeout(()=>{
-        console.log('Executando a segunda função');
-        if(callback) callback();
-    }, tempoAleatorio());
-}
-function funcao03(callback) {
-    setTimeout(()=>{
-        console.log('Executando a terceira função');
-        if(callback) callback();
-}, tempoAleatorio());
-}
-
 funcao01(funcao01Callback);
 
 function funcao01Callback() {
