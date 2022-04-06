@@ -19,3 +19,5 @@ Também podemos usar arrow function:
 })
 (); // Inicialização da função
 ```
+
+Podem ser usadas para não gerar conflitos com outras variáveis ou poluir o escopo global do browser, então todo o conteúdo dentro de um arquivo podem ser colocados dentro de uma função IIFE.
