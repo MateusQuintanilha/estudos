@@ -113,3 +113,37 @@ Agora ao tentar imprimir os dados do método na tela não irá gerar erro:
 ```js
 console.log(user01.getFullName()); // saída: Ruth Sims 20
 ```
+
+## Usando o getter
+
+Podemos mascarar esse método como uma chave desse objeto, mas apenas no caso em que não é preciso passar argumentos para o método. Ficando assim mais prático para usa-lo já que não será mais preciso adicionar as chaves após o nome do método.
+
+Para fazer isso precisamos adicionar a palavra `get` na frente do nome do método:
+
+```js
+const createUser = (firstName, lastName, email) => {
+    return {
+        firstName,
+        lastName,
+        email,
+        code: 20,
+        get getFullName() {
+            return firstName + ' ' + lastName + ' ' + this.code;
+        }
+    }
+};
+
+const user01 = createUser('Ruth', 'Sims','ruth@sims.rs');
+```
+
+Agora se você tentar usar esse método usando os parenteses irá gerar um erro:
+
+```js
+console.log(user01.getFullName()); // saída: TypeError: user01.getFullName is not a function
+```
+
+Então é preciso usar o nome do método sem os parenteses:
+
+```js
+console.log(user01.getFullName); // saída: Ruth Sims 20
+```
