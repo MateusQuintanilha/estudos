@@ -61,3 +61,55 @@ Vamos criar o `user02` também:
 ```js
 const user02 = createUser('Jimmy', 'Crawford','jimmy@crawford.jc');
 ```
+
+## Usando this
+
+Usamos os nomes dos parâmetros para criar o nosso método `getFullName`, então nesse caso o método pegará os valores diretamente dos parâmetros e não do objeto criado.
+
+Imagine que precisamos criar uma chave com um valor no objeto mas esses dados não virão através dos parâmetros, vamos criar uma chave com o nome de `code` com um valor de 20 abaixo da chave email para usar como exemplo e vamos passar essa chave dentro do método `getFullName`
+
+```js
+const createUser = (firstName, lastName, email) => {
+    return {
+        firstName,
+        lastName,
+        email,
+        code: 20,
+        getFullName() {
+            return firstName + ' ' + lastName + ' ' + code;
+        }
+    }
+};
+
+const user01 = createUser('Ruth', 'Sims','ruth@sims.rs');
+```
+
+Ao tentar imprimir os dados desse método no console irá gerar um erro falando que `code` não foi definido:
+
+```js
+console.log(user01.getFullName()); // saída: code is not defined
+```
+
+Para conseguir ter acesso a chave dentro do objeto precisamos usar a palavra `this` que estará se referindo ao `code` do contexto da execução que no caso do exemplo será o code do `user01`.
+
+```js
+const createUser = (firstName, lastName, email) => {
+    return {
+        firstName,
+        lastName,
+        email,
+        code: 20,
+        getFullName() {
+            return firstName + ' ' + lastName + ' ' + this.code;
+        }
+    }
+};
+
+const user01 = createUser('Ruth', 'Sims','ruth@sims.rs');
+```
+
+Agora ao tentar imprimir os dados do método na tela não irá gerar erro:
+
+```js
+console.log(user01.getFullName()); // saída: Ruth Sims 20
+```
