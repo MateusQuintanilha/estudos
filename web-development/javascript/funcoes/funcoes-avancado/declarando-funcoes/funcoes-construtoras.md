@@ -64,3 +64,21 @@ function Produto(type, mark, model, price) {
     }
 }
 ```
+
+## Instanciando um novo Produto
+
+Agora que a estrutura foi criada, vamos instancias os dois produtos que usamos como exemplo, para fazer isso iremos usar o operador `new`. ele é responsável por criar uma nova instancia de um tipo de objeto, ou seja, ele irá criar um objeto com os dados que serão passados na função produto.
+
+Vamos instanciar o produto1, para fazer isso, vamos criar uma variável com o nome produto1 e atribuir a ela o operador `new` seguido da função Produto e dentro dos parênteses iremos passar as propriedades do produto como argumento:
+
+```js
+const produto1 = new Produto('Processador', 'AMD', 'Ryzen 5 5600G', 1608.05);
+```
+
+Agora vamos instanciar o produto2:
+
+```js
+const produto2 = new Produto('Processador', 'AMD', 'Ryzen 5 5600X', 1665.52);
+```
+
+Viu como ficou mais fácil? Agora podemos criar vários produtos de uma maneira mais simples.
