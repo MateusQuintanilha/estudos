@@ -76,3 +76,60 @@ for (let valor of gerandoValor) {
     saída3: 3
 */
 ```
+
+## Executando uma função geradora dentro de outra função geradora
+
+Podemos executar uma função geradora dentro de outra, vamos criar uma função geradora com o nome de geradoraInterna e ela será executada dentro da função geradora que possui o nome de geradora.
+
+* Vamos criar uma função com o nome de geradoraInterna e ela possuirá três `yield` com o respectivos valores de 1, 2 e 3.
+* Vamos criar a outra função com o nome de geradora e ela possuirá três `yield` com o respectivos valores de 4, 5 e 6.
+
+```js
+function* geradoraInterna() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
+
+function* geradora() {
+    yield 4;
+    yield 5;
+    yield 6;
+}
+```
+
+Agora iremos precisar usar o `yield` seguido por um asterisco que ficará assim: `yield*` e nele iremos passar a execução da função geradoraInterna, precisamos colocar ela na posição em que queremos executar, nesse caso ela precisará ficar no início, já que queremos a sequencia dos valores de 1 a 6:
+
+```js
+function* geradoraInterna() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
+
+function* geradora() {
+    yield* geradoraInterna();
+    yield 4;
+    yield 5;
+    yield 6;
+}
+```
+
+Vamos atribuir o valor em uma variável com o nome `gerandoValor` e para executar vamos usar um for...of:
+
+```js
+const gerandoValor = geradora();
+
+for (let valor of gerandoValor) {
+    console.log(valor);
+}
+
+/* 
+    saída1: 1
+    saída2: 2
+    saída3: 3
+    saída4: 4
+    saída5: 5
+    saída6: 6
+*/
+```
