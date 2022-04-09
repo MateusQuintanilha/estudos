@@ -5,7 +5,14 @@ Um a função fábrica é uma função que retorna um novo objeto sem usar a pal
 Vamos criar um objeto chamado `user01`:
 
 ```js
-user01 = {firstName: 'Ruth', lastName: 'Sims', email: 'ruth@sims.rs', getFullName() {return this.firstName + ' ' + this.lastName;}};
+user01 = {
+    firstName: 'Ruth', 
+    lastName: 'Sims', 
+    email: 'ruth@sims.rs', 
+    getFullName() {
+        return this.firstName + ' ' + this.lastName;
+        }
+    };
 ```
 
 O objeto `user01` possui 3 propriedades: `firstName`, `lastName`, `email`, e um método `getFullName()` que retorna o nome completo.
@@ -13,7 +20,13 @@ O objeto `user01` possui 3 propriedades: `firstName`, `lastName`, `email`, e um 
 Suponha que seja necessário criar outro objeto semelhante chamado `user02`, vocÊ poderá duplicar o código da seguinte forma:
 
 ```js
-user02 = {firstName: 'Jimmy', lastName: 'Crawford', email: 'jimmy@crawford.jc', getFullName() {return this.firstName + ' ' + this.lastName;}};
+user02 = {
+    firstName: 'Jimmy', 
+    lastName: 'Crawford', 
+    email: 'jimmy@crawford.jc', 
+    getFullName() {return this.firstName + ' ' + this.lastName;
+    }
+};
 ```
 
 Neste exemplo, os objetos `user01` e `user02` possuem as mesmas propriedades e métodos. Mas o problem é que estamos repetindo muito código, e se precisarmos criar 20 usuários? E depois dos 20 usuários criados precisarmos adicionar um método que retorna o nome e o email do usuário?
