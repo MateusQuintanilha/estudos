@@ -44,3 +44,35 @@ console.log(gerandoValor); // saída: Object [Generator] {}
 
 A variável `gerandoValor` contém um objeto Generator.
 
+## Executando a função e usando o método next
+
+Para executar essa função precisamos usar o método `next()`. Esse método é responsável por executar o conteúdo da função onde o método foi iterado até a primeira expressão `yield`, esse `yield` irá retornar o seu conteúdo para o `next()` que em seguida irá criar e retornar um objeto contendo a propriedade `value` contendo o valor retornado pelo `yield` e a propriedade boolean `done` que é responsável por indicar se o gerador produziu o seu último valor, enquanto a função geradora possui valor para retornar essa propriedade será `true`, ao chegar em seu último valor essa propriedade passará a ter o valor de `false`.
+
+```js
+console.log(gerandoValor.next()); // saída: { value: 1, done: false }
+console.log(gerandoValor.next()); // saída: { value: 2, done: false }
+console.log(gerandoValor.next()); // saída: { value: 3, done: false }
+console.log(gerandoValor.next()); // saída: { value: undefined, done: true }
+```
+
+para acessar o valor do método `next()` só precisamos acessa a propriedade `value`:
+
+```js
+console.log(gerandoValor.next().value); // saída: 1
+console.log(gerandoValor.next().value); // saída: 2
+console.log(gerandoValor.next().value); // saída: 3
+console.log(gerandoValor.next().value); // saída: undefined
+```
+
+Também podemos criar um for...of para acessar esses valores e o for...of saberá quando parar a sua execução:
+
+```js
+for (let valor of gerandoValor) {
+    console.log(valor);
+}
+/* 
+    saída1: 1
+    saída2: 2
+    saída3: 3
+*/
+```
