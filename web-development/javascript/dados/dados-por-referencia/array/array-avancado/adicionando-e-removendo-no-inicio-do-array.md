@@ -30,3 +30,26 @@ let resultado = carros.unshift('Monza', 'Chevette');
 console.log(carros); // saída: ['Monza', 'Chevette', 'Gol', 'Opala', 'Uno']
 console.log(resultado) // saída: 5
 ```
+
+## Removendo o primeiro elemento de um array
+
+Para remover o primeiro item de um array iremos utilizar o método `shift()`. Além de excluir o elemento, ele retorna o item excluído, caso o valor seja atribuído a uma variável ou constante.
+
+Vamos criar um array com o nome de legumes que irá conter alguns nomes de legumes.
+
+```js
+let legumes = ['Abóbora', 'Beterraba', 'Chuchu', 'Inhame'];
+legumes.shift();
+
+console.log(legumes); // saída: [ 'Beterraba', 'Chuchu', 'Inhame' ]
+```
+
+Como podemos ver, o primeiro elemento que  contém a 'Abóbora' foi removido, agora vamos atribuir o `legumes.shift();` a uma variável com o nome de `itemExcluido` que irá receber o elemento excluído.
+
+```js
+let legumes = ['Abóbora', 'Beterraba', 'Chuchu', 'Inhame'];
+let itemExcluido = legumes.shift();
+
+console.log(legumes); // saída: [ 'Beterraba', 'Chuchu', 'Inhame' ]
+console.log(itemExcluido); // saída: 'Abóbora'
+```
