@@ -99,3 +99,90 @@ const valoresFiltrados =  valores.filter(valor => valor > 10);
 
 console.log(valoresFiltrados); // saída: [ 32, 65, 75, 234, 742, 34 ]
 ```
+
+### 2º Exemplo
+
+A partir desse exemplo estarei usando uma arrow function como callback o mais simplificada possível
+
+Vamos criar um array que irá conter objetos, nesse objeto vamos ter nome, idade, email.
+
+```js
+const pessoas = [
+    {nome: 'Earl Briggs', idade: 28, email: 'briggs@email.com'},
+    {nome: 'Marvin Weber', idade: 23, email: 'weber@email.com'},
+    {nome: 'Kyle Walsh', idade: 52, email: 'walsh@outroemail.com'},
+    {nome: 'Claudia Jensen', idade: 34, email: 'jensen@email.com'},
+    {nome: 'Adam Turner', idade: 47, email: 'turner@outroemail.com'},
+    {nome: 'Corey Higgins', idade: 51, email: 'higgins@email.com'},
+];
+```
+
+#### Filtrando as pessoas que possuem o nome com mais de 12 caracteres
+
+```js
+const pessoasComNomeGrande = pessoas.filter((obj) => {
+    return obj.nome.length < 12;
+});
+
+console.log(pessoasComNomeGrande);
+
+/*  saída:
+    [
+        { nome: 'Earl Briggs', idade: 28, email: 'briggs@email.com' },
+        { nome: 'Kyle Walsh', idade: 52, email: 'walsh@outroemail.com' },
+        { nome: 'Adam Turner', idade: 47, email: 'turner@outroemail.com' }
+    ]
+*/
+```
+
+#### Filtrando as pessoas que possuem o nome com menos de 12 caracteres
+
+```js
+const pessoasComNomePequeno = pessoas.filter((obj) => {
+    return obj.nome.length > 12;
+});
+
+console.log(pessoasComNomePequeno);
+
+/*  saída:
+    [
+        { nome: 'Claudia Jensen', idade: 34, email: 'jensen@email.com' },
+        { nome: 'Corey Higgins', idade: 51, email: 'higgins@email.com' }
+    ]
+*/
+```
+
+#### Filtrando as pessoas que possuem menos de trinta anos
+
+```js
+const pessoasComMenosDeTrintaAnos = pessoas.filter((obj) => {
+    return obj.idade < 30;
+});
+console.log(pessoasComMenosDeTrintaAnos);
+
+/*  saída:
+    [
+        { nome: 'Earl Briggs', idade: 28, email: 'briggs@email.com' },
+        { nome: 'Marvin Weber', idade: 23, email: 'weber@email.com' }
+    ]
+*/
+```
+
+#### Filtrando as pessoas que possuem o email com @email
+
+```js
+const pessoasComEmail = pessoas.filter((obj) => {
+    if(obj.email.indexOf('@email') > 0) return obj
+});
+
+console.log(pessoasComEmail)
+
+/*  saída:
+    [
+        { nome: 'Earl Briggs', idade: 28, email: 'briggs@email.com' },
+        { nome: 'Marvin Weber', idade: 23, email: 'weber@email.com' },
+        { nome: 'Claudia Jensen', idade: 34, email: 'jensen@email.com' },
+        { nome: 'Corey Higgins', idade: 51, email: 'higgins@email.com' }
+    ]
+*/
+```
