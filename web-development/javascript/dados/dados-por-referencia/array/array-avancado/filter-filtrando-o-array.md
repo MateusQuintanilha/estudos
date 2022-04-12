@@ -36,3 +36,66 @@ function callback(valorAtual, indexAtual, arrayPercorrido) {}
 * `arrayPercorrido` é opcional e representa o próprio array que está sendo percorrido.
 
 **É importante lembrar que o método `filter()` não modifica o array existente, ele irá criar um novo array. Então no final teremos um array do mesmo tamanho ou menor que o array original**
+
+## Exemplos de usos do método `filter()`
+
+### 1º Exemplo
+
+Vamos criar um array com 10 valores aleatórios que será usado como base para o exemplos:
+
+```js
+const valores = [5, 10, 7, 32, 65, 75, 234, 742, 34, 6];
+```
+
+Em seguida vamos usar o método `filter()` que irá retornar somente os valores maiores que 10:
+
+#### Usando uma função literal
+
+```js
+function callbackFilter(valor) {
+    return valor > 10;
+}
+const valoresFiltrados =  valores.filter(callbackFilter);
+
+console.log(valoresFiltrados); // saída: [ 32, 65, 75, 234, 742, 34 ]
+```
+
+#### Usando uma função anônima
+
+```js
+const valoresFiltrados =  valores.filter(function(valor) {
+    return valor > 10
+});
+
+console.log(valoresFiltrados); // saída: [ 32, 65, 75, 234, 742, 34 ]
+```
+
+#### Usando uma arrow function
+
+```js
+const valoresFiltrados =  valores.filter((valor) => {
+    return valor > 10
+});
+
+console.log(valoresFiltrados); // saída: [ 32, 65, 75, 234, 742, 34 ]
+```
+
+#### Simplificando a arrow function
+
+Como estamos usando apenas um parâmetro na arrow function podemos retirar os parênteses:
+
+```js
+const valoresFiltrados =  valores.filter(valor => {
+    return valor > 10
+});
+
+console.log(valoresFiltrados); // saída: [ 32, 65, 75, 234, 742, 34 ]
+```
+
+E como só possuímos uma linha de código dentro da arrow function podemos retirar as chaves e a palavra return:
+
+```js
+const valoresFiltrados =  valores.filter(valor => valor > 10);
+
+console.log(valoresFiltrados); // saída: [ 32, 65, 75, 234, 742, 34 ]
+```
