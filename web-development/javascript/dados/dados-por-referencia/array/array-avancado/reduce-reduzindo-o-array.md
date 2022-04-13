@@ -35,3 +35,55 @@ function callback(acumulador, valorAtual, indexAtual, array){}
 **É importante lembrar que caso o valor inicial não seja passado, o acumulador iniciará com o valor do primeiro elemento da lista.**
 
 ## Exemplos de usos do método `reduce()`
+
+### 1º Exemplo
+
+Vamos criar um array com 10 valores aleatórios que será usado como base para os exemplos:
+
+```js
+const valores = [5, 10, 7, 32, 65, 75, 234, 742, 34, 6];
+```
+
+Em seguida vamos usar o método `recude()` para somar todos os números:
+
+#### Usando uma função literal
+
+```js
+const total = valores.reduce(callback, 0);
+
+function callback(acumulador, valorAtual) {
+    return acumulador += valorAtual
+}
+
+console.log(total); // saída: 1210
+```
+
+#### Usando uma função anônima
+
+```js
+const total = valores.reduce(function(acumulador, valorAtual) {
+    return acumulador += valorAtual
+}, 0);
+
+console.log(total); // saída: 1210
+```
+
+#### Usando uma arrow function
+
+```js
+const total = valores.reduce((acumulador, valorAtual) => {
+    return acumulador += valorAtual
+}, 0);
+
+console.log(total); // saída: 1210
+```
+
+#### Simplificando a arrow function
+
+Como estamos usando dois parâmetros na arrow function não podemos retirar os parênteses mas como só possuímos uma linha de código dentro da arrow function podemos retirar as chaves e a palavra return:
+
+```js
+const total = valores.reduce((acumulador, valorAtual) => acumulador += valorAtual, 0);
+
+console.log(total); // saída: 1210
+```
