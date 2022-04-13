@@ -87,3 +87,31 @@ const total = valores.reduce((acumulador, valorAtual) => acumulador += valorAtua
 
 console.log(total); // saída: 1210
 ```
+
+### 2º Exemplo
+
+Vamos criar um array que irá conter objetos, nesse objeto vamos ter nome, idade.
+
+```js
+const pessoas = [
+    {nome: 'Earl Briggs', idade: 28},
+    {nome: 'Marvin Weber', idade: 23},
+    {nome: 'Kyle Walsh', idade: 52},
+    {nome: 'Claudia Jensen', idade: 34},
+    {nome: 'Adam Turner', idade: 47},
+    {nome: 'Corey Higgins', idade: 51}
+];
+```
+
+#### Retorne a pessoa mais velha
+
+Vamos retornar a pessoa mais velha, para fazer isso não vamos passar um valor no parâmetro `valorInicial` do método `reduce()`, pois assim o parâmetro `acumulador` da função callback irá usar o primeiro objeto do array como valor inicial e para verificar qual pessoa é mais velha basta fazer a comparação da idade do objeto inicial com os demais.
+
+```js
+const pessoaMaisVelha = pessoas.reduce((acumulador, valorAtual) => {
+    if( acumulador.idade > valorAtual.idade) return acumulador;
+    return valorAtual;
+});
+
+console.log(pessoaMaisVelha); // saída: { nome: 'Kyle Walsh', idade: 52 }
+```
