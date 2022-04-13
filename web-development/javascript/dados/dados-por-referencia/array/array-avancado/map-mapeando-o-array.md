@@ -120,3 +120,96 @@ console.log(valoresEmDobro);
     ]
 */
 ```
+
+### 2º Exemplo (Mostrando Exemplo que altera o Array que está sendo percorrido)
+
+Agora vamos criar um array que irá conter objetos, nesse objeto vamos ter nome, idade, email que será usado como base para os exemplos.
+
+```js
+const pessoas = [
+    {nome: 'Earl Briggs', idade: 28, email: 'briggs@email.com'},
+    {nome: 'Marvin Weber', idade: 23, email: 'weber@email.com'},
+    {nome: 'Kyle Walsh', idade: 52, email: 'walsh@outroemail.com'}
+];
+```
+
+#### Retornar apenas o nome de cada pessoa
+
+```js
+const nomes = pessoas.map(obj => obj.nome);
+
+console.log(nomes);
+
+/* saída:
+    [
+        'Earl Briggs',
+        'Marvin Weber',
+        'Kyle Walsh'
+    ]
+*/
+```
+
+#### Remover o email e retornar nome e idade de cada pessoa
+
+```js
+const deleteEmail = pessoas.map(obj => {
+    delete obj.email;
+
+    return obj;
+});
+
+console.log(deleteEmail);
+/* saída:
+    [
+        { nome: 'Earl Briggs', idade: 28 },
+        { nome: 'Marvin Weber', idade: 23 },
+        { nome: 'Kyle Walsh', idade: 52 }
+    ]
+*/
+```
+
+Mas temos um problema, ao deletar o email também deletamos ele no array que está sendo percorrido, vamos imprimir o array que está sendo percorrido para ver:
+
+```js
+console.log(pessoas);
+/* saída:
+    [
+        { nome: 'Earl Briggs', idade: 28 },
+        { nome: 'Marvin Weber', idade: 23 },
+        { nome: 'Kyle Walsh', idade: 52 }
+    ]
+*/
+```
+
+Caso o desejado seja apagar os dados no array percorrido então tudo certo, mas se esse é um comportamento não desejado podemos criar um novo objeto dentro da callback e atribuir os objetos que estão dentro do array a ser percorrido usando o operador spread `...`.
+
+```js
+const deleteEmail = pessoas.map(obj => {
+    const newObj = {...obj};
+    delete newObj.email;
+
+    return newObj;
+});
+
+console.log(deleteEmail);
+/* saída:
+    [
+        { nome: 'Earl Briggs', idade: 28 },
+        { nome: 'Marvin Weber', idade: 23 },
+        { nome: 'Kyle Walsh', idade: 52 }
+    ]
+*/
+```
+
+Agora podemos imprimir os dados do array que está sendo percorrido e veremos que nada foi alterado nele:
+
+```js
+console.log(pessoas);
+/* saída:
+    [
+        { nome: 'Earl Briggs', idade: 28, email: 'briggs@email.com' },
+        { nome: 'Marvin Weber', idade: 23, email: 'weber@email.com' },
+        { nome: 'Kyle Walsh', idade: 52, email: 'walsh@outroemail.com' }
+    ]
+*/
+```
