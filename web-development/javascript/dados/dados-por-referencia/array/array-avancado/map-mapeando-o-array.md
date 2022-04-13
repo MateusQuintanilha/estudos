@@ -213,3 +213,46 @@ console.log(pessoas);
     ]
 */
 ```
+
+
+#### Retornar apenas o nome e email de cada pessoa
+
+Para retornar apenas o nome e email podemos deletar a idade igual fizemos com o email no exemplo anterior ou criar um novo objeto e atribuir a ele apenas o nome e o email:
+
+```js
+const nomeEmail = pessoas.map(obj => {
+    return {nome: obj.nome, email:obj.email}
+});
+
+console.log(nomeEmail);
+/* saída:
+    [
+        { nome: 'Earl Briggs', email: 'briggs@email.com' },
+        { nome: 'Marvin Weber', email: 'weber@email.com' },
+        { nome: 'Kyle Walsh', email: 'walsh@outroemail.com' }
+    ]
+*/
+```
+
+Caso tente simplificar a arrow function irá gerar um problema porque a arrow function irá reconhecer as chaves do objeto como sendo as chaves da function e não do objeto:
+
+```js
+const nomeEmail = pessoas.map(obj => {nome: obj.nome, email:obj.email});
+
+console.log(nomeEmail); // saída: SyntaxError: Unexpected token ':'
+```
+
+para resolver esse problema só precisamos envolver o objeto com parênteses:
+
+```js
+const nomeEmail = pessoas.map(obj => ({nome: obj.nome, email:obj.email}));
+
+console.log(nomeEmail);
+/* saída:
+    [
+        { nome: 'Earl Briggs', email: 'briggs@email.com' },
+        { nome: 'Marvin Weber', email: 'weber@email.com' },
+        { nome: 'Kyle Walsh', email: 'walsh@outroemail.com' }
+    ]
+*/
+```
