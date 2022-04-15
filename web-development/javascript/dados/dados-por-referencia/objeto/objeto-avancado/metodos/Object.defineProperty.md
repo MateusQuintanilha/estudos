@@ -218,3 +218,28 @@ const carro1 = new Carro('Chevrolet ', 'Opala', 1979);
 
 console.log(carro1); // saída: Carro { fabricante: 'Nissan' }
 ```
+
+## Criando uma nova propriedade usando o método `Object.defineProperty`
+
+Para criar uma nova propriedade só precisamos passar o nome de uma propriedade que não existe como parâmetro para o método `Object.defineProperty`.
+
+```js
+function Carro(fabricante, modelo, ano){
+    
+    Object.defineProperty(this, 'fabricante',{
+        enumerable: true,
+        value: fabricante,
+    });
+
+    Object.defineProperty(this, 'motor',{
+        enumerable: true,
+        value: '2JZ',
+    });
+}
+
+const carro1 = new Carro('Chevrolet ', 'Opala', 1979);
+
+console.log(carro1); // saída: Carro { fabricante: 'Chevrolet ', motor: '2JZ' }
+```
+
+Na segunda vez que usamos o método usamos um nome que não existia `motor`, então o método criou essa propriedade.
