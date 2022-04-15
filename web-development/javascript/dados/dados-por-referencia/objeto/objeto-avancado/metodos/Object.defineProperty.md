@@ -76,3 +76,66 @@ console.log(carro1); // saída: Carro { fabricante: undefined }
 ```
 
 Agora a chave foi mostrada, mas o valor está sendo mostrado como `undefined`, isso acontece porque não adicionamos o valor da propriedade, vamos fazer isso a seguir.
+
+
+### Adicionando a propriedade `value`
+
+Podemos usar a propriedade `value` para inserir o valor da propriedade que foi passada no parâmetro do método `Object.defineProperty()`. Esse valor pode ser qualquer tipo de dado, vamos usar o próprio parâmetro como o valor, para receber o valor do argumento desse parâmetro.
+
+```js
+function Carro(fabricante, modelo, ano){
+
+    Object.defineProperty(this, 'fabricante',{
+        enumerable: true,
+        value: fabricante,
+    });
+}
+
+const carro1 = new Carro('Chevrolet ', 'Opala', 1979);
+
+console.log(carro1); // saída: Carro { fabricante: 'Chevrolet ' }
+```
+
+### Adicionando a propriedade `writable`
+
+Podemos usar a propriedade `writable` com o valor boolean `true` permitir que o valor da chave possa ser alterado usando um operador de atribuição ou `false` para não permitir que o valor da chave possa ser alterado (Esse valor vem como padrão).
+
+Vamos tentar alterar o valor da chave `fabricante`.
+
+```js
+function Carro(fabricante, modelo, ano){
+
+    Object.defineProperty(this, 'fabricante',{
+        enumerable: true,
+        value: fabricante,
+
+    });
+}
+
+const carro1 = new Carro('Chevrolet ', 'Opala', 1979);
+
+carro1.fabricante = 'Ford'
+
+console.log(carro1); // saída: Carro { fabricante: 'Chevrolet ' }
+```
+
+Não foi possível fazer essa alteração porque por padrão a propriedade `writable` usa o seu valor como `false`, agora vamos adiciona-la com o valor `true`.
+
+```js
+function Carro(fabricante, modelo, ano){
+
+    Object.defineProperty(this, 'fabricante',{
+        enumerable: true,
+        value: fabricante,
+        writable: true
+    });
+}
+
+const carro1 = new Carro('Chevrolet ', 'Opala', 1979);
+
+carro1.fabricante = 'Ford'
+
+console.log(carro1); // saída: Carro { fabricante: 'Ford' }
+```
+
+Agora conseguimos alterar o valor da chave `fabricante`.
