@@ -77,7 +77,6 @@ console.log(carro1); // saída: Carro { fabricante: undefined }
 
 Agora a chave foi mostrada, mas o valor está sendo mostrado como `undefined`, isso acontece porque não adicionamos o valor da propriedade, vamos fazer isso a seguir.
 
-
 ### Adicionando a propriedade `value`
 
 Podemos usar a propriedade `value` para inserir o valor da propriedade que foi passada no parâmetro do método `Object.defineProperty()`. Esse valor pode ser qualquer tipo de dado, vamos usar o próprio parâmetro como o valor, para receber o valor do argumento desse parâmetro.
