@@ -37,3 +37,48 @@ function User() {
     return objeto;
 }
 ```
+
+O operador `new` também altera o contexto da função em relação ao `this`, ao usar o operador `new` o `this` irá fazer referência ao objeto do local da invocação da função em que o `new` foi utilizado, ou seja, ele irá pegar os argumentos do local da invocação, irá passar para dentro da função e em seguida irá retornar esses dados para o objeto que foi instanciado.
+
+Vamos criar os parâmetros nome e sobrenome na função e vamos inserir nome e sobrenome nos argumentos das duas invocações.
+
+```js
+function User(nome, sobrenome) {
+    
+}
+
+const user1 = User('Rodrigo', 'Rodrigues');
+const user2 = new User('Fernando', 'Fernandes');
+
+console.log(user1); // saída: undefined
+console.log(user2); // saída: User {}
+```
+
+Ao executar podemos ver que nada mudou, vamos tentar retornar o parâmetro nome usando a palavra return.
+
+```js
+function User(nome, sobrenome) {
+    return nome;
+}
+
+const user1 = User('Rodrigo', 'Rodrigues');
+const user2 = new User('Fernando', 'Fernandes');
+
+console.log(user1); // saída: Rodrigo
+console.log(user2); // saída: User {}
+```
+
+Ao usar a palavra `return` a invocação de função funcionou mas a invocação usando o `new` não, pois o `new` precisa do `this` para fazer referência ao novo objeto que foi criado.
+
+```js
+function User(nome, sobrenome) {
+    this.nome = nome;
+    this.sobrenome = sobrenome;
+}
+
+const user1 = User('Rodrigo', 'Rodrigues');
+const user2 = new User('Fernando', 'Fernandes');
+
+console.log(user1); // saída: undefined
+console.log(user2); // saída: User { nome: 'Fernando', sobrenome: 'Fernandes' }
+```
