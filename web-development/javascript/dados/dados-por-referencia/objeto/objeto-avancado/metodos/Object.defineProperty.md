@@ -139,3 +139,82 @@ console.log(carro1); // saída: Carro { fabricante: 'Ford' }
 ```
 
 Agora conseguimos alterar o valor da chave `fabricante`.
+
+### Adicionando a propriedade `configurable`
+
+Podemos usar a propriedade `configurable` com o valor `true` para permitir que possa ser feita alterações nas configurações e com o valor `false` para travar as configurações feitas, ou seja, não permitir que as configurações sejam alteradas, também não irá permitir a exclusão da propriedade.
+
+Vamos duplicar o conteúdo do método `Object.defineProperty` e fazer alterações no conteúdo do método que foi duplicado e adicionar a propriedade `configurable` como `true` no primeiro método.
+
+```js
+function Carro(fabricante, modelo, ano){
+
+    Object.defineProperty(this, 'fabricante',{
+        enumerable: true,
+        value: fabricante,
+        writable: false,
+        configurable: true
+    });
+    Object.defineProperty(this, 'fabricante',{
+        enumerable: true,
+        value: 'Nissan',
+        writable: true,
+    });
+}
+
+const carro1 = new Carro('Chevrolet ', 'Opala', 1979);
+carro1.fabricante = 'Ford'
+console.log(carro1); // saída: Carro { fabricante: 'Ford' }
+
+```
+
+Perceba que que no primeiro método a propriedade `writable` está como `false`, então o valor da propriedade não poderia ser alterado usando o operador de atribuição, mas na segunda vez que usamos o método, alteramos essa propriedade para `true` e com isso liberamos para que essa alteração possa ser feita.
+
+Agora vamos trocar o valor da propriedade `configurable` para `false`
+
+```js
+function Carro(fabricante, modelo, ano){
+
+    Object.defineProperty(this, 'fabricante',{
+        enumerable: true,
+        value: fabricante,
+        writable: true,
+        configurable: false
+    });
+    Object.defineProperty(this, 'fabricante',{
+        enumerable: true,
+        value: 'Nissan',
+        writable: true,
+    });
+}
+
+const carro1 = new Carro('Chevrolet ', 'Opala', 1979);
+carro1.fabricante = 'Ford'
+console.log(carro1); // saída: TypeError: Cannot redefine property: fabricante
+```
+
+A propriedade `configurable` que está com o valor `false` não permitiu que essa reconfiguração fosse feita e gerou um erro.
+
+Mas se todas as propriedades possuírem o mesmo valor o conteúdo da propriedade `value` poderá ser trocado, caso a propriedade `writable` estiver com o valor `true`:
+
+```js
+function Carro(fabricante, modelo, ano){
+
+    Object.defineProperty(this, 'fabricante',{
+        enumerable: true,
+        value: fabricante,
+        writable: true,
+        configurable: false
+    });
+    Object.defineProperty(this, 'fabricante',{
+        enumerable: true,
+        value: 'Nissan',
+        writable: true,
+        configurable: false
+    });
+}
+
+const carro1 = new Carro('Chevrolet ', 'Opala', 1979);
+
+console.log(carro1); // saída: Carro { fabricante: 'Nissan' }
+```
