@@ -355,3 +355,77 @@ console.log(carro1.fabricante); // saída: Chevrolet
 console.log(carro1.modelo); // saída: Opala
 console.log(carro1.ano); // saída: 1979
 ```
+
+## Setter
+
+O setter é usado para adicionar ou alterar o valor de uma propriedade, ele deverá ser usado junto de uma função.
+
+A sintaxe do setter no método `defineProperty` é a seguinte:
+
+```js
+set: function(novoValor) {
+   valor = novoValor;
+}
+```
+
+Vamos adicionar um set para cada propriedade do exemplo anterior:
+
+```js
+function Carro(fabricante, modelo, ano){
+
+    Object.defineProperty(this, 'fabricante',{
+        enumerable: true,
+        configurable: false,
+        get: function() {
+            return fabricante;
+        },
+        set: function(novoValor) {
+            fabricante = novoValor;
+        }
+    });
+    Object.defineProperty(this, 'modelo',{
+        enumerable: true,
+        configurable: false,
+        get: function() {
+            return modelo;
+        },
+        set: function(novoValor) {
+            modelo = novoValor;
+        }
+    });
+    Object.defineProperty(this, 'ano',{
+        enumerable: true,
+        configurable: false,
+        get: function() {
+            return ano;
+        },
+        set: function(novoValor) {
+            ano = novoValor;
+        }
+    });
+}
+
+const carro1 = new Carro('Chevrolet ', 'Opala', 1979);
+```
+
+Agora ao tentar imprimir o objeto `carro1` os valores retornados serão `[Getter/Setter]`.
+
+```js
+console.log(carro1); // saída: fabricante: [Getter/Setter], modelo: [Getter/Setter], ano: [Getter/Setter]
+```
+
+Para alterar o valor usando o setter iremos usar a atribuição assim como atribuímos um valor a uma propriedade:
+
+```js
+carro1.fabricante = 'Volkswagen';
+carro1.modelo = 'SP2';
+carro1.ano = 1974;
+```
+
+Agora vamos imprimir no console os valores:
+
+```js
+console.log(carro1.fabricante); // saída: Volkswagen
+console.log(carro1.modelo); // saída: SP2
+console.log(carro1.ano); // saída: 1974 
+```
