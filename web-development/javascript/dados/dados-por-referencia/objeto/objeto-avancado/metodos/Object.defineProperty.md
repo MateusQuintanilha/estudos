@@ -242,3 +242,59 @@ console.log(carro1); // saída: Carro { fabricante: 'Chevrolet ', motor: '2JZ' }
 ```
 
 Na segunda vez que usamos o método usamos um nome que não existia `motor`, então o método criou essa propriedade.
+
+## Getter e Setter
+
+Vamos usar esse código como exemplo:
+
+```js
+function Carro(fabricante, modelo, ano){
+
+    Object.defineProperty(this, 'fabricante',{
+        enumerable: true,
+        value: fabricante,
+        writable: false,
+        configurable: false
+    });
+    Object.defineProperty(this, 'modelo',{
+        enumerable: true,
+        value: modelo,
+        writable: true,
+        configurable: false
+    });
+    Object.defineProperty(this, 'ano',{
+        enumerable: true,
+        value: ano,
+        writable: true,
+        configurable: false
+    });
+}
+
+const carro1 = new Carro('Chevrolet ', 'Opala', 1979);
+
+console.log(carro1); // saída: Carro { fabricante: 'Chevrolet ', modelo: 'Opala', ano: 1979 }
+```
+
+Vamos retirar as propriedades `value` e `writable` do `defineProperty` pois não faz sentido usa-las, pois vamos usar o getter e setter para trabalhar com a legibilidade e modificação dos valores.
+
+Agora o código ficou assim:
+
+```js
+function Carro(fabricante, modelo, ano){
+
+    Object.defineProperty(this, 'fabricante',{
+        enumerable: true,
+        configurable: false,
+    });
+    Object.defineProperty(this, 'modelo',{
+        enumerable: true,
+        configurable: false,
+    });
+    Object.defineProperty(this, 'ano',{
+        enumerable: true,
+        configurable: false,
+    });
+}
+
+const carro1 = new Carro('Chevrolet ', 'Opala', 1979);
+```
