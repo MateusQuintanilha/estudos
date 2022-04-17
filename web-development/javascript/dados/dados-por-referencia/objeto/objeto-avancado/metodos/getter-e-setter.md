@@ -74,3 +74,63 @@ Pois o método `get` mascarou/transformou o método `nomeCompleto` em uma propri
 ```js
 pessoa.nomeCompleto; // saída: Cameron Moore
 ```
+
+## Setter
+
+O método setter é usado para adicionar ou alterar o valor de uma propriedade de um objeto.
+
+Sintaxe:
+
+```js
+set
+```
+
+É necessário associar o método `set` a uma função e ao fazer isso a função passará a ser tratada como uma propriedade, então não poderá ser usado parênteses em sua invocação e para passar um argumento, passe usando a atribuição assim como um valor é atribuído a uma propriedade.
+
+Vamos criar um objeto chamado pessoa com nome, sobrenome e peso e vamos criar um método para alterar o peso:
+
+```js
+const pessoa = {
+    nome: 'Cameron',
+    sobrenome: 'Moore',
+    peso: 78,
+    alteraPeso(novoPeso) {
+        this.peso = novoPeso;
+    }
+};
+```
+
+Agora vamos invocar o método `alteraPeso` e vamos alterar o valor de peso e em seguida vamos exibir o peso alterado no console.
+
+```js
+pessoa.alteraPeso(70);
+
+console.log(pessoa.peso) // saída: 70
+```
+
+O peso foi alterado de 78 para 70. Agora vamos associar o método `set` ao método `alteraPeso`.
+
+```js
+const pessoa = {
+    nome: 'Cameron',
+    sobrenome: 'Moore',
+    peso: 78,
+    set alteraPeso(novoPeso) {
+        this.peso = novoPeso;
+    }
+};
+```
+
+Agora vamos tentar invocar o método `alteraPeso` do mesmo jeito que tentamos anteriormente:
+
+```js
+pessoa.alteraPeso(70); // TypeError: pessoa.alteraPeso is not a function
+```
+
+Ao tentar fazer a invocação como uma função foi gerado um erro pois o método `set` mascarou/transformou a função em uma propriedade, então precisamos invocar esse método como uma propriedade normal e para atribuir um argumento para esse método iremos usar a atribuição, assim como é usado para uma propriedade:
+
+```js
+pessoa.alteraPeso = 70;
+
+console.log(pessoa.peso) // saída: 70
+```
