@@ -23,8 +23,8 @@ Object.defineProperty(objeto, propriedade, {descritor})
 * `writable`: Use `true`para que o valor da chave possa ser alterado usando um operador de atribuição e `false` para que isso não seja possível. (Essa propriedade por padrão é `false`).
 * `configurable`: Use `true` para liberar a reconfiguração, alteração ou a exclusão da chave e `false` para que isso não seja possível.
 
-* `get`:
-* `set`:
+* `get`: O método getter é usado para receber/mostrar o valor de uma propriedade.
+* `set`: O método setter é usado para adicionar ou alterar o valor de uma propriedade.
 
 ## Exemplo 1
 
