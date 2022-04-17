@@ -298,3 +298,60 @@ function Carro(fabricante, modelo, ano){
 
 const carro1 = new Carro('Chevrolet ', 'Opala', 1979);
 ```
+
+### Getter
+
+O getter é usado para exibir/retornar o valor de uma propriedade, ele deverá ser usado junto de uma função.
+
+A sintaxe do getter no método `defineProperty` é a seguinte:
+
+```js
+get: function() {
+    return propriedadeQueSeraRetornada;
+}
+```
+
+Vamos adicionar um getter para cada propriedade do exemplo:
+
+```js
+function Carro(fabricante, modelo, ano){
+
+    Object.defineProperty(this, 'fabricante',{
+        enumerable: true,
+        configurable: false,
+        get: function() {
+            return fabricante;
+        },
+    });
+    Object.defineProperty(this, 'modelo',{
+        enumerable: true,
+        configurable: false,
+        get: function() {
+            return modelo;
+        },
+    });
+    Object.defineProperty(this, 'ano',{
+        enumerable: true,
+        configurable: false,
+        get: function() {
+            return ano;
+        },
+    });
+}
+
+const carro1 = new Carro('Chevrolet ', 'Opala', 1979);
+```
+
+Ao tentar exibir o objeto `carro1` veremos que os valores não serão exibidos:
+
+```js
+console.log(carro1); // saída: Carro { fabricante: [Getter], modelo: [Getter], ano: [Getter] }
+```
+
+Ao usar o getter a função passará a ser tratada como uma propriedade, então precisamos invocar o método sem usar os parênteses.
+
+```js
+console.log(carro1.fabricante); // saída: Chevrolet
+console.log(carro1.modelo); // saída: Opala
+console.log(carro1.ano); // saída: 1979
+```
