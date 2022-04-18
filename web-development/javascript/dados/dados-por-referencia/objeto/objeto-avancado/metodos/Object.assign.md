@@ -44,3 +44,31 @@ const copiandoPessoa = Object.assign({}, pessoa);
 
 console.log(copiandoPessoa); // saída: { nome: 'Theresa', sobrenome: 'Valdez' }
 ```
+
+## Mesclando objetos
+
+Podemos passar vários objetos como parâmetros no método `Object.assign()`, mas tome cuidado pois o primeiro objeto irá receber todos os dados dos demais:
+
+Nesse caso o método irá retornar a mesclagem dos objetos para a variável mesclandoObjetos e também irá retornar essa mesclagem para o objeto `a`.
+
+```js
+const a = {a: 10};
+const b = {b: 20};
+const c = {c: 30};
+
+const mesclandoObjetos = Object.assign(a, b, c);
+console.log(a); // saída: { a: 10, b: 20, c: 30 }
+console.log(mesclandoObjetos); // saída: { a: 10, b: 20, c: 30 }
+```
+
+Caso não queira que o objeto `a` seja alterado, coloque um objeto vazio como o primeiro parâmetro:
+
+```js
+const a = {a: 10};
+const b = {b: 20};
+const c = {c: 30};
+
+const mesclandoObjetos = Object.assign({}, a, b, c);
+console.log(a); // saída: { a: 10 }
+console.log(mesclandoObjetos); // saída: { a: 10, b: 20, c: 30 }
+```
