@@ -61,3 +61,57 @@ Exemplo:
 margin: 20px;
 ```
 
+
+#### Valor Vertical e Valor Horizontal
+
+Podemos usar dois valores, o primeiro valor será atribuído na margem vertical (Superior e Inferior) e o segundo valor será atribuído na margem horizontal (Esquerda e Direita).
+
+Sintaxe:
+
+```css
+margin: valorVertical valorHorizontal;
+```
+
+Exemplo:
+
+```css
+margin: 10px 20px;
+```
+
+Nesse exemplo as margens superior e inferior irão receber 10px e as margens da esquerda e direita irão receber 20px.
+
+#### Valor Topo, ValorHorizontal e Valor Inferior
+
+Podemos usar três valores, o primeiro valor será atribuído na margem do topo, o segundo valor será atribuído na margem horizontal (Esquerda e Direita) e o terceiro valor será atribuído na margem inferior.
+
+Sintaxe:
+
+```css
+margin: valorTopo valorHorizontal valorInferior;
+```
+
+Exemplo:
+
+```css
+margin: 10px 30px 50px;
+```
+
+Nesse exemplo a margem do topo irá receber 10px, as margens da esquerda e direita irão receber 30px e a margem inferior irá receber 50px.
+
+#### Valor Topo, Valor da Direita, Valor Inferior e Valor da Esquerda
+
+Podemos usar quatro valores, os valores serão inseridos de forma horaria começando do topo e terminando no lado esquerdo.
+
+Sintaxe:
+
+```css
+margin: valorTopo valorDireita valorInferior valorEsquerda;
+```
+
+Exemplo:
+
+```css
+margin: 40px 20px 10px 15px;
+```
+
+Nesse exemplo a margem do topo irá receber 20px, a margem da direita irá receber 20px, a margem inferior irá receber 10px e a margem da esquerda irá receber 15px.
