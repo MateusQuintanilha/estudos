@@ -8,11 +8,13 @@ Sintaxe:
 Object.create(proto, propertiesObject)
 ```
 
-* proto - O objeto que deve ser o protótipo do objeto recém-criado.
-* propertiesObject (opcional) - Um objeto cujas próprias propriedades enumeráveis ​​especificam descritores de propriedade a serem adicionados ao objeto recém-criado. Essas propriedades correspondem ao segundo argumento de Object.defineProperties().
+## Parâmetros
+
+* `proto` - O objeto que deve ser o protótipo do objeto recém-criado.
+* `propertiesObject` (opcional) - Um objeto cujas próprias propriedades enumeráveis ​​especificam descritores de propriedade a serem adicionados ao objeto recém-criado. Essas propriedades correspondem ao segundo argumento de Object.defineProperties().
 
 ## Valor de Retorno do `Object.create()`
 
 * Retorna um novo objeto com o objeto de protótipo especificado.
 
-**Nota: Se proto não for `null` ou `object`, `typeError` será lançado.
+**Nota: Será lançada uma exceção `typeError` se o proto não for `null` ou `object`.**
