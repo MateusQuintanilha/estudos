@@ -38,3 +38,26 @@ margin-right: valor;
 margin-bottom: valor;
 margin-left: valor;
 ```
+
+### Shorthand
+
+Uma propriedade shorthand é uma união de várias propriedades em apenas uma e para as propriedades de margem podemos usar a propriedade shorthand `margin`.
+
+Podemos usar essa propriedade de várias formas, vamos ver cada uma a seguir:
+
+#### Valor Único
+
+Podemos usar um valor único para representar todos os lados
+
+Sintaxe:
+
+```js
+margin: valorUnico;
+```
+
+Exemplo:
+
+```css
+margin: 20px;
+```
+
