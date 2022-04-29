@@ -5,7 +5,7 @@ A propriedade `white-space` controla como serão tratados os espaços em branco 
 Sintaxe:
 
 ```css
-white-space: normal | pre | nowrap | pre-wrap | pre-line | inherit
+white-space: normal |nowrap |pre | pre-line | pre-wrap | initial | inherit;
 ```
 
 * normal - É o valor padrão da propriedade. Qualquer quantidade de espaços em branco na marcação será renderizada como um espaço.
