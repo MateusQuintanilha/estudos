@@ -1,14 +1,9 @@
 # vertical-align
 
-A propriedade `vertical-align` é usada para definir o alinhamento horizontal de um texto.
+A propriedade `vertical-align` é usada para definir o alinhamento vertical de um elemento html, seja ele um texto, uma imagem, etc.
 
 Sintaxe:
 
 ```css
-text-align: right | center | left | justify
+vertical-align: baseline | length |sub |super |top |text-top | middle | bottom | text-bottom | initial | inherit;
 ```
-
-* right - Alinha o texto à direita do box.
-* center - Alinha o texto no centro do box.
-* left - Alinha o texto à esquerda do box. Este é o valor inicial (ou default).
-* justify - Alinha o texto de modo que cada linha estenda-se da esquerda à direita do box.
