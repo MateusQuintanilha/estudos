@@ -50,3 +50,46 @@ Um dos métodos mais importantes é o `constructor` pois ele faz referência a f
 ```js
 console.log(Object.prototype.constructor === Object); // saída: true
 ```
+
+## criando uma função construtora como exemplo
+
+Vamos criar uma função construtora chamada Monster, ela um parâmetro chamado name e outro chamado race:
+
+```js
+function Monster(name, race) {
+    this.name = name;
+    this.race = race;
+}
+```
+
+Assim como a função construtora `Object()` a função `Monster()` também tem uma propriedade `prototype` que faz referência a um objeto anônimo e esse objeto anônimo possui a propriedade `constructor` que faz referencia a função construtora `Monster`.
+
+Vamos imprimir a função `Monster` no console:
+
+```js
+console.log(Monster); /* saída:
+    ƒ Monster(name, race) {
+        this.name = name;
+        this.race = race;
+    }
+*/
+```
+
+Agora vamos imprimir o `Monster.prototype`:
+
+```js
+console.log(Monster.prototype); /* saída:
+    {constructor: ƒ}
+        constructor: ƒ Monster(name, race)
+            arguments: null
+            caller: null
+            length: 2
+            name: "Monster"
+            prototype: {constructor: ƒ}
+            [[FunctionLocation]]: script.js:1
+            [[Prototype]]: ƒ ()
+            [[Scopes]]: Scopes[2]
+*/
+```
+
+Na segunda linha podemos ver o `constructor` fazendo a referencia a função `Monster`.
