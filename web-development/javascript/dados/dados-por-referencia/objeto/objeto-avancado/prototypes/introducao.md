@@ -4,14 +4,26 @@ Protótipo é o termo usado para se referir a algo que foi criado com o propósi
 
 O JavaScript é uma linguagem baseada em protótipos  para fornecer herança, cada objeto possui um protótipo, que é sempre outro objeto, ou `null`.
 
-Por padrão, o motor do JavaScript fornece a função `Object` e um objeto anônimo que pode ser referenciado por `Object.prototype`.
-
-Vamos usar a ferramenta de desenvolvedor do navegador para imprimir no console a função `Object` e o objeto anônimo `Object.prototype`:
+Por padrão, o motor do JavaScript fornece a função `Object`, podemos verificar isso usando o `typeof`:
 
 ```js
-console.log(Object); // saída: ƒ Object() { [native code] }
+console.log(typeof(Object)); // saída: 'function'
+```
 
-console.log(Object.prototype); /* saída:
+Então `Object()` é uma função, e não um objeto.
+
+Além disso, o JavaScript fornece um objeto anônimo que é referenciado como `prototype` e para conseguir acessa-lo podemos usar o nome da função seguido da notação de ponto e a palavra `prototype`:
+
+Sintaxe:
+
+```js
+nomeDaFunction.Prototype
+```
+
+Então para acessar o prototype da função `Object()` iremos usar `Object.prototype`:
+
+```js
+console.log(Object.prototype); /*saída:
     {constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
     constructor: ƒ Object()
     hasOwnProperty: ƒ hasOwnProperty()
@@ -28,6 +40,13 @@ console.log(Object.prototype); /* saída:
     get __proto__: ƒ __proto__()
     set __proto__: ƒ __proto__()
 */
+
 ```
 
-Podemos ver que o `Object` realmente é uma função e que o Objeto `Object.prototype` possui muitas propriedades internas como `toString()`, `valueOf()` entre outros.
+Podemos ver que o Objeto anônimo que acessamos através de `Object.prototype` possui muitos métodos como `toString()`, `valueOf()` entre outros.
+
+Um dos métodos mais importantes é o `constructor` pois ele faz referência a função construtora em que o objeto usou de molde, nesse caso ao `Object`:
+
+```js
+console.log(Object.prototype.constructor === Object); // saída: true
+```
