@@ -47,6 +47,14 @@ Podemos ver que o Objeto anônimo que acessamos através de `Object.prototype` p
 
 Um dos métodos mais importantes é o `constructor` pois ele faz referência a função construtora em que o objeto usou de molde, nesse caso ao `Object`:
 
+Como podemos ver no conteúdo que foi impresso no console, na segunda linha faz referencia ao Object:
+
+```js
+// constructor: ƒ Object()
+```
+
+Também podemos fazer a comparação para ter a certeza que o constructor é igual a Object:
+
 ```js
 console.log(Object.prototype.constructor === Object); // saída: true
 ```
@@ -62,7 +70,7 @@ function Monster(name, race) {
 }
 ```
 
-Assim como a função construtora `Object()` a função `Monster()` também tem uma propriedade `prototype` que faz referência a um objeto anônimo e esse objeto anônimo possui a propriedade `constructor` que faz referencia a função construtora `Monster`.
+O motor do JavaScript cria a função `Monster()` e por baixo dos panos também cria um novo objeto anônimo. A função `Monster()` possui a propriedade `prototype` que faz referência a esse novo objeto anônimo que foi criado. E o objeto anônimo possui a propriedade `constructor` que faz referencia a função `Monster`.
 
 Vamos imprimir a função `Monster` no console:
 
@@ -93,3 +101,5 @@ console.log(Monster.prototype); /* saída:
 ```
 
 Na segunda linha podemos ver o `constructor` fazendo a referencia a função `Monster`.
+
+Além disso, o JavaScript vincula o objeto `Monster.prototype` ao  objeto `Object.prototype` por meio do `[[Prototype]]`, que é conhecido como ligação de protótipo.
