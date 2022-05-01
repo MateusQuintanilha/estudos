@@ -152,3 +152,19 @@ Monster.prototype.attack = function () {
         return `Você começou a ser atacado pelo monstro ${this.name}`;
     };
 ```
+
+Agora vamos executar esse método
+
+Todas as vezes que executarmos esse método ele irá acessar o método através da ligação que existe entre `monstro1` e `Monster.prototype`.
+
+```js
+console.log(monstro01.attack()); // saída: Você começou a ser atacado pelo monstro Poring
+```
+
+Também conseguimos acessar os métodos que estão no `Object.prototype`:
+
+```js
+console.log(monstro01.name.toString()); // saída: Poring
+```
+
+Essa ligação entre `monstro01 -> Monstro.prototype -> Object.prototype` é chamado de prototype chain.
