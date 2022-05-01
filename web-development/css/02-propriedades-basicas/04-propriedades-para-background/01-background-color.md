@@ -4,6 +4,6 @@ A propriedade `background-color` é usada para definir a cor de fundo de um elem
 
 Sintaxe:
 
-```js
+```css
 background-color: color | transparent | initial | inherit;
 ```
