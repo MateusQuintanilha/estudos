@@ -103,3 +103,52 @@ console.log(Monster.prototype); /* saída:
 Na segunda linha podemos ver o `constructor` fazendo a referencia a função `Monster`.
 
 Além disso, o JavaScript vincula o objeto `Monster.prototype` ao  objeto `Object.prototype` por meio do `[[Prototype]]`, que é conhecido como ligação de protótipo.
+
+## A diferença entre adicionar um método na função e no prototype da função
+
+Vamos adicionar um método na função Monster chamado attack e ele irá retornar uma frase junto com o nome do monstro:
+
+```js
+function Monster(name, race) {
+    this.name = name;
+    this.race = race;
+
+    this.attack = function () {
+        return `Você começou a ser atacado pelo monstro ${this.name}`;
+    };
+}
+```
+
+Essa foi a forma que usamos para adicionar métodos até aqui, mas essa forma possui um problema bem sério de gerenciamento de recursos, porque todas as vezes que criarmos uma instância essa instância irá copiar o método também, vamos criar uma instância:
+
+```js
+const monstro01 = new Monster('Poring', 'Slime');
+```
+
+Agora vamos imprimi-lá no console:
+
+```js
+console.log(monstro01); /* saída:
+    Monster {
+        name: 'Poring',
+        race: 'Slime',
+        attack: [Function (anonymous)]
+    }
+```
+
+Agora imagine em uma aplicação grande como um jogo, onde existem milhares de monstros instanciados e cada monstro desse com dezenas de métodos pré-carregados, teríamos um problema bem sério de desempenho não é mesmo? mas como resolver isso? Podemos adicionar os métodos no prototype.
+
+Para adicionar um método no prototype de uma função precisamos acessar o  prototype da função `NomeDaFunction.prototype` em seguida usar a notação por ponto e o nome do método e para finalizar iremos atribuir o conteúdo do método usando o sinal de igual `=`.
+
+Vamos remover o método attack de dentro da função Monster e adicionar o método attack no prototype do Monster:
+
+```js
+function Monster(name, race) {
+    this.name = name;
+    this.race = race;
+}
+
+Monster.prototype.attack = function () {
+        return `Você começou a ser atacado pelo monstro ${this.name}`;
+    };
+```
