@@ -2,7 +2,7 @@
 
 Protótipo é o termo usado para se referir a algo que foi criado com o propósito de ser um modelo ou molde para futuras produções.
 
-O JavaScript é uma linguagem baseada em protótipos  para fornecer herança, cada objeto possui um protótipo, que é sempre outro objeto, ou `null`.
+O JavaScript é uma linguagem baseada em protótipos  para fornecer herança, cada objeto possui um protótipo, que é sempre um objeto, ou `null`.
 
 Por padrão, o motor do JavaScript fornece a função `Object`, podemos verificar isso usando o `typeof`:
 
@@ -45,9 +45,9 @@ console.log(Object.prototype); /*saída:
 
 Podemos ver que o Objeto anônimo que acessamos através de `Object.prototype` possui muitos métodos como `toString()`, `valueOf()` entre outros.
 
-Um dos métodos mais importantes é o `constructor` pois ele faz referência a função construtora em que o objeto usou de molde, nesse caso ao `Object`:
+Um dos métodos mais importantes é o `constructor` pois ele faz referência a função em que o prototype está ligado, nesse caso ao `Object`:
 
-Como podemos ver no conteúdo que foi impresso no console, na segunda linha faz referencia ao Object:
+Como podemos ver no conteúdo que foi impresso no console, na segunda linha faz referencia a função Object:
 
 ```js
 // constructor: ƒ Object()
@@ -119,7 +119,7 @@ function Monster(name, race) {
 }
 ```
 
-Essa foi a forma que usamos para adicionar métodos até aqui, mas essa forma possui um problema bem sério de gerenciamento de recursos, porque todas as vezes que criarmos uma instância essa instância irá copiar o método também, vamos criar uma instância:
+Essa foi a forma em que usamos para adicionar métodos até aqui, mas essa forma possui um problema bem sério de gerenciamento de recursos, porque todas as vezes que criarmos uma instância essa instância irá copiar o método também, vamos criar uma instância:
 
 ```js
 const monstro01 = new Monster('Poring', 'Slime');
@@ -137,6 +137,8 @@ console.log(monstro01); /* saída:
 ```
 
 Agora imagine em uma aplicação grande como um jogo, onde existem milhares de monstros instanciados e cada monstro desse com dezenas de métodos pré-carregados, teríamos um problema bem sério de desempenho não é mesmo? mas como resolver isso? Podemos adicionar os métodos no prototype.
+
+## Adicionando métodos no prototype
 
 Para adicionar um método no prototype de uma função precisamos acessar o  prototype da função `NomeDaFunction.prototype` em seguida usar a notação por ponto e o nome do método e para finalizar iremos atribuir o conteúdo do método usando o sinal de igual `=`.
 
