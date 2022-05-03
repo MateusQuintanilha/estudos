@@ -209,3 +209,9 @@ console.log(monstro01.andar()); // saída: TypeError: monstro01.andar is not a f
 ```
 
 Um erro foi gerado, pois esse método foi adicionado apenas ao monstro02, então ele não existe na cadeia de protótipos do monstro01.
+
+## Obtendo ligação de protótipo
+
+O `__proto__` é pronunciado como dunder proto (protótipo do dunder). O `__proto__` é uma propriedade assessora (getter e setter) do objeto `Object.prototype`. Ele expõe a ligação interna do protótipo `[[prototype]]` de um objeto através do qual é acessado.
+
+O `__proto__` foi padronizado no ES6 para garantir a compatibilidade dos navegadores de internet. No entanto, pode ser depreciado no futuro em favor do `Object.getPrototypeOf()`. Portanto, nunca utilize `__proto__` em códigos de produção.
