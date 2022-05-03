@@ -119,7 +119,7 @@ function Monster(name, race) {
 }
 ```
 
-Essa foi a forma em que usamos para adicionar métodos até aqui, mas essa forma possui um problema bem sério de gerenciamento de recursos, porque todas as vezes que criarmos uma instância essa instância irá copiar o método também, vamos criar uma instância:
+Essa foi a forma em que usamos para adicionar métodos até aqui, mas essa forma possui um problema bem sério de performance, porque todas as vezes que criarmos uma instância essa instância irá copiar o método também, vamos criar uma instância:
 
 ```js
 const monstro01 = new Monster('Poring', 'Slime');
@@ -169,4 +169,4 @@ Também conseguimos acessar os métodos que estão no `Object.prototype`:
 console.log(monstro01.name.toString()); // saída: Poring
 ```
 
-Essa ligação entre `monstro01 -> Monstro.prototype -> Object.prototype` é chamado de prototype chain.
+Essa ligação entre `monstro01 --> Monstro.prototype --> Object.prototype` é chamado de prototype chain.
