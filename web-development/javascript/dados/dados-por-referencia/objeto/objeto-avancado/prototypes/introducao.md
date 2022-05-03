@@ -170,3 +170,11 @@ console.log(monstro01.name.toString()); // saída: Poring
 ```
 
 Essa ligação entre `monstro01 --> Monstro.prototype --> Object.prototype` é chamado de prototype chain.
+
+Como o Monster.prototype não tem o método `toString()`, o motor do JavaScript irá para o próximo elo da cadeia de protótipo e irá procurar o método `toString()`, nesse caso ele irá encontrar e executar o método.
+
+Mas caso o método não exista nessa cadeia de protótipos o JavaScript irá lançar um erro. por Exemplo:
+
+```js
+console.log(monstro01.andar()); // saída: TypeError: monstro01.andar is not a function
+```
