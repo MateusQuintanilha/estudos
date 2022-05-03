@@ -178,3 +178,34 @@ Mas caso o método não exista nessa cadeia de protótipos o JavaScript irá lan
 ```js
 console.log(monstro01.andar()); // saída: TypeError: monstro01.andar is not a function
 ```
+
+## Adicionando métodos em um objeto individual
+
+Vamos criar uma instancia chamada de monstro02 e vamos atribuir o método `andar()` que irá retornar a frase "O monstro está andando" apenas para a instancia do monstro02:
+
+```js
+// criando a instancia do monstro02
+const monstro02 = new Monster('Poporing', 'Slime');
+```
+
+Agora vamos adicionar o método apenas ao monstro02
+
+```js
+monstro02.andar = function() {
+    return `O ${this.name} está andando!`;
+};
+```
+
+Vamos tentar chamar o método no monstro02:
+
+```js
+console.log(monstro02.andar()); // saída: O Poporing está andando!
+```
+
+O método funcionou, agora vamos tentar chamar o método no monstro01:
+
+```js
+console.log(monstro01.andar()); // saída: TypeError: monstro01.andar is not a function
+```
+
+Um erro foi gerado, pois esse método foi adicionado apenas ao monstro02, então ele não existe na cadeia de protótipos do monstro01.
