@@ -14,4 +14,4 @@ setInterval(function, milissegundos, param1, param2, …);
 
 * function: é a função que será executada;
 * milissegundos: é o intervalo em milissegundos(ms) em que o código será executado. Se o valor especificado for menor que 10, o valor 10 será utilizado.
-* param: parâmetros para passar para a função.
+* param1, param2: são os parâmetros utilizados.
