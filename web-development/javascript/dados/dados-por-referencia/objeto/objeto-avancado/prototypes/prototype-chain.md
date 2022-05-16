@@ -1,10 +1,8 @@
 # Encadeamento de Protótipos (Prototype Chain)
 
-Um objeto possui um prototype e esse prototype também pode ter um prototype, e assim por diante, até que o último prototype dessa sequência seja `null`. Essa sequência de um protótipo dentro de outro é chamado de Prototype Chain.
+Como vimos anteriormente, cada objeto faz referência a um protótipo, que sempre será outro objeto até que o último objeto em sua cadeia retorne `null`. Essa sequência de um protótipo dentro de outro é chamado de Prototype Chain.
 
-Um objeto pode utilizar qualquer propriedade ou método que existir nesse encadeamento de protótipos.
-
-Vamos ver alguns exemplos desse Encadeamento de protótipos:
+Vamos ver alguns exemplos dessa cadeia de protótipos:
 
 ## Encadeamento de protótipos de um Objeto
 
@@ -34,7 +32,7 @@ Vamos criar um array com o nome de `listaDeFrutas`:
 A cadeia de protótipos desse array será assim:
 
 ```js
-    // pessoa.__proto__ --> Array.prototype --> Object.prototype --> null
+    // listaDeFrutas.__proto__ --> Array.prototype --> Object.prototype --> null
 ```
 
 ## Encadeamento de protótipos de uma Função
