@@ -64,3 +64,28 @@ Conseguimos alterar a cadeia de protótipos, antes a cadeia do monsterName era: 
 Agora ela ficou assim: `monsterName --> monsterRace --> Object.prototype --> null`.
 
 Mas esse método não é recomendado, pois alterar o prototype de um objeto pode acarretar em problemas de performance, é aconselhável criar um novo objeto  usando o objeto que deseja como prototype e não criar um objeto e depois alterar o seu prototype. Para fazer isso podemos usar o método `Object.create()`.
+
+## Criando um novo objeto usando um objeto existente como prototype
+
+Para criar um novo objeto usando um objeto existente como prototype iremos usar o método `Object.create()`, nele iremos passar o nome do objeto existente que será usado como prototype. Vamos usar os mesmos objetos do exemplo:
+
+Vamos criar um objeto com o nome `monsterRace` e vamos inserir nele uma propriedade com a chave `race` e o valor `slime`.
+
+```js
+const monsterRace = {
+    race: 'Slime'
+};
+```
+
+Agora ao invés de criar o outro objeto e depois alterar o seu prototype como fizemos no exemplo anterior, iremos criar uma variável e atribuir o método `Object.create()` com o nome o objeto que será usado como prototype em seguida vamos atribuir a propriedade name para o objeto que foi criado:
+
+```js
+const monsterName = Object.create(monsterRace);
+monsterName.name = 'poring';
+```
+
+Agora vamos imprimir `monsterName.race` no console para ver se funcionou:
+
+```js
+console.log(monsterName.race); // saída: Slime
+```
