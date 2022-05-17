@@ -26,3 +26,41 @@ Isso acontece de forma automática, isso ocorre no momento em que criamos um obj
 ```js
 console.log(objA.__proto__ === Object.prototype); // saída: true
 ```
+
+## Alterando o prototype de um objeto usando `Object.setPrototypeOf()`
+
+Vamos criar um objeto com o nome `monsterRace` e vamos inserir nele uma propriedade com a chave `race` e o valor `slime`.
+
+```js
+const monsterRace = {
+    race: 'Slime'
+};
+```
+
+em seguida vamos criar outro objeto com o nome `monsterName` e vamos inserir nele uma propriedade com a chave `name` e o valor `Poring`.
+
+```js
+const monsterName = {
+    name: 'Poring'
+};
+```
+
+Agora precisamos fazer a ligação do objeto monsterName com o monsterRace para adicionar a raça do monstro ao nome dele, para fazer isso podemos usar o método `Object.setPrototypeOf()`, no primeiro parâmetro iremos inserir o objeto em que iremos inserir o prototype e no segundo parâmetro será o objeto que será inserido no primeiro parâmetro.
+
+Então ficará assim:
+
+```js
+Object.setPrototypeOf(monsterName, monsterRace);
+```
+
+e para testar podemos imprimir o `monsterName.race` no console:
+
+```js
+console.log(monsterName.race); // saída: Slime
+```
+
+Conseguimos alterar a cadeia de protótipos, antes a cadeia do monsterName era: `monsterName --> Object.prototype --> null`.
+
+Agora ela ficou assim: `monsterName --> monsterRace --> Object.prototype --> null`.
+
+Mas esse método não é recomendado, pois alterar o prototype de um objeto pode acarretar em problemas de performance, é aconselhável criar um novo objeto  usando o objeto que deseja como prototype e não criar um objeto e depois alterar o seu prototype. Para fazer isso podemos usar o método `Object.create()`.
