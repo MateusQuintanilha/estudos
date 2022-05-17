@@ -50,3 +50,5 @@ A cadeia de protótipos dessa função será assim:
 ```js
     // soma.__proto__ --> function.prototype --> Object.prototype --> null
 ```
+
+Cada cadeia de protótipos que vemos possuem seus próprios métodos, e utilizamos esses métodos a muito tempo como por exemplo os métodos push, shift, slice, length entre outros. Podemos usar os métodos nativos que estão na cadeia de protótipos ou adicionar novos métodos nela, essa forma de acessar métodos da cadeia de protótipos chamamos de herança.
