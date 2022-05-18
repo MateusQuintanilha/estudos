@@ -116,3 +116,42 @@ Monster.prototype.monsterStatus = function () {
     `;
 }
 ```
+
+Vamos invocar a função:
+
+```js
+const monster1 = new Monster('Poring', 'Slime');
+```
+
+Agora ao chamar os métodos teremos o seguinte resultado:
+
+```js
+console.log(monster1.attack()); // saída: Você começou a ser atacado pelo monstro Poring
+console.log(monster1.monsterStatus()); /* saída:
+    ======= Status =======
+    Nome: Poring
+    Raça: Slime
+    ======================
+    */
+```
+
+Também podemos criar um novo objeto usando o `Object.create` e usando a função construtora monster como prototype:
+
+```js
+const monster2 = Object.create(Monster.prototype);
+```
+
+só que o objeto monster2 estará vazio:
+
+```js
+console.log(monster2); // saída: Monster {}
+```
+
+podemos adicionar as propriedades name e race atribuindo elas ao objeto monster2:
+
+```js
+monster2.name = 'Poporing';
+monster2.race = 'Slime';
+
+console.log(monster2); // saída: Monster { name: 'Poporing', race: 'Slime' }
+```
