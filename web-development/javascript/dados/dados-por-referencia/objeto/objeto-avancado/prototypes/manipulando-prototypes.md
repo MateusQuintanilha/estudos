@@ -155,3 +155,24 @@ monster2.race = 'Slime';
 
 console.log(monster2); // saída: Monster { name: 'Poporing', race: 'Slime' }
 ```
+
+ou então podemos adicionar elas no momento da criação do objeto, vamos criar um monster3 para usar como exemplo:
+
+```js
+const monster3 = Object.create(Monster.prototype, {
+    name: {
+        writable: true,
+        configurable: true,
+        enumerable: true,
+        value: 'Drop'
+    },
+    race: {
+        writable: true,
+        configurable: true,
+        enumerable: true,
+        value: 'Slime'
+    }
+});
+
+console.log(monster3); // saída: Monster { name: 'Drop', race: 'Slime' }
+```
