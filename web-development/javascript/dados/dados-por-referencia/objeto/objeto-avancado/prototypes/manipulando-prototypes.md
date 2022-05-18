@@ -89,3 +89,30 @@ Agora vamos imprimir `monsterName.race` no console para ver se funcionou:
 ```js
 console.log(monsterName.race); // saída: Slime
 ```
+
+## Manipulando métodos e prototypes em uma função construtora
+
+Vamos criar uma função construtora básica chamada de Monster com dois parâmetros, name e race.
+
+```js
+function Monster(name, race) {
+    this.name = name;
+    this.race = race;
+}
+```
+
+E também vamos adicionar dois métodos no prototype da função construtora, o primeiro método vai será o attack que irá imprimir uma mensagem no console avisando que o monstro está atacando e o segundo será o monsterStatus que irá imprimir no console o nome e a raça do monstro.
+
+```js
+Monster.prototype.attack = function () {
+    return `Você começou a ser atacado pelo monstro ${this.name}`;
+};
+Monster.prototype.monsterStatus = function () {
+    return `
+    ======= Status =======
+    Nome: ${this.name}
+    Raça: ${this.race}
+    ======================
+    `;
+}
+```
