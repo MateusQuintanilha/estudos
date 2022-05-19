@@ -52,3 +52,25 @@ function Camiseta(name, price, color, type) {
     Produto.call(this, name, price, color);
 }
 ```
+
+### atribuindo a função construtora Produto como prototype da função construtora Camiseta
+
+mas ainda não fizemos a ligação do prototype, para fazer isso precisamos atribuir um novo objeto vazio para o prototype da função construtora Camiseta, para fazer isso podemos usar o método `Object.create()`:
+
+```js
+Camiseta.prototype = Object.create(Produto.prototype);
+```
+
+mas isso irá gerar um problema, todos as instâncias criadas a partir de Camiseta serão atribuídas a função construtora Produto.
+
+Vamos criar uma instância de Camiseta para visualizar esse problema:
+
+```js
+const camiseta = new Camiseta('Camiseta Form', 50, 'Preta', 'Regata');
+```
+
+Ao imprimir no console o construtor de camiseta será Produto:
+
+```js
+console.log(camiseta); // saída: Produto { name: 'Camiseta Form', price: 50, color: 'Preta' }
+```
