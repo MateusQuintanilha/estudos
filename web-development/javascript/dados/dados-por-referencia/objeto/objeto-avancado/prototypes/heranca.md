@@ -10,7 +10,7 @@ Já vimos um pouco sobre herança através da cadeia de protótipos e como os me
 
 Vamos criar uma função construtora genérica que será usada de base para criar vários produtos diferentes para uma loja. Mas antes de começar, precisamos ver quais produtos essa loja irá ter, para não complicar muito vamos pegar três produtos: Camiseta, Mochila, Caneca.
 
-Todos eles possuem nome, preço e cor. Vamos usar essas duas propriedades para começar.
+Todos eles possuem nome, preço e cor. Vamos usar essas duas propriedades para começar
 
 ## Criando a função construtora Produto
 
@@ -50,6 +50,7 @@ Dentro do método `call()` precisamos passar o argumento this em seguida os argu
 ```js
 function Camiseta(name, price, color, type) {
     Produto.call(this, name, price, color);
+    this.type = type;
 }
 ```
 
