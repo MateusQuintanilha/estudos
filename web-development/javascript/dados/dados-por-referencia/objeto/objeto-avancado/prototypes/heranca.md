@@ -74,3 +74,17 @@ Ao imprimir no console o construtor de camiseta será Produto:
 ```js
 console.log(camiseta); // saída: Produto { name: 'Camiseta Form', price: 50, color: 'Preta' }
 ```
+
+### Reatribuindo a ligação do construtor da função construtora Camiseta para Camiseta
+
+Para resolver isso precisamos atribuir reatribuir o construtor da função construtora Camiseta como Camiseta:
+
+```js
+Camiseta.prototype.constructor = Camiseta;
+```
+
+Vamos imprimir no console para visualizar:
+
+```js
+console.log(camiseta); // saída: Camiseta { name: 'Camiseta Form', price: 50, color: 'Preta' }
+```
