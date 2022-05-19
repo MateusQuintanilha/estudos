@@ -38,3 +38,17 @@ Agora vamos criar uma função construtora para camiseta
 function Camiseta(name, price, color, type) {
 }
 ```
+
+### Chamando a função construtora Produtos dentro da função construtora Camiseta
+
+Agora precisamos fazer com que a função construtora Produto seja executada dentro da função construtora Camiseta para fazer o encadeamento. Podemos usar o método  `call()` fazer isso.
+
+Para usar o método `call()` iremos usar o nome da função que desejamos chamar em seguida iremos usar a notação por ponto e o método `call`.
+
+Dentro do método `call()` precisamos passar o argumento this em seguida os argumentos necessários para a função que está sendo executada.
+
+```js
+function Camiseta(name, price, color, type) {
+    Produto.call(this, name, price, color);
+}
+```
