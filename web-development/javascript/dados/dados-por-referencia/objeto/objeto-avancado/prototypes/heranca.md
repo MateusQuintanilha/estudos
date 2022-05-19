@@ -29,3 +29,12 @@ Produto.prototype.discount = function(percentage) {
     this.price = this.price - (this.price * (percentage / 100));
 };
 ```
+
+## Especificando os produtos
+
+Agora vamos criar uma função construtora para camiseta
+
+```js
+function Camiseta(name, price, color, type) {
+}
+```
