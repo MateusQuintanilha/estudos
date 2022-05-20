@@ -78,3 +78,32 @@ mas se tentarmos sacar 901 são será possível pois o limite máximo é 1000 e 
 
 ```js
 contaCorrente1.sacar(901); // saída: Saldo Insuficiente, você possui R$-100.00 de saldo
+```
+
+## Especificando a conta-Poupança
+
+Vamos criar a função construtora Conta Poupança  usando a função construtora Conta como prototype
+
+```js
+function ContaPoupanca(agencia, conta, saldo) {
+    Conta.call(this,agencia, conta, saldo);
+}
+ContaPoupanca.prototype = Object.create(Conta.prototype);
+ContaPoupanca.prototype.constructor = ContaPoupanca;
+```
+
+Agora vamos invocar a função construtora ContaPoupanca e adicionando os dados para agencia 102, conta 92 e saldo 100:
+
+```js
+const ContaPoupanca1 = new ContaPoupanca(102, 92, 100);
+```
+
+E ao usar o método sacar para sacar 90 veremos que o resultado será sacado e restará 10:
+
+```js
+ContaPoupanca1.sacar(90); // saída: Você sacou: R$90.00, saldo restante: R$10.00
+```
+
+## Polimorfismo
+
+Como podemos ver no método sacar da conta corrente alteramos o método sacar para poder sacar um valor a mais que o saldo em conta que é o valor que definimos no limite. Mas essa alteração só afetou a ContaCorrente, na ContaPoupanca o método sacar funcionou da forma que ele foi criado. Essa forma de usar a mesma palavra (método, ou qualquer outra parte do código) de formas diferentes dependendo de onde é usado que é o Polimorfismo.
