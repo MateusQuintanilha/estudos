@@ -44,7 +44,7 @@ function ContaCorrente(agencia, conta, saldo, limite) {
     this.limite = limite;
 }
 ContaCorrente.prototype = Object.create(Conta.prototype);
-ContaCorrente.prototype = ContaCorrente;
+ContaCorrente.prototype.constructor = ContaCorrente;
 ```
 
 ## Fazendo o polimorfismo no método sacar da conta-corrente
@@ -61,3 +61,20 @@ ContaCorrente.prototype.sacar = function(valor) {
     console.log(`Você sacou: R$${valor.toFixed(2)}, saldo restante: R$${this.saldo.toFixed(2)}`)
 };
 ```
+
+Agora podemos criar uma instância da ContaCorrente passando os dados de agencia como 10, conta como 22 saldo como 0 e limite como 1000:
+
+```js
+const contaCorrente1 = new ContaCorrente(10,22,0,1000);
+```
+
+Ao tentar sacar 100 reais o método irá permitir mas o saldo irá para -100:
+
+```js
+contaCorrente1.sacar(100); // saída: Você sacou: R$100.00, saldo restante: R$-100.00
+```
+
+mas se tentarmos sacar 901 são será possível pois o limite máximo é 1000 e já sacamos 100:
+
+```js
+contaCorrente1.sacar(901); // saída: Saldo Insuficiente, você possui R$-100.00 de saldo
