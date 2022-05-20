@@ -46,3 +46,18 @@ function ContaCorrente(agencia, conta, saldo, limite) {
 ContaCorrente.prototype = Object.create(Conta.prototype);
 ContaCorrente.prototype = ContaCorrente;
 ```
+
+## Fazendo o polimorfismo no método sacar da conta-corrente
+
+Vamos alterar o método sacar da conta corrente para poder sacar o saldo em conta mais o valor do limite
+
+```js
+ContaCorrente.prototype.sacar = function(valor) {
+    if(valor > (this.saldo + this.limite)) {
+        console.log(`Saldo Insuficiente, você possui R$${this.saldo.toFixed(2)} de saldo`);
+        return;
+    }
+    this.saldo -= valor;
+    console.log(`Você sacou: R$${valor.toFixed(2)}, saldo restante: R$${this.saldo.toFixed(2)}`)
+};
+```
