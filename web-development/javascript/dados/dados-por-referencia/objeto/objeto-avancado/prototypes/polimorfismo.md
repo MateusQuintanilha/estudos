@@ -33,3 +33,16 @@ Conta.prototype.verSaldo = function() {
     console.log('Agencia: ' + this.agencia + ' ' + 'Conta: ' + this.conta + ' ' + 'Saldo: R$' + this.saldo.toFixed(2))
 };
 ```
+
+## Especificando a conta-corrente
+
+Vamos criar uma função construtora para a conta-corrente usando a função construtora Conta como prototype
+
+```js
+function ContaCorrente(agencia, conta, saldo, limite) {
+    Conta.call(this, agencia, conta, saldo);
+    this.limite = limite;
+}
+ContaCorrente.prototype = Object.create(Conta.prototype);
+ContaCorrente.prototype = ContaCorrente;
+```
