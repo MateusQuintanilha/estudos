@@ -1,0 +1,3 @@
+# Polimorfismo
+
+Polimorfismo é a forma de permitir vários comportamentos diferentes com um mesmo nome, imagine duas contas no banco, uma conta-corrente e uma poupança, na primeira podemos usar o valor do saldo em conta ou o valor de crédito para fazer uma compra, já na conta poupança só podemos usar o valor do saldo. Estamos usando a mesma forma de pagamento, mas as duas contas possuem diferenças na forma de fazer esse pagamento.
