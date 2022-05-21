@@ -44,3 +44,22 @@ console.log(pessoa1); /* saída:
 ```
 
 Mas não é isso que a gente quer, queremos que os métodos sejam adicionados no prototype da factory function.
+
+## Adicionando métodos no prototype do objeto que será retornado pela factory function
+
+Para conseguirmos adicionar os métodos dentro do prototype precisamos criar um objeto separado para ser o prototype em seguida criar o objeto da factory function que irá retornar os dados usando esse objeto criado com os métodos como prototype.
+
+Vamos remover o conteúdo do return e criar o objeto que irá conter os métodos, vamos chama-lo de pessoaPrototype:
+
+```js
+function criaPessoa(nome, sobrenome) {
+    const pessoaPrototype = {
+        nomeCompleto() {
+            console.log(`${this.nome} ${this.sobrenome}`);
+        },
+        falar() {
+            console.log(`${this.nome} está falando`)
+        }
+    };
+}
+```
