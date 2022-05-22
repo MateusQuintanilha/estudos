@@ -71,3 +71,40 @@ function criaPessoa(nome, sobrenome) {
 }
 ```
 Agora que separamos os métodos em objetos individuais precisamos adiciona-los no objeto `pessoaPrototype` e podemos fazer isso de duas formas:
+
+### Primeira forma
+
+Podemos usar o método `Object.assign()` passar um objeto vazio em seguida adicionar os nomes dos objetos que contém os métodos:
+
+```js
+const pessoaPrototype = Object.assign({}, nomeCompleto, falar);
+```
+
+Exemplo:
+
+```js
+const nomeCompleto = {
+    nomeCompleto() {
+        console.log(`${this.nome} ${this.sobrenome}`);
+    }
+};
+
+const falar = {
+    falar() {
+        console.log(`${this.nome} está falando`)
+    }
+};
+
+const pessoaPrototype = Object.assign({}, nomeCompleto, falar);
+
+function criaPessoa(nome, sobrenome) {
+    return Object.create(pessoaPrototype, {
+        nome: {value: nome},
+        sobrenome: {value: sobrenome}
+    });
+}
+
+const pessoa1 = criaPessoa('Chapolin', 'Colorado');
+pessoa1.nomeCompleto(); // saída: Chapolin Colorado
+pessoa1.falar(); // saída: Chapolin está falando
+```
