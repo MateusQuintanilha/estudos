@@ -108,3 +108,39 @@ const pessoa1 = criaPessoa('Chapolin', 'Colorado');
 pessoa1.nomeCompleto(); // saída: Chapolin Colorado
 pessoa1.falar(); // saída: Chapolin está falando
 ```
+### Segunda forma
+
+Podemos criar um objeto vazio e dentro desse objeto podemos usar o spread operator para adicionar os nomes dos objetos que contém os métodos:
+
+```js
+const pessoaPrototype = {...nomeCompleto, ...falar};
+```
+
+Exemplo:
+
+```js
+const nomeCompleto = {
+    nomeCompleto() {
+        console.log(`${this.nome} ${this.sobrenome}`);
+    }
+};
+
+const falar = {
+    falar() {
+        console.log(`${this.nome} está falando`)
+    }
+};
+
+const pessoaPrototype = {...nomeCompleto, ...falar};
+
+function criaPessoa(nome, sobrenome) {
+    return Object.create(pessoaPrototype, {
+        nome: {value: nome},
+        sobrenome: {value: sobrenome}
+    });
+}
+
+const pessoa1 = criaPessoa('Chapolin', 'Colorado');
+pessoa1.nomeCompleto(); // saída: Chapolin Colorado
+pessoa1.falar(); // saída: Chapolin está falando
+```
