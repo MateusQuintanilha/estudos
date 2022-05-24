@@ -19,3 +19,13 @@ console.log(john.getFullName()); // saída: John Doe
 ```
 
 Nesse exemplo, criamos a função construtora Person que possui duas propriedades: `fristName` e `lastName`. Em seguida criamos o método `getFullName()` que irá retornar uma `String` contendo os valores das propriedades `fristName` e `lastName`. Esse método foi atribuído ao `prototype` da função construtora `Person`.
+
+## Criando uma Class
+
+Vamos remodelar o exemplo anterior para uma class. Para criar uma class em JavaScript iremos usar a palavra-chave `class` em seguida iremos inserir o nome da class, esse nome segue as mesmas regras da função construtora, então a primeira letra será maiúscula em seguida abrimos e fechamos chaves.
+
+```js
+class Person {}
+```
+
+Todo o conteúdo da class será inserido dentro desse par de chaves.
