@@ -21,3 +21,20 @@ class Carro {
     }
 }
 ```
+
+Vamos invocar a classe:
+
+```js
+const c1 = new Carro('Fusca');
+console.log(c1); // saída: Carro { nome: 'Fusca', [Symbol(velocidade)]: 0 }
+```
+
+Agora vamos criar um for e vamos colocar para executar o método acelerar 200 vezes e vamos ver oque acontece:
+
+```js
+for(let i = 0; i <= 200; i++) {
+    c1.acelerar();
+}
+
+console.log(c1);// saída: Carro { nome: 'Fusca', velocidade: 100 }
+```
