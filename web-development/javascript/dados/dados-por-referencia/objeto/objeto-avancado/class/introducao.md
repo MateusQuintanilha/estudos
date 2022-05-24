@@ -47,3 +47,22 @@ class Person {
     }
 }
 ```
+
+### Adicionando métodos ao prototype
+
+Podemos adicionar métodos no prototype apenas adicionando os métodos após as chaves do constructor
+
+```js
+class Person {
+    constructor(fristName, lastName) {
+        this.fristName = fristName;
+        this.lastName = lastName;
+    }
+    getFullName() {
+        return `${this.fristName} ${this.lastName}`;
+    }
+}
+
+const john = new Person('John', 'Doe');
+console.log(john.getFullName()); // saída: John Doe
+```
