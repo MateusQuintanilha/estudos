@@ -29,3 +29,21 @@ class Person {}
 ```
 
 Todo o conteúdo da class será inserido dentro desse par de chaves.
+
+### Construtor
+
+Podemos usar o método `constructor` para criar e inicializar um objeto que irá conter os parâmetros.
+
+***Nota: O construtor é opcional, então só iremos utiliza-lo quando precisarmos dele***
+***Nota: Só poderá existir um construtor por class***
+
+Para iniciar um construtor iremos usar a palavra-chave `constructor` em seguida iremos adicionar um par de parênteses que irá conter os parâmetros, após o par de parênteses iremos inserir um par chaves e dentro desse par de chaves iremos atribuir os parâmetros ao `this`:
+
+```js
+class Person {
+    constructor(fristName, lastName) {
+        this.fristName = fristName;
+        this.lastName = lastName;
+    }
+}
+```
