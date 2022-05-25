@@ -38,3 +38,40 @@ class Smartphone extends Dispositivo {};
 ```
 
 Criamos a classe `Smartphone` e usamos a palavra-chave `extends` em seguida adicionamos o nome da classe de onde os recursos serão herdados.
+
+## Criando uma instância da classe Smartphone
+
+Vamos criar uma instância dessa classe para ver o resultado:
+
+```js
+const s1 = new Smartphone('Samsung Galaxy S20');
+console.log(s1); // saída: Smartphone { nome: 'Samsung Galaxy S20', ligado: false }
+```
+
+Agora se essa classe filha precisar de alguma propriedade nova precisamos criar o seu constructor e para isso precisamos trazer os parâmetros que serão necessários na classe filha, para fazer isso iremos usar a função `super` no ligar do `this`.
+
+Nesse exemplo só iremos precisar usar o `super` no parâmetro nome.
+
+```js
+class Smartphone extends Dispositivo {
+    constructor(nome, modelo, cor) {
+        super(nome);
+        this.modelo = modelo;
+        this.cor = cor;
+    }
+};
+```
+
+Agora vamos refazer a instância `s1`:
+
+```js
+const s1 = new Smartphone('Samsung', 'Galaxy S20', 'Preto');
+console.log(s1); /* saída: 
+    Smartphone {
+    nome: 'Samsung',
+    ligado: false,
+    modelo: 'Galaxy S20',
+    cor: 'Preto'
+    }
+*/
+```
