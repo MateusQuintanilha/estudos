@@ -1,3 +1,30 @@
 # Herança com Class
 
 As classes JavaScript também suportam o recurso de herança, para conseguir usar a herança na hora da criação da classe filha precisamos usar a palavra-chave `extends` após o seu nome e em seguida adicionar o nome da classe pai (a classe filha irá herdar todos os recursos da classe pai).
+
+## Criando a classe pai
+
+Vamos criar uma classe chama de Dispositivo onde ela irá precisar de um parâmetro nome e também irá possuir uma propriedade chamada de ligado que será iniciada como `false`, essa classe irá possuir dois métodos, o primeiro chamado ligar que irá trocar o valor da propriedade ligado para true, e se caso o valor dessa propriedade já for true irá retornar uma mensagem avisando que o dispositivo já está ligado e também terá um método chamado desligar que fará o inverso do método ligar.
+
+```js
+class Dispositivo {
+    constructor(nome) {
+        this.nome = nome;
+        this.ligado = false;
+    }
+    ligar() {
+        if(this.ligado) {
+            return console.log(`${this.nome} já está ligado!`);
+        }
+        
+        this.ligado = true;
+    }
+    desligar() {
+        if(!this.ligado) {
+            return console.log(`${this.nome} já está desligado!`);
+        }
+        
+        this.ligado = false;
+    }
+}
+```
