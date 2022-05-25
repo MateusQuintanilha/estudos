@@ -28,3 +28,13 @@ class Dispositivo {
     }
 }
 ```
+
+## Criando a classe filha Smartphone
+
+Agora vamos criar a classe filha, essa classe terá o nome de Smartphone, inicialmente vamos criar uma classe vazia, pois só vamos usar os recursos da classe pai.
+
+```js
+class Smartphone extends Dispositivo {};
+```
+
+Criamos a classe `Smartphone` e usamos a palavra-chave `extends` em seguida adicionamos o nome da classe de onde os recursos serão herdados.
