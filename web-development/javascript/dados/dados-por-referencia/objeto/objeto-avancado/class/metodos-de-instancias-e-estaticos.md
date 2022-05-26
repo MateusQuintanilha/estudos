@@ -9,4 +9,7 @@ class Carro {
         this.quantidadeDeGasolina = quantidadeDeGasolina;
     }
 }
+
+const carro1 = new Carro(8, 47);
+console.log(carro1); // saída: Carro { distanciaPorLitro: 8, quantidadeDeGasolina: 47 }
 ```
