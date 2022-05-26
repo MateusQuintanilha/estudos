@@ -6,7 +6,7 @@ Podemos usar dois tipos de métodos dentro da classe, o método de instância e 
 class Carro {
     constructor(distanciaPorLitro, quantidadeDeGasolina) {
         this.distanciaPorLitro = distanciaPorLitro;
-        this,quantidadeDeGasolina = quantidadeDeGasolina;
+        this.quantidadeDeGasolina = quantidadeDeGasolina;
     }
 }
 ```
