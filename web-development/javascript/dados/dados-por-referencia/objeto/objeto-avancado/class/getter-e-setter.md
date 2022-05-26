@@ -39,7 +39,6 @@ for(let i = 0; i <= 200; i++) {
 console.log(c1);// saída: Carro { nome: 'Fusca', [Symbol(velocidade)]: 100 }
 ```
 
-
 Como podemos ver, o método acelerar respeitou aquele limite de 100 que foi declarado no if mas tem algumas formas de burlar isso.
 
 Imagine que alguém em outra parte do código coloque `c1.velocidade = 500;`, isso irá alterar a velocidade do veículo para 500 sem passar pela verificação que fizemos no método acelerar:
