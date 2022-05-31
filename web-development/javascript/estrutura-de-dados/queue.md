@@ -10,3 +10,35 @@ Métodos fundamentais:
 * dequeue(): para remover o primeiro elemento a entrar na fila
 
 Outros métodos poderão ser implementados como `size()` para mostrar o tamanho da fila, ou `front()` para pegar o primeiro elemento da fila, dentre tantos outros.
+
+Criando o modelo
+
+```js
+class Queue {
+    constructor() {
+        this.data = [];
+    }
+    enqueue(item) {
+        this.data.push(item);
+        console.log(`${item} chegou na fila!`);
+    };
+    dequeue() {
+        const item = this.data.shift();
+        console.log(`${item} saiu da fila!`)
+    };
+}
+```
+
+Criando uma instância
+
+```js
+const fila = new Queue();
+```
+
+Usando essa instância:
+
+```js
+fila.enqueue('Mariana');
+fila.enqueue('João');
+fila.dequeue();
+```
