@@ -16,3 +16,21 @@ Sintaxe:
 ```js
 new Promise((resolve, reject) => {})
 ```
+
+## Criando uma Promise
+
+```js
+console.log('Pedir uber');
+const corrida = false;
+const promessa = new Promise((resolve, reject) => {
+    if(corrida) return resolve('Carro chegou');
+    return reject('Pedido negado!');
+});
+
+console.log('Aguardando')
+
+promessa
+.then( result => console.log(result))
+.catch( error => console.log(error))
+.finally( () => console.log('Finalizado'));
+```
