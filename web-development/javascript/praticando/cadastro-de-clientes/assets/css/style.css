@@ -23,7 +23,69 @@ header {
 aside {
     grid-area: aside;
     height: calc(100vh - 76px);
+    background: #485779;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+li {
+    width: 100%;
+    height: 60px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+li:hover {
+    background: #4273FA;
+}
+#atual {
+    background: #4273FA;
+}
+li a {
+    text-decoration: none;
+    color: #FFFFFF;
 }
 main {
     grid-area: main;
+    background: #FFFFFF;
+    border: 1px solid #D6DEE3;
+    margin: 30px;
+}
+/* .menu {
+    width: 100%;
+    height: 190px;
+    border-bottom: 1px solid #D6DEE3;
+} */
+table {
+    width: 100%;
+}
+thead {
+    height: 40px;
+    border: 1px solid black;
+}
+tbody {
+    text-align: center;
+}
+td, th {
+    padding: 10px;
+    border-bottom: 1px solid #D6DEE3;
+}
+button {
+    padding: 10px 15px;
+    color: #FFFFFF;
+}
+.edit {
+    background: #4eb969;
+}
+.edit:hover {
+    background: #61CF7D;
+}
+.del {
+    background: #d6304f;
+}
+.del:hover {
+    background: #FE3F61;
 }
