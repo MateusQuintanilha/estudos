@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    max-width: 1440px;
+    margin: 0 auto;
+    background: #F6F8FF;
+    grid-template-areas:
+    "header header header header header"
+    "aside main main main main";
+}
+header {
+    grid-area: header;
+    height: 76px;
+    background: #FFFFFF;
+    border: 1px solid #D6DEE3;
+}
+aside {
+    grid-area: aside;
+    height: calc(100vh - 76px);
+}
+main {
+    grid-area: main;
+}
