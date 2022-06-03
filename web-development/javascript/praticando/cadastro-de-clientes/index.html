@@ -20,7 +20,9 @@
         </ul>
     </aside>
     <main>
-        <div class="menu"></div>
+        <div class="menu">
+            <button id="new-client">Novo Cliente</button>
+        </div>
         <table>
             <thead>
                 <tr>
@@ -31,7 +33,7 @@
                     <th>Ação</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="table-content">
                 <tr>
                     <td>Todd Jenkins</td>
                     <td>jiegwe@kivgim.rw</td>
@@ -54,6 +56,24 @@
                 </tr>
             </tbody>
         </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Cliente</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form class="modal-form">
+                    <input type="text" class="modal-field" placeholder="Nome do Cliente">
+                    <input type="email" class="modal-field" placeholder="e-mail do Cliente">
+                    <input type="text" class="modal-field" placeholder="Celular do Cliente">
+                    <input type="text" class="modal-field" placeholder="Cidade do Cliente">
+                </form>
+                <footer class="modal-footer">
+                    <button class="button-green">Salvar</button>
+                    <button class="button-blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
     </main>
     <script src="assets/js/script.js"></script>
 </body>
