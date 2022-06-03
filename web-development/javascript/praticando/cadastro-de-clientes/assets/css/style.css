@@ -19,6 +19,9 @@ header {
     height: 76px;
     background: #FFFFFF;
     border: 1px solid #D6DEE3;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
 }
 aside {
     position: sticky;
@@ -59,9 +62,6 @@ main {
     width: 400px;
     height: 400px;
     border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
     background-color: #485779;
 }
 .menu-cadastro input {
@@ -73,9 +73,7 @@ main {
 /*     height: 190px; */
 padding: 20px;
     border-bottom: 1px solid #D6DEE3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 #new-client {
     background-color: #4273FA;
