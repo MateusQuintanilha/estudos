@@ -182,15 +182,15 @@ button:hover {
     text-align: right;
     padding: 0 20px;
 }
-.button-green {
+#save {
     background: #42b65f;
 }
-.button-green:hover {
+#save:hover {
     background: #2d8d45;
 }
-.button-blue {
+#cancel {
     background: #4273FA;
 }
-.button-blue:hover {
+#cancel:hover {
     background: #2553d1;
 }
