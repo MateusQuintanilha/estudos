@@ -15,3 +15,24 @@ document.getElementById('new-client')
 
 document.getElementById('modalClose')
     .addEventListener('click', closeModal);
+
+// CRUD - create read update delete
+const createClient = (client) => {
+    const clientDB = getLocalStorage();
+    clientDB.push(client);
+    setLocalStorage(clientDB);
+}
+
+const readClient = () => getLocalStorage();
+
+const updateClient = (index, client) => {
+    const clientDB = getLocalStorage();
+    clientDB[index] = client;
+    setLocalStorage(clientDB);
+}
+
+const deleteClient = (index) => {
+    const clientDB = getLocalStorage();
+    clientDB.splice(index, 1);
+    setLocalStorage(clientDB);
+};
