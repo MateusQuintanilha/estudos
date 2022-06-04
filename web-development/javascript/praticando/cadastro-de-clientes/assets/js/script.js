@@ -1,7 +1,12 @@
-const modal = document.getElementById('modal');
+const openModal = () => document.getElementById('modal').classList.add('active');
+const closeModal = () => {
+    clearFields();
+    document.getElementById('modal').classList.remove('active')
+};
 
+// Events
 document.getElementById('new-client')
-    .addEventListener('click', () => modal.classList.add('active'));
+    .addEventListener('click', openModal);
 
 document.getElementById('modalClose')
-    .addEventListener('click', () => modal.classList.remove('active'));
+    .addEventListener('click', closeModal);
