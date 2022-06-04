@@ -1,11 +1,7 @@
-function actionButton(idButton, idContent, action) {
-    const buttonContent = document.getElementById(idButton);
-    const content = document.getElementById(idContent)
+const modal = document.getElementById('modal');
 
-    buttonContent.addEventListener('click', () =>{
-        content.classList.toggle(action)
-    })
-}
+document.getElementById('new-client')
+    .addEventListener('click', () => modal.classList.add('active'));
 
-actionButton('new-client', 'modal', 'active');
-actionButton('modalClose', 'modal', 'active');
+document.getElementById('modalClose')
+    .addEventListener('click', () => modal.classList.remove('active'));
