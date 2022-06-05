@@ -36,3 +36,24 @@ const deleteClient = (index) => {
     clientDB.splice(index, 1);
     setLocalStorage(clientDB);
 };
+
+// Form Client
+const isValidFields = () => document.getElementById('client-form').reportValidity();
+
+const clearFields = () => {
+    const fields = document.querySelectorAll('.modal-field');
+    fields.forEach(field => field.value = "");
+};
+
+const saveClient = () => {
+    if (!isValidFields()) return;
+    const client = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        tel: document.getElementById('tel').value,
+        city: document.getElementById('city').value
+    }
+    createClient(client);
+    updateTable();
+    clearFields();
+};
