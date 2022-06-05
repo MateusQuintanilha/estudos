@@ -9,13 +9,6 @@ const nameDataBase = 'db_client';
 const getLocalStorage = () => JSON.parse(localStorage.getItem(nameDataBase)) ?? [];
 const setLocalStorage = (contentDB) => localStorage.setItem(nameDataBase, JSON.stringify(contentDB));
 
-// Events
-document.getElementById('new-client')
-    .addEventListener('click', openModal);
-
-document.getElementById('modalClose')
-    .addEventListener('click', closeModal);
-
 // CRUD - create read update delete
 const createClient = (client) => {
     const clientDB = getLocalStorage();
@@ -84,3 +77,16 @@ const updateTable = () => {
     clientDB.forEach(createRow);
 }
 updateTable();
+
+// Events
+document.getElementById('new-client')
+    .addEventListener('click', openModal);
+
+document.getElementById('modalClose')
+    .addEventListener('click', closeModal);
+
+document.getElementById('save')
+    .addEventListener('click', saveClient);
+
+document.getElementById('cancel')
+    .addEventListener('click', clearFields)
