@@ -89,4 +89,4 @@ document.getElementById('save')
     .addEventListener('click', saveClient);
 
 document.getElementById('cancel')
-    .addEventListener('click', clearFields)
+    .addEventListener('click', clearFields);
