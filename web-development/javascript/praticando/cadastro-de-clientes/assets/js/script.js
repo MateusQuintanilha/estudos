@@ -57,3 +57,30 @@ const saveClient = () => {
     updateTable();
     clearFields();
 };
+
+const createRow = (client) => {
+    const newRow = document.createElement('tr');
+    newRow.innerHTML = `
+        <td>${client.name}</td>
+        <td>${client.email}</td>
+        <td>${client.tel}</td>
+        <td>${client.city}</td>
+        <td>
+            <button class="edit">Editar</button>
+            <button class="del">Excluir</button>
+        </td>
+    `;
+    document.querySelector('#table-client>tbody').appendChild(newRow);
+};
+
+const clearTable = () => {
+    const rows = document.querySelectorAll('#table-client>tbody tr');
+    rows.forEach(row => row.parentNode.removeChild(row));
+};
+
+const updateTable = () => {
+    const clientDB = readClient();
+    clearTable();
+    clientDB.forEach(createRow);
+}
+updateTable();
