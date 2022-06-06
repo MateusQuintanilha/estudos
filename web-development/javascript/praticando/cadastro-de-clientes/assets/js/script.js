@@ -51,7 +51,7 @@ const saveClient = () => {
     clearFields();
 };
 
-const createRow = (client) => {
+const createRow = (client, index) => {
     const newRow = document.createElement('tr');
     newRow.innerHTML = `
         <td>${client.name}</td>
@@ -59,8 +59,8 @@ const createRow = (client) => {
         <td>${client.tel}</td>
         <td>${client.city}</td>
         <td>
-            <button class="edit">Editar</button>
-            <button class="del">Excluir</button>
+            <button type="button" class="edit" id="edit-${index}">Editar</button>
+            <button type="button" button class="del" id="delete-${index}">Excluir</button>
         </td>
     `;
     document.querySelector('#table-client>tbody').appendChild(newRow);
