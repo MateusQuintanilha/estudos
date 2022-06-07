@@ -84,6 +84,15 @@ const fillFields = (client) => {
     document.getElementById('city'). value = client.city;
 };
 
+const actionEditDelete = (event) => {
+    const element = event.target;
+    if (element.type === 'button') {
+        const [action, index] = element.id.split('-');
+        if (action === 'edit') editClient(index);
+        if (action === 'delete') console.log('Deletando');
+    }
+};
+
 const editClient = (index) => {
     const client = readClient()[index];
     fillFields(client);
