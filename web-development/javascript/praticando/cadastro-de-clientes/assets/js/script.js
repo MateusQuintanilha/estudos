@@ -46,9 +46,16 @@ const saveClient = () => {
         tel: document.getElementById('tel').value,
         city: document.getElementById('city').value
     }
-    createClient(client);
-    updateTable();
-    clearFields();
+    const index = document.getElementById('name').dataset.index;
+    if(index == 'new'){
+        createClient(client);
+        updateTable();
+        clearFields();
+    } else {
+        updateClient(index, client);
+        updateTable();
+        closeModal();
+    }
 };
 
 const createRow = (client, index) => {
@@ -82,6 +89,14 @@ const fillFields = (client) => {
     document.getElementById('email'). value = client.email;
     document.getElementById('tel'). value = client.tel;
     document.getElementById('city'). value = client.city;
+    document.getElementById('name').dataset.index = client.index;
+};
+
+const editClient = (index) => {
+    const client = readClient()[index];
+    client.index = index;
+    fillFields(client);
+    openModal();
 };
 
 const actionEditDelete = (event) => {
@@ -93,14 +108,7 @@ const actionEditDelete = (event) => {
     }
 };
 
-const editClient = (index) => {
-    const client = readClient()[index];
-    fillFields(client);
-    openModal();
-};
-
 updateTable();
-
 // Events
 document.getElementById('new-client')
     .addEventListener('click', openModal);
