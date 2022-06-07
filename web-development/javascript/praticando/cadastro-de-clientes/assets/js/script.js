@@ -99,12 +99,20 @@ const editClient = (index) => {
     openModal();
 };
 
+
 const actionEditDelete = (event) => {
     const element = event.target;
     if (element.type === 'button') {
         const [action, index] = element.id.split('-');
         if (action === 'edit') editClient(index);
-        if (action === 'delete') console.log('Deletando');
+        if (action === 'delete') {
+            const client = readClient()[index];
+            const response = confirm(`Deseja realmente excluir o cliente ${client.name}?`);
+            if (response) {
+                deleteClient(index);
+                updateTable();
+            }
+        }
     }
 };
 
