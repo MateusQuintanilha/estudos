@@ -113,3 +113,5 @@ document.getElementById('save')
 
 document.getElementById('cancel')
     .addEventListener('click', clearFields);
+
+document.addEventListener('click', actionEditDelete);
