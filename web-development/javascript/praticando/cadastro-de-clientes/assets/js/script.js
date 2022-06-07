@@ -76,6 +76,20 @@ const updateTable = () => {
     clearTable();
     clientDB.forEach(createRow);
 }
+
+const fillFields = (client) => {
+    document.getElementById('name'). value = client.name;
+    document.getElementById('email'). value = client.email;
+    document.getElementById('tel'). value = client.tel;
+    document.getElementById('city'). value = client.city;
+};
+
+const editClient = (index) => {
+    const client = readClient()[index];
+    fillFields(client);
+    openModal();
+};
+
 updateTable();
 
 // Events
