@@ -6,7 +6,7 @@
 }
 
 .container {
-    max-width: 800px;
+    max-width: 900px;
     padding: 20px;
     margin: 0 auto;
     background-color: cadetblue;
@@ -22,4 +22,14 @@ header {
 .book-list th {
     text-align: center;
     padding: 5px;
+}
+input {
+    padding: 5px 10px
+}
+button {
+    padding: 5px 10px;
+}
+.edit button,
+.delete button {
+    padding: 5px 20px;
 }
