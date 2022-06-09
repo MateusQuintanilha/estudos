@@ -20,7 +20,7 @@
             </form>
                 <div class="buttons">
                     <button type="submit" id="new-book">Cadastrar Livro</button>
-                    <button type="reset">Limpar Campos</button>
+                    <button type="reset" id="reset-fields">Limpar Campos</button>
                 </div>
         </section>
         <section class="book-list-container">
@@ -31,19 +31,10 @@
                         <th>Autor do Livro</th>
                         <th>Idioma do Livro</th>
                         <th>Ações</th>
+
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Livro #01</td>
-                        <td>Fulano de Tal</td>
-                        <td>pt-BR</td>
-                        <td>
-                            <button>Editar</button>
-                            <button>Excluir</button>
-                        </td>
-                    </tr>
-                </tbody>
+                <tbody id="book-tbody"></tbody>
             </table>
         </section>
     </main>
