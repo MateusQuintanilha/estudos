@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Cadastro de Livros</title>
+</head>
+<body>
+    <header class="container">
+        <h1>Cadastro de Livros</h1>
+    </header>
+    <main class="container">
+        <section class="book-register-container">
+            <form action="#" id="book-register">
+                <input type="text" name="title" id="title" placeholder="Título do Livro" required>
+                <input type="text" name="author" id="author" placeholder="Autor do Livro" required>
+                <input type="text" name="language" id="language" placeholder="Idioma do Livro" required>
+            </form>
+                <div class="buttons">
+                    <button type="submit" id="new-book">Cadastrar Livro</button>
+                    <button type="reset">Limpar Campos</button>
+                </div>
+        </section>
+        <section class="book-list-container">
+            <table class="book-list">
+                <thead>
+                    <tr>
+                        <th>Título do Livro</th>
+                        <th>Autor do Livro</th>
+                        <th>Idioma do Livro</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Livro #01</td>
+                        <td>Fulano de Tal</td>
+                        <td>pt-BR</td>
+                        <td>
+                            <button>Editar</button>
+                            <button>Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
