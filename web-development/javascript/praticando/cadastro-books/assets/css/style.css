@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: cadetblue;
+}
+header {
+    text-align: center;
+}
+.book-register-container {
+    display: flex;
+    gap: 5px;
+}
+.book-list td,
+.book-list th {
+    text-align: center;
+    padding: 5px;
+}
