@@ -80,3 +80,11 @@ const editField = (event) => {
         updateTable();
     }
 };
+
+// Events
+document.getElementById('new-book').addEventListener('click', saveBook);
+document.getElementById('reset-fields'). addEventListener('click', clearFields);
+document.getElementById('book-tbody').addEventListener('click', editField);
+
+// Auto
+updateTable();
