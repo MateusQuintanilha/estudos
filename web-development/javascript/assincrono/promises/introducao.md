@@ -41,3 +41,7 @@ Uma Promise poderá ser:
 * `Settled`: Seja com sucesso ou com erro, ela foi finalmente concluída
 
 ## Métodos
+
+### Promise.all(lista)
+
+O método `Promise.all` recebe um iterável (como um array) de promessas e, um a vez que todas as promessas tenham sido resolvidas, retorna um novo array com os valores da resolução das promessas na ordem em que foi passada. Mas caso uma dessas promessas falhar, o `Promise.all` fará um "curto circuito", de modo que rejeitará todas as outras promessas.
