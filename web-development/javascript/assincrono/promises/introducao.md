@@ -70,3 +70,27 @@ Promise.all(promises)
 
 // Saída: Result: [ 1, 2, 3 ]
 ```
+
+#### Promise.all com uma das promessas rejeitada
+
+Vamos usar o mesmo exemplo anterior mas vamos alterar a segunda promessa do array de `resolve` para `reject` e vamos passar a seguinte frase: "Eu vou falhar e arruinar tudo."
+
+```js
+const promises = [
+    Promise.resolve(1),
+    Promise.reject('Eu vou falhar e arruinar tudo.'),
+    Promise.resolve(3),
+];
+
+Promise.all(promises)
+    .then((list) => {
+        console.log('Result:');
+        console.log(list);
+    })
+    .catch((error) => {
+        console.log('Error:');
+        console.log(error);
+    });
+
+// Saída: Error: Eu vou falhar e arruinar tudo.
+```
