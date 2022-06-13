@@ -35,17 +35,16 @@ promessa
 
 Uma Promise poderá ser:
 
-* `Pending`: Estado inicial, assim que o Objeto da promessa é iniciado
-* `Fulfilled`: A promessa foi concluída com sucesso
-* `Rejected`: A promessa foi rejeitada, houve um erro
-* `Settled`: Seja com sucesso ou com erro, ela foi finalmente concluída
+* `Pending`(pendente): Estado inicial, assim que o Objeto da promessa é iniciado
+* `Fulfilled`(atendida): A promessa foi concluída com sucesso
+* `Rejected`(rejeitada): A promessa foi rejeitada, houve um erro
+* `Settled`(resolvida): Seja com sucesso ou com erro, ela foi finalmente concluída
 
 ## Métodos
 
 ### Promise.all(lista)
 
 O método `Promise.all` recebe um iterável (como um array) de promessas e, um a vez que todas as promessas tenham sido resolvidas, retorna um novo array com os valores da resolução das promessas na ordem em que foi passada. Mas caso uma dessas promessas falhar, o `Promise.all` fará um "curto circuito", de modo que rejeitará todas as outras promessas.
-
 
 #### Promise.all com todas as promessas resolvidas
 
@@ -100,8 +99,8 @@ Promise.all(promises)
 O método `Promise.allSettled` assim como o `Promise.all`, também recebe um iterável (como um array) de promessas e espera que todas sejam resolvidas. A principal diferença é que irá retornar um array de objetos, descrevendo o resultado de cada uma das promessas. Esse objeto possui duas propriedades:
 
 * `Status`: Indica o resultado da promessa e pode assumir dois valores:
-  * `fulfilled`: no caso de promessa ser resolvida.
-  * `reject`: no caso da promessa ser rejeitada.
+  * `fulfilled`(atendida): no caso de promessa ser resolvida.
+  * `reject`(rejeitada): no caso da promessa ser rejeitada.
 * `value`: O valor do resultado da promessa.
 
 Portando, o método `Promise.allSettled` irá retornar o resultado das promessas somente após todas as promessas passadas terem sido resolvidas ou rejeitadas. Diferente do método `Promise.all` que se houver uma promessa rejeitada irá gerar um "curto circuito", o método `Promise.allSettled` irá retornar a resolução de todas as promessas  junto com a informação se ela foi resolvida ou rejeitada.
