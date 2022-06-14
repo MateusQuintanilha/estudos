@@ -124,7 +124,7 @@ Promise.allSettled(promises)
         console.log(error);
     });
 
-    /* Saída: Result:
+/* Saída: Result:
         [
             { status: 'fulfilled', value: 1 },
             { status: 'rejected', reason: 'Eu vou falhar e arruinar tudo.' },
@@ -152,9 +152,7 @@ function promessaComTempo(msg) {
             if(typeof msg != 'number') reject(msg);
             resolve(msg);
         }, rand());
-    }
-    );
-    
+    });  
 }
 
 const promises = [
@@ -193,9 +191,7 @@ function promessaComTempo(msg) {
             if(typeof msg === 'number') reject(msg);
             resolve(msg);
         }, rand());
-    }
-    );
-    
+    });  
 }
 
 function baixarPagina() {
@@ -212,7 +208,7 @@ baixarPagina()
     .then(dadosPagina => {
         console.log(dadosPagina);
     })
-    . catch(error => console.log(error));
+    .catch(error => console.log(error));
 ```
 
 ### Promise.resolve(valor)
@@ -234,8 +230,7 @@ function promessaComTempo(msg) {
             if(typeof msg === 'number') reject(msg);
             resolve(msg);
         }, rand());
-    }
-    );
+    });
     
 }
 
@@ -253,5 +248,5 @@ baixarPagina()
     .then(dadosPagina => {
         console.log(dadosPagina);
     })
-    . catch(error => console.log(error));
+    .catch(error => console.log(error));
 ```
