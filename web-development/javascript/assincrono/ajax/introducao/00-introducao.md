@@ -6,3 +6,15 @@ Os dois recursos em questão que você pode utilizar são:
 
 * Fazer requisições para o servidor sem recarregar a página
 * Receber e trabalhar com dados do servidor
+
+## Criando requisições com XMLHttpRequest
+
+O JavaScript nativamente possui um objeto responsável por realizar requisições HTTP via AJAX, esse objeto é conhecido como `XMLHttpRequest`.
+
+Vamos criar uma instância do objeto `XMLHttpRequest`:
+
+```js
+const xhr = new XMLHttpRequest();
+```
+
+Agora que criamos a instância, precisamos iniciar uma nova requisição.
