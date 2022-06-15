@@ -51,3 +51,17 @@ Podemos usar o comando `mkdir` em seguida adicionar o nome do diretório para cr
 Para poder criar múltiplos diretórios como por exemplo `site/src` irá acusar um erro falando que o diretório `site` não existe, para que esse erro não ocorra, podemos adicionar um `-p` para que os diretório site seja criado e em seguida o src seja criado dentro do diretório site:  `mkdir -p site/src`.
 
 Também podemos criar múltiplos diretórios no mesmo diretório raiz, para isso só precisamos separar os nomes dos diretórios a serem criados com espaço: `mkdir site2 site3 site4`
+
+## Criando arquivos com touch
+
+Podemos usar o comando `touch` para alterar registros de data e hora de arquivos ou pastas e também podemos criar um ou mais arquivos.
+
+### Alterando registo de data e hora com touch
+
+Para fazer a alteração dos registros de data e hora de um arquivo só é necessário usar o comando `touch` em seguida adicionar o nome do arquivo que desejamos fazer a alteração dos registros: `touch site`.
+
+### Criando Arquivos com touch
+
+Para criar um arquivo usando o `touch` precisamos usar o comando em seguida adicionar o nome do arquivo e a extensão: `touch file.txt`.
+
+Para criar múltiplos arquivo usando o `touch` só precisamos separar os nomes dos arquivos com espaço: `touch file1.txt file2.txt file3.txt`.
