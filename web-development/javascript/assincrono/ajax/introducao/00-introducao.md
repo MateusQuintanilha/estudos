@@ -18,3 +18,26 @@ const xhr = new XMLHttpRequest();
 ```
 
 Agora que criamos a instância, precisamos iniciar uma nova requisição.
+
+## Iniciando ou Reiniciando uma Requisição usando o método open
+
+O `XMLHttpRequest` possui o método `open()` para iniciar uma nova requisição ou reinicializar um requisição já existente.
+
+Sintaxe:
+
+```js
+XMLHttpRequest.open(method, url)
+XMLHttpRequest.open(method, url, async)
+XMLHttpRequest.open(method, url, async, user)
+XMLHttpRequest.open(method, url, async, user, password)
+```
+
+### Parâmetros do método open
+
+* `method`: O método de requisição HTTP: "GET", "POST", "PUT", "DELETE", etc.
+* `url`: A URL para enviar a requisição
+* `async`(opcional): É um parâmetro boolean, utiliza o `valor` true como padrão.
+  * `true`: A requisição será realizada de forma assíncrona.
+  * `false`: A requisição será realizada de forma síncrona.
+* `user`(opcional): O nome de usuário para ser usado em autenticação; por padrão, esse valor é `null`.
+* `password`(opcional): A senha de usuário para ser usado em autenticação; por padrão esse valor é `null`.
