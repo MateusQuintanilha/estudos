@@ -65,3 +65,24 @@ Para fazer a alteração dos registros de data e hora de um arquivo só é neces
 Para criar um arquivo usando o `touch` precisamos usar o comando em seguida adicionar o nome do arquivo e a extensão: `touch file.txt`.
 
 Para criar múltiplos arquivo usando o `touch` só precisamos separar os nomes dos arquivos com espaço: `touch file1.txt file2.txt file3.txt`.
+
+
+## Copiando arquivos e pastas
+
+Podemos usar o comando `cp` para copiar arquivos e pastas, para fazer isso precisamos usar o comando, em seguida adicionamos o nome do arquivo que queremos copiar e para finalizar adicionamos o nome do arquivo ou diretório onde o arquivo será copiado : `cp file.txt arquivo.txt` (irá criar outro arquivo txt com o conteúdo do arquivo file), Agora vamos ao exemplo de copiar para outro diretório: `cp file.txt site2`.
+
+## Movendo e renomeando arquivos ou pastas
+
+Podemos usar o comando `mv` para mover ou renomear arquivos ou pastas.
+
+Podemos usar o comando para mover arquivos ou pastas, podemos mover múltiplos arquivos, para isso iremos separar o nome dos arquivos com espaço e todas as pastas ou arquivos serão movido para o ultimo nome inserido: `mv file1.txt file2.txt file3.txt site`
+
+e para renomear um arquivo precisamos usar o comando em seguida adicionar o nome do arquivo com a extensão que desejamos alterar o nome e em seguida adicionar o novo nome com a extensão: `mv file1.txt arquivo1.txt`
+
+## Removendo arquivos ou pastas (para sempre)
+
+Podemos usar o comando `rm` para remover um arquivos ou pasta para sempre, para fazer isso precisamos usar o comando em seguida adicionar o nome do arquivo ou diretório que desejamos remover, também podemos remover múltiplos arquivos separando os arquivos com espaço. `rm arquivo2.txt file3.txt`
+
+Para remover um diretório precisamos usar o `-r` antes do nome do diretório que desejamos excluir, pois como um diretório possui muitos arquivos, apenas o comando `rm` não poderá exclui-lo: `rm -r site`.
+
+E também podemos forçar para remover arquivos caso tenha problemas com permições podemos usar o `-rf` para forçar a remoção `rm -rf site3`.
