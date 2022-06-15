@@ -33,3 +33,21 @@ podemos usar apelas o comando `ls` para listar os arquivos do diretório ou apó
 `-R` irá lista os repositórios e todos os arquivos que estão dentro dele.
 
 `-S` irá ordenar os arquivos pelo tamanho.
+
+## Arquivos e Diretórios
+
+### File
+
+Podemos usar o comando `file` com o nome e a extensão do arquivo para verificar as informações do arquivo como a extensão, resolução.
+
+### Stat
+
+Podemos usar o comando `stat` com o nome e a extensão do arquivo para verificar outros tipos de informações como quem é o dono do arquivo, tipos de permições, ultima modificação, tamanho, etc.
+
+## Criando diretório
+
+Podemos usar o comando `mkdir` em seguida adicionar o nome do diretório para criar um diretório.
+
+Para poder criar múltiplos diretórios como por exemplo `site/src` irá acusar um erro falando que o diretório `site` não existe, para que esse erro não ocorra, podemos adicionar um `-p` para que os diretório site seja criado e em seguida o src seja criado dentro do diretório site:  `mkdir -p site/src`.
+
+Também podemos criar múltiplos diretórios no mesmo diretório raiz, para isso só precisamos separar os nomes dos diretórios a serem criados com espaço: `mkdir site2 site3 site4`
