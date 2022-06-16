@@ -66,3 +66,15 @@ Parâmetros:
 * `password`(opcional): A senha de usuário para ser usado em autenticação; por padrão esse valor é `null`.
 
 ***Nota: Observe que o método `open` só configura a solicitação, ao contrário de seu nome, não abre a conexão. Ele apenas configura a solicitação, mas a atividade de rede só começa com a chamada do método `send`.***
+
+### Enviando a solicitação da Requisição usando o método send
+
+O `XMLHttpRequest` possui o método `send()` que é responsável por abrir a conexão e enviar a solicitação ao servidor.
+
+```js
+xhr.sed([body])
+```
+
+Parâmetro:
+
+* `body`(opcional): Contém o corpo da solicitação, alguns métodos de solicitação como `GET` não possuem um corpo. E alguns deles como `POST` precisam enviar os dados para o servidor.
