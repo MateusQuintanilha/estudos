@@ -105,3 +105,14 @@ xhr.onprogress = () => {};
 // progress 02
 xhr.addEventListener('progress', () => {});
 ```
+
+### Tipos de respostas
+
+Podemos usar o método `responseType` para definir o formato de resposta:
+
+* `""`(padrão) - Obtém a resposta como string
+* `"text"` - Obtém a resposta como string
+* `arraybuffer` - É usado para pegar um `arraybuffer` contendo dados binários.
+* `blob` - É usado para pegar um `blob` contendo dados binários.
+* `"document"` - Obtém a resposta como document XML (pode usar XPath e outros métodos XML) ou documento HTML (com base no tipo MIME dos dados recebidos),
+* `"json"` - Obtém a resposta como JSON (analisado automaticamente).
