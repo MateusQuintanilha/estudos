@@ -7,37 +7,37 @@ Os dois recursos em questão que você pode utilizar são:
 * Fazer requisições para o servidor sem recarregar a página
 * Receber e trabalhar com dados do servidor
 
-## Criando requisições com XMLHttpRequest
+## XMLHttpRequest
 
-O JavaScript nativamente possui um objeto responsável por realizar requisições HTTP via AJAX, esse objeto é conhecido como `XMLHttpRequest`.
+`XMLHttpRequest` é um objeto embutido do navegador que permite fazer solicitações HTTP em JavaScript. Como vimos anteriormente, apesar de ter a palavra "XML" em seu nome, ele pode operar em qualquer dado e não apenas no formato XML.
 
-Vamos criar uma instância do objeto `XMLHttpRequest`:
+***Nota: No momento, há outro método mais moderno `fetch`.***
+
+No desenvolvimento web moderno o `XMLHttpRequest` pode ser usado por três razões:
+
+* Razões históricas: precisamos dar suporte a scripts existentes com `XMLHttpRequest`.
+* Quando e´preciso dar suporte a navegadores antigos e não queremos polyfills (por exemplo, para manter os scripts pequenos).
+* Precisamos de algo que o `fetch` ainda não pode fazer, por exemplo, acompanhar o progresso do upload.
+
+Agora vamos dar início ao Básico:
+
+O `XMLHttpRequest` possui dois modos de operação: Síncrono e o Assíncrono.
+
+Vamos ver primeiro o assíncrono, pois é usado na maioria dos casos.
+
+Para fazer o pedido e receber a resposta, precisamos de 4 etapas:
+
+1. Criar a instância do `XMLHttpRequest`
+1. Inicializa-lo usando o método `open`, geralmente logo após a criação de sua instância
+1. Enviar o pedido usando o método `send`.
+1. Escutar os eventos para obter uma resposta.
+
+### Criando a instância do XMLHttpRequest
+
+Vamos criar uma instância do `XMLHttpRequest`:
 
 ```js
 const xhr = new XMLHttpRequest();
 ```
 
-Agora que criamos a instância, precisamos iniciar uma nova requisição.
-
-## Iniciando ou Reiniciando uma Requisição usando o método open
-
-O `XMLHttpRequest` possui o método `open()` para iniciar uma nova requisição ou reinicializar um requisição já existente.
-
-Sintaxe:
-
-```js
-XMLHttpRequest.open(method, url)
-XMLHttpRequest.open(method, url, async)
-XMLHttpRequest.open(method, url, async, user)
-XMLHttpRequest.open(method, url, async, user, password)
-```
-
-### Parâmetros do método open
-
-* `method`: O método de requisição HTTP: "GET", "POST", "PUT", "DELETE", etc.
-* `url`: A URL para enviar a requisição
-* `async`(opcional): É um parâmetro boolean, utiliza o `valor` true como padrão.
-  * `true`: A requisição será realizada de forma assíncrona.
-  * `false`: A requisição será realizada de forma síncrona.
-* `user`(opcional): O nome de usuário para ser usado em autenticação; por padrão, esse valor é `null`.
-* `password`(opcional): A senha de usuário para ser usado em autenticação; por padrão esse valor é `null`.
+***Nota: Esse construtor não possui argumentos.***
