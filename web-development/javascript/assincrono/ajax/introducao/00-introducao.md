@@ -78,3 +78,30 @@ xhr.sed([body])
 Parâmetro:
 
 * `body`(opcional): Contém o corpo da solicitação, alguns métodos de solicitação como `GET` não possuem um corpo. E alguns deles como `POST` precisam enviar os dados para o servidor.
+
+### Escutando os Eventos
+
+Os três eventos mais utilizados são:
+
+* `load` - Quando a solicitação for concluída (mesmo que o status HTTP sendo 400 ou 500) e a resposta for totalmente baixada.
+* `error` - Quando a solicitação não pôde ser feita, por exemplo, rede inativa ou URL inválida.
+* `progress` - Dispara periodicamente enquanto a resposta está sendo baixada, relata quando for terminado o download.
+
+Temos algumas formas para escutar cada um desses eventos:
+
+```js
+// load 01
+xhr.onload = () => {};
+// load 02
+xhr.addEventListener('load', () => {});
+
+// error 01
+xhr.onerror = () => {};
+// error 02
+xhr.addEventListener('error', () => {});
+
+// progress 01
+xhr.onprogress = () => {};
+// progress 02
+xhr.addEventListener('progress', () => {});
+```
