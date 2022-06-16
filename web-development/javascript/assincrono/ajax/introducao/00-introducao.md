@@ -41,3 +41,28 @@ const xhr = new XMLHttpRequest();
 ```
 
 ***Nota: Esse construtor não possui argumentos.***
+
+### Configurando a solicitação da Requisição usando o método open
+
+O `XMLHttpRequest` possui o método `open()` para configurar uma nova requisição ou reconfigurar um requisição já existente.
+
+Sintaxe:
+
+```js
+xhr.open(method, url)
+xhr.open(method, url, async)
+xhr.open(method, url, async, user)
+xhr.open(method, url, async, user, password)
+```
+
+Parâmetros:
+
+* `method`: O método HTTP: "GET", "POST", "PUT", "DELETE", etc.
+* `url`: A URL a ser solicitada, uma string, pode ser um objeto `URL`
+* `async`(opcional): É um parâmetro boolean, utiliza o valor `true` como padrão.
+  * `true`: A requisição será realizada de forma assíncrona.
+  * `false`: A requisição será realizada de forma síncrona.
+* `user`(opcional): O nome de usuário para ser usado em autenticação; por padrão, esse valor é `null`.
+* `password`(opcional): A senha de usuário para ser usado em autenticação; por padrão esse valor é `null`.
+
+***Nota: Observe que o método `open` só configura a solicitação, ao contrário de seu nome, não abre a conexão. Ele apenas configura a solicitação, mas a atividade de rede só começa com a chamada do método `send`.***
