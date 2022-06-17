@@ -128,3 +128,28 @@ HEADERS_RECEIVED = 2; // send() foi chamado e os cabeçalhos e status estão dis
 LOADING = 3; // a resposta está carregando (um pacote de dados é recebido)
 DONE = 4; // a operação está concluída.
 ```
+
+Um objeto `XMLHttpRequest` percorre na ordem `0→ 1→ 2→ 3→ … → 3→ 4`. O estado `3` se repete toda vez que um pacote de dados é recebido pela rede.
+
+Podemos rastreá-los usando o evento `readystatechange` em códigos mais antigos, pois houve um tempo que não havia nenhum `load` ou outros eventos. Hoje em dia, os manipuladores `load/error/progress` o depreciaram.
+
+```js
+xhr.onreadystatechange = function() {
+  if (xhr.readyState == 3) {
+    // loading
+  }
+  if (xhr.readyState == 4) {
+    // request finished
+  }
+};
+```
+
+### Abortando solicitação
+
+Podemos encerrar a solicitação a qualquer momento usando o método `abor()`.
+
+Sintaxe:
+
+```js
+xhr.abort();
+```
