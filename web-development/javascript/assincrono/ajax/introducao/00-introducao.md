@@ -146,7 +146,7 @@ xhr.onreadystatechange = function() {
 
 ### Abortando solicitação
 
-Podemos encerrar a solicitação a qualquer momento usando o método `abor()`.
+Podemos encerrar a solicitação a qualquer momento usando o método `abort()`. Fazendo com que o `xhr.status` se torne `0`.
 
 Sintaxe:
 
