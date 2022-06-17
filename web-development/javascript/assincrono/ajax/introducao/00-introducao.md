@@ -116,3 +116,15 @@ Podemos usar o método `responseType` para definir o formato de resposta:
 * `blob` - É usado para pegar um `blob` contendo dados binários.
 * `"document"` - Obtém a resposta como document XML (pode usar XPath e outros métodos XML) ou documento HTML (com base no tipo MIME dos dados recebidos),
 * `"json"` - Obtém a resposta como JSON (analisado automaticamente).
+
+### verificando os estados
+
+Podemos ver o estado atual de uma request através do método `readyState`, Podemos receber as seguintes respostas:
+
+```js
+UNSET = 0; // existe um XHR criado mas o open() ainda não foi chamado.
+OPENED = 1; // open() foi chamado.
+HEADERS_RECEIVED = 2; // send() foi chamado e os cabeçalhos e status estão disponíveis.
+LOADING = 3; // a resposta está carregando (um pacote de dados é recebido)
+DONE = 4; // a operação está concluída.
+```
