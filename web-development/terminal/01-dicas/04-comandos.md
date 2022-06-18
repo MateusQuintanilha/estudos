@@ -119,3 +119,9 @@ Exemplo2: para procurar diretórios que possuem `*da*` em qualquer parte do nome
 Podemos ver o conteúdo de um arquivo usando o comando `less` em seguida adicionamos o nome do arquivo. (o arquivo será aberto e para fechar o arquivo precisamos usar um q).
 
 E para dar um print na tela e em seguida fechar a operação podemos usar o comando `cat`.
+
+## Editando arquivos
+
+Podemos usar o comando `nano` em seguida o nome do arquivo que desejamos editar, precisamos usar as setas do teclado para navegar entre o documento pois o mouse não funciona. (CTRL + O salva o arquivo e CTRL + X para fechar)
+
+Também podemos usar o comando `vim` é um editor de texto mais avançado.
