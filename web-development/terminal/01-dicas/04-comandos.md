@@ -98,3 +98,18 @@ Exemplo: Podemos mover todos os arquivos que comecem com si em de um repositóri
 * `?`: irá aplicar a ação apenas um caractere após o uso da ?.
 
 Exemplo: `mv sites2/site? sites` nesse caso irá mover todos os arquivos que possuírem um caractere após a palavra site, então se tivermos arquivos site com números em sequência de 1 a 12, só irá mover os arquivos de 1 a 9.
+
+## Encontrando arquivos ou diretórios
+
+Podemos usar o comando `find` para encontrar arquivos ou diretórios, mas precisamos passar mais algumas coisas: `find <path> arg [expression]`.
+
+Por exemplo para usar o find no diretório em que estamos iremos usar da seguinte forma: `find .`.
+
+Agora precisamos passar o tipo de arquivo que estamos procurando.
+
+* -type d: para pesquisar um diretório
+* -type f: para pesquisar um arquivo
+
+Exemplo: para procurar todos os arquivos que são mp4 no diretório atual. faremos  da seguinte forma: `find . -type f -name "*.mp4"`.
+
+Exemplo2: para procurar diretórios que possuem `*da*` em qualquer parte do nome podemos fazer assim: `find . type d -name "*da*"`.
