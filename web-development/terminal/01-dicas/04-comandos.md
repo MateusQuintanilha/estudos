@@ -66,7 +66,6 @@ Para criar um arquivo usando o `touch` precisamos usar o comando em seguida adic
 
 Para criar múltiplos arquivo usando o `touch` só precisamos separar os nomes dos arquivos com espaço: `touch file1.txt file2.txt file3.txt`.
 
-
 ## Copiando arquivos e pastas
 
 Podemos usar o comando `cp` para copiar arquivos e pastas, para fazer isso precisamos usar o comando, em seguida adicionamos o nome do arquivo que queremos copiar e para finalizar adicionamos o nome do arquivo ou diretório onde o arquivo será copiado : `cp file.txt arquivo.txt` (irá criar outro arquivo txt com o conteúdo do arquivo file), Agora vamos ao exemplo de copiar para outro diretório: `cp file.txt site2`.
