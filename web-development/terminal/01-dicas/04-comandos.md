@@ -113,3 +113,9 @@ Agora precisamos passar o tipo de arquivo que estamos procurando.
 Exemplo: para procurar todos os arquivos que são mp4 no diretório atual. faremos  da seguinte forma: `find . -type f -name "*.mp4"`.
 
 Exemplo2: para procurar diretórios que possuem `*da*` em qualquer parte do nome podemos fazer assim: `find . type d -name "*da*"`.
+
+## Ver conteúdo de arquivos com cat e less
+
+Podemos ver o conteúdo de um arquivo usando o comando `less` em seguida adicionamos o nome do arquivo. (o arquivo será aberto e para fechar o arquivo precisamos usar um q).
+
+E para dar um print na tela e em seguida fechar a operação podemos usar o comando `cat`.
