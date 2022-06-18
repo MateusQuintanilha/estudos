@@ -85,3 +85,16 @@ Podemos usar o comando `rm` para remover um arquivos ou pasta para sempre, para 
 Para remover um diretório precisamos usar o `-r` antes do nome do diretório que desejamos excluir, pois como um diretório possui muitos arquivos, apenas o comando `rm` não poderá exclui-lo: `rm -r site`.
 
 E também podemos forçar para remover arquivos caso tenha problemas com permições podemos usar o `-rf` para forçar a remoção `rm -rf site3`.
+
+## wildcards (curinga)
+
+Podemos usar os curingas para fazer algumas ações para facilitar o nosso dia a dia.
+
+* `*`: irá aplicar a ação para um ou mais caracteres após o *.
+
+Exemplo: Podemos mover todos os arquivos que comecem com si em de um repositório para outro.
+`mv sites/si* sites2`: nesse exemplo irá mover todos os arquivos do repositório sites que se iniciam com si para o repositório sites2.
+
+* `?`: irá aplicar a ação apenas um caractere após o uso da ?.
+
+Exemplo: `mv sites2/site? sites` nesse caso irá mover todos os arquivos que possuírem um caractere após a palavra site, então se tivermos arquivos site com números em sequência de 1 a 12, só irá mover os arquivos de 1 a 9.
