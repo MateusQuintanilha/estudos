@@ -6,3 +6,13 @@ Há tipos diferentes de APIs REST. Vejamos aqui as que você usará na maioria d
 * POST - Enviar dados para a AP+I. Por exemplo, criar um novo registro de usuários com nome, idade e endereço de e-mail.
 * PUT - Atualizar um registro existente com novos dados. Por exemplo, atualizar o endereço de e-mail.
 * DELETE - Remover um registro. Por exemplo, excluir um usuário de um banco de dados.
+
+Há três elementos para toda API REST. A solicitação, a resposta e os cabeçalhos.
+
+Solicitação (Request) - Esses são os dados que você enviará para a API, como um id de pedido para obter os dados do pedido.
+
+Exemplo: `Manishs-MacBook-Pro:~ manish$ curl -X GET -v https://api.github.com/users/manishmshiva`
+
+Resposta(Response) - Todos os dados que você receber de volta do servidor após uma solicitação com sucesso/que tenha falhado.
+
+Cabeçalhos(Headers) - Metadados adicionais passados para a API para auxiliar o servidor a entender o tipo de solicitação com a qual ele está lidando, por exemplo, "content-type" (tipo de conteúdo).
