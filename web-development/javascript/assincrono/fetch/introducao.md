@@ -4,6 +4,35 @@ anteriormente só possuíamos  o `XMLHttpRequest` para fazer solicitações de A
 
 Hoje em dia o JavaScript tem sua própria maneira integrada para fazer solicitações de API. Essa maneira é chamada de Fetch API, um novo padrão para fazer solicitações de servidor com promessas e também muitas outras funcionalidades.
 
+## Sintaxe da Fetch API
+
+Para usar a Fetch API, precisamos chamar o método `fetch`. Precisamos passar a URL da API como um parâmetro:
+
+```js
+fetch(url)
+```
+
+O método `fetch` retorna uma promessa, então precisamos incluir o método `then` que será executado caso a promessa retornada for `resolve`.
+
+```js
+.then(function() {})
+```
+
+E também precisamos incluir o método `catch` pois a promessa poderá retornar como `reject` ou algum erro. O código dentro do `catch` será executado caso algum erro ou se a promessa for rejeitada.
+
+```js
+.catch(function() {})
+```
+
+Resumindo, ao usar a Fetch API teremos algo parecido com isto:
+
+```js
+fetch(url)
+.then(function() {})
+.catch(function() {});
+```
+
+
 Há tipos diferentes de APIs REST. Vejamos aqui as que você usará na maioria dos casos.
 
 * GET - Obter dados de uma API. Por exemplo, obter um usuário do Twitter com base em seu nome de usuário.
