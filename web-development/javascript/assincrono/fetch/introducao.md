@@ -1,5 +1,9 @@
 # Fetch API
 
+anteriormente só possuíamos  o `XMLHttpRequest` para fazer solicitações de API, mas ele não incluí promessas e não gera um código muito organizado. Também podemos usar o jQuery para ter uma sintaxe mais organizada com o `jQuery.ajax()`.
+
+Hoje em dia o JavaScript tem sua própria maneira integrada para fazer solicitações de API. Essa maneira é chamada de Fetch API, um novo padrão para fazer solicitações de servidor com promessas e também muitas outras funcionalidades.
+
 Há tipos diferentes de APIs REST. Vejamos aqui as que você usará na maioria dos casos.
 
 * GET - Obter dados de uma API. Por exemplo, obter um usuário do Twitter com base em seu nome de usuário.
