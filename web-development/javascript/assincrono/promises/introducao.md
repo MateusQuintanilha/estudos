@@ -1,6 +1,6 @@
 # Promises
 
-`Promise` é uma função construtora de promessas. Existem dois resultado possíveis de uma promessa, ela pode ser resolvida, com a execução do primeiro argumento, ou rejeitada se  o segundo argumento for ativado.
+uma `Promise` é um objeto que representa o sucesso ou a falha de uma operação assíncrona
 
 Sintaxe:
 
@@ -8,8 +8,8 @@ Sintaxe:
 new Promise((resolve: Function, reject: Function) => {})
 ```
 
-* `resolve`: Função para retornar o resultado da promise.
-* `reject`: Função para retornar o erro da promise.
+* `resolve`: Função para retornar o resultado bem sucedido de uma promise.
+* `reject`: Função para retornar a falha de uma promise.
 
 ## Criando uma Promise
 
