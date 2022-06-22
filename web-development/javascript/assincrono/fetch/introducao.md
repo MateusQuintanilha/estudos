@@ -12,26 +12,9 @@ Para usar a Fetch API, precisamos chamar o método `fetch`. Precisamos passar a 
 fetch(url)
 ```
 
-O método `fetch` retorna uma promessa, então precisamos incluir o método `then` que será executado caso a promessa retornada for `resolve`.
+## O método fetch retorna uma promise
 
-```js
-.then(function() {})
-```
-
-E também precisamos incluir o método `catch` pois a promessa poderá retornar como `reject` ou algum erro. O código dentro do `catch` será executado caso algum erro ou se a promessa for rejeitada.
-
-```js
-.catch(function() {})
-```
-
-Resumindo, ao usar a Fetch API teremos algo parecido com isto:
-
-```js
-fetch(url)
-.then(function() {})
-.catch(function() {});
-```
-
+O método `fetch` retorna uma promise, então sempre teremos dois resultados possíveis: `resolve` que significa que os dados que eu queria foram obtidos e `reject` que significa que um erro aconteceu e a promise foi rejeitada.
 
 Há tipos diferentes de APIs REST. Vejamos aqui as que você usará na maioria dos casos.
 
