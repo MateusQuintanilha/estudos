@@ -32,6 +32,16 @@ Usamos o método `catch` para capturar um erro que aconteceu ou caso a promessa 
 .catch(error => {})
 ```
 
+### Estrutura básica de uma fetch
+
+Resumindo, ao usar a Fetch API teremos algo parecido com isto:
+
+```js
+fetch(url)
+.then(response => {})
+.catch(error => {});
+```
+
 
 Há tipos diferentes de APIs REST. Vejamos aqui as que você usará na maioria dos casos.
 
