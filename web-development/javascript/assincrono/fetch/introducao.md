@@ -24,6 +24,14 @@ Para capturarmos uma resposta bem sucedida de uma promise usamos o método `then
 .then(response => {})
 ```
 
+### Resposta malsucedida de uma promise
+
+Usamos o método `catch` para capturar um erro que aconteceu ou caso a promessa seja rejeitada `reject`, o método `catch` também irá receber uma função como argumento e como sabemos que ela irá retornar um erro usamos o nome do parâmetro dessa função como error:
+
+```js
+.catch(error => {})
+```
+
 
 Há tipos diferentes de APIs REST. Vejamos aqui as que você usará na maioria dos casos.
 
