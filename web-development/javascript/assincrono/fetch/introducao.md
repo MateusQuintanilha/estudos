@@ -16,6 +16,15 @@ fetch(url)
 
 O método `fetch` retorna uma promise, então sempre teremos dois resultados possíveis: `resolve` que significa que os dados que eu queria foram obtidos e `reject` que significa que um erro aconteceu e a promise foi rejeitada.
 
+### Resposta bem sucedida de uma promise
+
+Para capturarmos uma resposta bem sucedida de uma promise usamos o método `then`, todas as vezes que uma promise for resolvida `resolve` o conteúdo dentro do `then`, o método `then` irá receber uma função como argumento e geralmente usamos o nome do seu parâmetro como response:
+
+```js
+.then(response => {})
+```
+
+
 Há tipos diferentes de APIs REST. Vejamos aqui as que você usará na maioria dos casos.
 
 * GET - Obter dados de uma API. Por exemplo, obter um usuário do Twitter com base em seu nome de usuário.
