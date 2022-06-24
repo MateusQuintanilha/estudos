@@ -6,11 +6,23 @@ Hoje em dia o JavaScript tem sua própria maneira integrada para fazer solicita�
 
 ## Sintaxe da Fetch API
 
-Para usar a Fetch API, precisamos chamar o método `fetch`. Precisamos passar a URL da API como um parâmetro:
+Para usar a Fetch API, precisamos chamar o método `fetch`:
 
 ```js
-fetch(url)
+fetch(resource, [init])
 ```
+
+Parâmetros
+
+* `resource` - Define o recurso que você deseja buscar. Isto pode ser:
+  * String ou qualquer outro objeto com um `stringifier` - incluindo um objeto `URL` que fornece a URL do recurso que você deseja buscar.
+  * Um objeto `Request`.
+* `init`(opcional) - Um objeto que contem parâmetros adicionais para configurações como:
+  *`Method`:  métodos de requisições (GET, POST, PUT, DELETE)
+  *`Cabeçalho`: Metadados adicionais passados para a API para auxiliar o servidor a entender o tipo de solicitação com a qual ele está lidando, por exemplo, "content-type" (tipo de conteúdo).
+  *`Body`:  Body.array.Buffer(), Body.Blob(), Body.formData(), Body.json(), Body.text().
+
+***NOTA: Sem `options` o método fetch fará uma solicitação `GET` simples.***
 
 ## O método fetch retorna uma promise
 
@@ -41,21 +53,3 @@ fetch(url)
 .then(response => {})
 .catch(error => {});
 ```
-
-
-Há tipos diferentes de APIs REST. Vejamos aqui as que você usará na maioria dos casos.
-
-* GET - Obter dados de uma API. Por exemplo, obter um usuário do Twitter com base em seu nome de usuário.
-* POST - Enviar dados para a AP+I. Por exemplo, criar um novo registro de usuários com nome, idade e endereço de e-mail.
-* PUT - Atualizar um registro existente com novos dados. Por exemplo, atualizar o endereço de e-mail.
-* DELETE - Remover um registro. Por exemplo, excluir um usuário de um banco de dados.
-
-Há três elementos para toda API REST. A solicitação, a resposta e os cabeçalhos.
-
-Solicitação (Request) - Esses são os dados que você enviará para a API, como um id de pedido para obter os dados do pedido.
-
-Exemplo: `Manishs-MacBook-Pro:~ manish$ curl -X GET -v https://api.github.com/users/manishmshiva`
-
-Resposta(Response) - Todos os dados que você receber de volta do servidor após uma solicitação com sucesso/que tenha falhado.
-
-Cabeçalhos(Headers) - Metadados adicionais passados para a API para auxiliar o servidor a entender o tipo de solicitação com a qual ele está lidando, por exemplo, "content-type" (tipo de conteúdo).
