@@ -21,3 +21,14 @@ request.send();
 
 // saída: 1
 ```
+
+Exemplo de requisição usando `Fetch API`:
+
+```js
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+.then(response => response.json())
+.then(post => console.log(post.id))
+.catch(() => console.log('erro ao executar a requisição'));
+
+// saída: 1
+```
