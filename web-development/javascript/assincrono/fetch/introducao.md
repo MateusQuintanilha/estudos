@@ -81,3 +81,22 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
     .then(response => {})
     .catch(error => {})
 ```
+
+## Response: Acessando informações da Resposta
+
+Quando a promise for resolvida, será devolvida na forma de um objeto `Response` que representa a resposta uma requisição.
+
+***NOTA: A promessa não rejeita erros de `HTTP`, apenas rejeita erros de rede.***
+
+Agora que sabemos que o método `fetch` retorna uma promise e essa promise quando resolvida retorna um objeto `Response`. Esse objeto `Response` possui diversas propriedades e métodos úteis para inspecionar a resposta:
+
+Propriedades:
+
+* `Response.ok`(somente leitura) - Contém um valor boolean indicando se a resposta foi bem sucedida ("status" no intervalo 200-299) ou não.
+* `Response.redirected`(somente leitura) - Indica se a resposta é ou não o resultado de um redirecionamento; isto é, sua lista de URL tem mais de uma entrada.
+* `Response.status`(somente leitura) - Contém o código de "status" da resposta (ex., 200 para um sucesso).
+* `Response.statusText`(somente leitura) - Contém a mensagem de "status" correspondente ao código de "status" (ex., OK para 200).
+* `Response.type`(somente leitura) - Contém o tipo da resposta (ex., basic, cors).
+* `Response.url`(somente leitura) - Contém a URL de resposta.
+
+Com essas propriedades podemos saber se houve algum erro na conexão `HTTP`.
