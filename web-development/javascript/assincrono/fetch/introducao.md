@@ -57,10 +57,22 @@ Parâmetros:
 
 * O segundo parâmetro é o `init`(ele é opcional) - esse parâmetro recebe um objeto contendo as configurações da requisição como:
   * `method` - Responsável por definir o método de requisição como `GET`, `POST`, `PUT`, `PATH`, `DELETE`.
-  * `headers` -
-  * `body`
+  * `mode`(O padrão é cors) - O modo que você deseja usar para a solicitação, por exemplo, cors, no-cors, same-originou navigate.
+  * `headers` - Metadados adicionais passados para a API para auxiliar o servidor a entender o tipo de solicitação com a qual ele está lidando, por exemplo, "content-type" (tipo de conteúdo). ***Nota: O conteúdo deve ser um objeto JSON***
+  * `body` - Para alterar o conteúdo no servidor podemos passar um string de JSON.
 
 ***NOTA: Sem o parâmetro `init` o método fetch fará uma solicitação `GET` simples.***
+
+Sintaxe Completa:
+
+```js
+fetch(resource, {
+    method?: "GET" | "POST" | "PUT" | "DELETE",
+    mode?: "navigate" | "same-origin" | "no-cors" | "cors",
+    headers?: { [ key: string ]: any },
+    body?: {key: string}
+  })
+```
 
 ## Request: Enviando uma solicitação
 
