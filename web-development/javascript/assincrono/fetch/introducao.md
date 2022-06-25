@@ -69,3 +69,15 @@ Agora vamos ao exemplo, vamos usando o método `fetch` de forma simples, usando 
 ```js
 fetch('https://jsonplaceholder.typicode.com/posts/1')
 ```
+
+## Request: Obtendo a Resposta
+
+O método `fetch` retorna uma promise, então podemos usar o método `then()` para capturar uma promessa que foi resolvida(resolve) e o método `catch()` para capturar uma promise que foi rejeitada(reject).
+
+Tanto no método `then` quanto no `catch` iremos precisar usar uma função cara capturar as respostas, no método `then` usamos o nome do parâmetro como response por convenção, já que o objeto que iremos receber será do tipo `Response` e no caso do `catch` usamos o nome do parâmetro como error, já que a sua função é capturar os erros.
+
+```js
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+    .then(response => {})
+    .catch(error => {})
+```
