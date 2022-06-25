@@ -61,3 +61,11 @@ Parâmetros:
   * `body`
 
 ***NOTA: Sem o parâmetro `init` o método fetch fará uma solicitação `GET` simples.***
+
+## Request: Enviando uma solicitação
+
+Agora vamos ao exemplo, vamos usando o método `fetch` de forma simples, usando apenas o parâmetro obrigatório:
+
+```js
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+```
