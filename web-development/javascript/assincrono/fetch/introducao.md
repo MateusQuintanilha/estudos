@@ -112,3 +112,15 @@ Propriedades:
 * `Response.url`(somente leitura) - Contém a URL de resposta.
 
 Com essas propriedades podemos saber se houve algum erro na conexão `HTTP`.
+
+Vamos verificar qual o código de status de resposta HTTP recebemos:
+
+```js
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+    .then(response => console.log(response.status))
+    .catch(error => console.log(error))
+
+    // saída: 200
+```
+
+Caso não conheça quais são os códigos aqui está um resumo sobre eles:
