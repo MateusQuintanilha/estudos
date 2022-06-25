@@ -42,3 +42,22 @@ Agora vamos ver como o método `fetch` funciona:
 O método `fetch()` está disponível no escopo global, ele é responsável por iniciar o processo de requisição `HTTP` para buscar recursos sem a necessidade de reiniciar a página, retornando uma promessa que é cumprida assim que a resposta estiver disponível.
 
 ***Nota:O parâmetros do `fetch()` são idênticos aos do construtor `Request()`***
+
+Sintaxe:
+
+```js
+fetch(resource [,init])
+```
+
+Parâmetros:
+
+* O primeiro parâmetro é o `resource`(ele é obrigatório) - esse parâmetro é responsável por definir o caminho em que a requisição `HTTP` será feita. Ela poderá ser:
+  * Uma `String` ou qualquer outro objeto com um `stringifier` — incluindo um objeto `URL`.
+  * Um objeto `Request`.
+
+* O segundo parâmetro é o `init`(ele é opcional) - esse parâmetro recebe um objeto contendo as configurações da requisição como:
+  * `method` - Responsável por definir o método de requisição como `GET`, `POST`, `PUT`, `PATH`, `DELETE`.
+  * `headers` -
+  * `body`
+
+***NOTA: Sem o parâmetro `init` o método fetch fará uma solicitação `GET` simples.***
