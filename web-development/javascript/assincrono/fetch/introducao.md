@@ -134,3 +134,15 @@ Os códigos de status das respostas HTTP indicam se uma requisição HTTP foi co
 * Redirecionamentos (300-399)
 * Erros do cliente (400-499)
 * Erros do servidor (500-599).
+
+## Response: Obtendo o conteúdo da Resposta
+
+Para conseguirmos ter acesso ao conteúdo da resposta, precisamos usar um dos métodos a seguir dependendo do tipo de conteúdo que estiver dentro do objeto `Response`:
+
+* `Response.text()` - retorna a resposta da requisição como uma string.
+* `Response.json()` - retorna a resposta da requisição em formato JSON.
+* `Response.arrayBuffer()` -  retorna a resposta da requisição como um ArrayBuffer.
+* `Response.blob()` - retorna a resposta da requisição como um Blob.
+* `Response.formData()` - retorna o resultado da requisição como um objeto do tipo FormData.
+* `Response.redirect()` - cria uma nova resposta com uma URL diferente.
+* `Response.clone()` - cria um clone da resposta da requisição.
