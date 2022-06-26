@@ -146,3 +146,41 @@ Para conseguirmos ter acesso ao conteúdo da resposta, precisamos usar um dos m�
 * `Response.formData()` - retorna o resultado da requisição como um objeto do tipo FormData.
 * `Response.redirect()` - cria uma nova resposta com uma URL diferente.
 * `Response.clone()` - cria um clone da resposta da requisição.
+
+Após o uso de um dos métodos acima, o método irá fazer a sua função e irá retornar uma `Promise`, então será preciso utilizar novamente o método `then` para capturar o seu conteúdo, também será preciso usar uma função para capturar o conteúdo no seu parâmetro, como mostrado no exemplo abaixo:
+
+Exemplo usando a API jsonplaceholder
+
+No exemplo a seguir vamos precisar usar o método `json()` para converter o seu conteúdo, pois o conteúdo está em JSON.
+
+***NOTA: Lembrando que não  usamos a palavra return quando usamos a arrow function na forma reduzida pois o return fica implícito, mas quando usamos as chaves precisamos retornar o método de conversão se não gerará um erro***
+
+Exemplo gerando erro:
+
+```js
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+    .then(response => {
+        console.log(response.status)
+        response.json()
+    })
+    .then(post => console.log(post.id))
+    .catch(error => console.log(error))
+  
+    // saída: 200
+    // saída: TypeError: Cannot read properties of undefined (reading 'id')
+```
+
+Exemplo correto:
+
+```js
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+    .then(response => {
+        console.log(response.status)
+        return response.json()
+    })
+    .then(post => console.log(post.id))
+    .catch(error => console.log(error))
+  
+    // saída: 200
+    // saída: 1
+```
