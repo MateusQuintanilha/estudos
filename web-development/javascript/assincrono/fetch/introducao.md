@@ -184,3 +184,34 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
     // saída: 200
     // saída: 1
 ```
+
+
+## Fetch async await
+
+Também podemos usar async/await para pegar os resultados de uma fetch API sem precisar utilizar os métodos `then` e `catch`:
+
+```js
+(async function() {
+    const request = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+    const response = await request.json();
+
+    console.log(request.status); // saída: 200
+    console.log(response.id); // saída: 1
+})();
+```
+
+E para capturar os erros, podemos usar o try catch:
+
+```js
+(async function() {
+    try {
+        const request = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+        const response = await request.json();
+    
+        console.log(request.status); // saída: 200
+        console.log(response.id); // saída: 1
+    } catch (error) {
+        console.log(error)
+    }
+})();
+```
