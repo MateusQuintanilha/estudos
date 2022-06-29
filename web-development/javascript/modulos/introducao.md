@@ -19,3 +19,12 @@ Para citar alguns (por razões históricas):
 Agora, tudo isso lentamente está se tornando parte da história, mas ainda podemos encontrá-los em scripts antigos.
 
 O sistema utilizado atualmente é o de módulos em nível de linguagem ou como é comumente chamado (Módulo ES6) apareceu no padrão do ECMAScript em 2015, e evoluiu gradualmente desde então e agora é suportado por todos os principais navegadores e no Node.js. Então vamos focar nos módulos ES6.
+
+## O que é um módulo?
+
+Os módulos em JavaScript são arquivos que possuem uma forma de compartilhar informações entre outros arquivos, dessa forma, todos os arquivos que realizarem a importação desse módulo poderão utilizar e usufruir de suas funções ou informações que foram expostas.
+
+E podemos fazer o compartilhamento de informações com outros arquivos usando as palavras-chave : `export` e `import`.
+
+* `export`: é usada para definir quais partes do códigos poderão ser acessíveis a partir de outros arquivos.
+* `import`: permite a importação de funcionalidades de outros módulos
