@@ -10,3 +10,12 @@ Antes desse recurso ra necessário declarar variáveis globais em arquivos .js q
 
 Mas eventualmente os scripts se tornaram cada vez mais complexos, então a comunidade inventou uma variedade de maneiras de organizar o código em módulos, bibliotecas especiais para carregar módulos sob demanda.
 
+Para citar alguns (por razões históricas):
+
+* `AMD` - Um sistema de módulos mais antigos, implementado inicialmente pela biblioteca `require.js`.
+* `CommonJS` - O sistema de módulos criado para o servidor Node.js.
+* `UMD`- mais um sistema de módulos, sugerido como universal, compatível com `AMD` e `CommonJS`.
+
+Agora, tudo isso lentamente está se tornando parte da história, mas ainda podemos encontrá-los em scripts antigos.
+
+O sistema utilizado atualmente é o de módulos em nível de linguagem ou como é comumente chamado (Módulo ES6) apareceu no padrão em 2015, e
