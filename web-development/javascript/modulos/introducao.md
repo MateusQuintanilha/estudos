@@ -30,3 +30,24 @@ E podemos fazer o compartilhamento de informações com outros arquivos usando a
 * `import`: permite a importação de funcionalidades de outros módulos
 
 ***NOTA: Essa forma de utilizar os módulos só funciona usando um servidor, se tentar usar usando o node ou abrindo o arquivo.html diretamente no navegador não irá funcionar.***
+
+## Criando os arquivos para a base do exemplo
+
+Vamos criar os arquivos base do exemplo que iremos usar tanto para exportar como para importar módulos, vamos criar uma pasta que irá conter todos os arquivos, dentro dessa pasta vamos criar o arquivo `index.html`, um arquivo chamado de `main.js` e por ultimo um arquivo chamado de `calculadora.js`.
+
+Dentro do arquivo `index.html` vamos criar a base do html e adicionar o link para o arquivo `main.js`:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./main.js"></script>
+</body>
+</html>
+```
