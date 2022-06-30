@@ -28,3 +28,5 @@ E podemos fazer o compartilhamento de informações com outros arquivos usando a
 
 * `export`: é usada para definir quais partes do códigos poderão ser acessíveis a partir de outros arquivos.
 * `import`: permite a importação de funcionalidades de outros módulos
+
+***NOTA: Essa forma de utilizar os módulos só funciona usando um servidor, se tentar usar usando o node ou abrindo o arquivo.html diretamente no navegador não irá funcionar.***
