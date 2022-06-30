@@ -104,3 +104,25 @@ A seguir veremos uma tabela com as versões das engines que passaram a dar supor
 Existem algumas formas de exporta e importar arquivos e vamos ver algumas dessas formas, iremos usar o arquivo `module.js` para criar alguns códigos e exporta-los para o arquivo `main.js`.
 
 Há duas formas em que podemos exportar nossos módulos utilizando `export`, através da exportação explícita (Named Exports) e da exportação padrão (Default Exports).
+
+### Exportação explícita (Named Exports)
+
+Podemos utilizar a exportação explícita diversas vezes no mesmo arquivo e podemos exportar vários tipos de dados.
+
+#### Podemos exportar variáveis e constantes
+
+Podemos criar as variáveis e depois atribuir o seu valor:
+
+```js
+export let name1, name2, name3;
+
+name1 = 'Nome 01';
+name2 = 'Nome 02';
+name3 = 'Nome 03';
+```
+
+Como também podemos criar variáveis ou contantes e atribuir seu valor no momento de sua criação:
+
+```js
+export const name4 = 'Nome 04', name5 = 'Nome 05', name6 = 'Nome 06';
+```
