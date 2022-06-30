@@ -51,3 +51,50 @@ Dentro do arquivo `index.html` vamos criar a base do html e adicionar o link par
 </body>
 </html>
 ```
+
+## Utilizando os módulos no navegador
+
+Para que os módulos sejam carregados corretamente precisamos alterar a forma em criamos o link do arquivo `main.js` no arquivo html, para que a engine do navegador entenda que esse esse arquivo contém módulos, para fazer isso precisamos adicionar a propriedade `type` com o valor `"module"`:
+
+Então vamos alterar na tag de abertura script:
+
+Sem a propriedade `type`:
+
+```html
+<script src="./main.js"></script>
+```
+
+Com a propriedade `type`:
+
+```html
+<script type="module" src="./main.js"></script>
+```
+
+Então o index.html irá ficar assim:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
+```
+
+A partir deste momento, enquanto estiver em um navegador que dê suporte ao recurso será possível utilizar a sintaxe de módulos.
+
+A seguir veremos uma tabela com as versões das engines que passaram a dar suporte aos módulos ES6:
+
+|   Engine                          |   Versão Minima   |
+|              :--:                 |       :--:        |
+|   Node.JS ( V8)                   |   8.5.0           |
+|   Safari ( WebKit)                |   11.4            |
+|   Chrome ( V8)                    |   68              |
+|   Microsoft Edge ( ChakraCore)    |   17              |
+|   Firefox ( Gecko)                |   61              |
