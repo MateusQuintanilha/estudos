@@ -99,15 +99,8 @@ A seguir veremos uma tabela com as versões das engines que passaram a dar supor
 |   Microsoft Edge ( ChakraCore)    |   17              |
 |   Firefox ( Gecko)                |   61              |
 
-## Exportando um módulo
+## Exportando e importando um módulo
 
-Como vimos anteriormente, para exportar um módulo precisamos usar a palavra-chave `export`, mas existem algumas maneiras diferentes de utiliza-la, vamos abrir o arquivo `calculadora.js`
+Existem algumas formas de exporta e importar arquivos e vamos ver algumas dessas formas, iremos usar o arquivo `module.js` para criar alguns códigos e exporta-los para o arquivo `main.js`.
 
-Vamos criar uma função que irá multiplicar 2 valores:
-
-```js
-function multiplicar(valorA, valorB) {
-    const resultado =  valorA * valorB;
-    console.log(resultado);
-}
-```
+Há duas formas em que podemos exportar nossos módulos utilizando `export`, através da exportação explícita (Named Exports) e da exportação padrão (Default Exports).
