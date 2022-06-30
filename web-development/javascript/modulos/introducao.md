@@ -175,3 +175,14 @@ function dividir(valorA, valorB) {
     console.log(resultado);
 }
 ```
+
+#### Podemos renomear as exportações
+
+Também podemos renomear as exportações quando usamos a lista de exportações, para fazer isso precisamos adicionar o nome do dado original, após o nome vamos adicionar a palavra-chave `as` e para finalizar iremos adicionar o novo nome para a exportação:
+
+```js
+export { constante01 as resultado01, constante02 as resultado02 };
+
+const constante01 = 'Aprovado';
+const constante02 = 'Reprovado';
+```
