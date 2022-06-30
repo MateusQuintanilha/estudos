@@ -12,9 +12,9 @@ Mas eventualmente os scripts se tornaram cada vez mais complexos, então a comun
 
 Para citar alguns (por razões históricas):
 
-* `AMD` - Um sistema de módulos mais antigos, implementado inicialmente pela biblioteca `require.js`.
+* `AMD` - É a sigla para Definição de Módulos Assíncronos (ou Asynchronous Module Definition), ele é um sistema de módulos mais antigos, implementado inicialmente pela biblioteca `require.js`.
 * `CommonJS` - O sistema de módulos criado para o servidor Node.js.
-* `UMD`- mais um sistema de módulos, sugerido como universal, compatível com `AMD` e `CommonJS`.
+* `UMD`- é a sigla para Definição de Módulo Universal (ou Universal Module Definition), a ideia por trás do UMD é prover uma forma de importar/exportar módulos que funcionasse tanto em ambientes com `AMD` quanto com `CommonJS`.
 
 Agora, tudo isso lentamente está se tornando parte da história, mas ainda podemos encontrá-los em scripts antigos.
 
@@ -33,7 +33,7 @@ E podemos fazer o compartilhamento de informações com outros arquivos usando a
 
 ## Criando os arquivos para a base do exemplo
 
-Vamos criar os arquivos base do exemplo que iremos usar tanto para exportar como para importar módulos, vamos criar uma pasta que irá conter todos os arquivos, dentro dessa pasta vamos criar o arquivo `index.html`, um arquivo chamado de `main.js` e por ultimo um arquivo chamado de `calculadora.js`.
+Vamos criar os arquivos base do exemplo que iremos usar tanto para exportar como para importar módulos, vamos criar uma pasta que irá conter todos os arquivos, dentro dessa pasta vamos criar o arquivo `index.html`, um arquivo chamado de `main.js` e por ultimo um arquivo chamado de `module.js`.
 
 Dentro do arquivo `index.html` vamos criar a base do html e adicionar o link para o arquivo `main.js`:
 
@@ -108,6 +108,20 @@ Há duas formas em que podemos exportar nossos módulos utilizando `export`, atr
 ### Exportação explícita (Named Exports)
 
 Podemos utilizar a exportação explícita diversas vezes no mesmo arquivo e podemos exportar vários tipos de dados.
+
+Para exportar um conteúdo no momento de sua criação só precisamos adicionar a palavra-chave `export` antes do seu conteúdo, exemplo:
+
+```js
+export const valor = 20;
+```
+
+Para exportar um conteúdo que já foi declarado precisamos usar a palavra-chave `export` seguido de um par de chaves `{ }` e adiciona o nome do conteúdo dentro das chaves, exemplo:
+
+```js
+export {valor01};
+
+const valor01 = 100;
+```
 
 #### Podemos exportar variáveis e constantes
 
