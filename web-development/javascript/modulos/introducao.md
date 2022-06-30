@@ -98,3 +98,16 @@ A seguir veremos uma tabela com as versões das engines que passaram a dar supor
 |   Chrome ( V8)                    |   68              |
 |   Microsoft Edge ( ChakraCore)    |   17              |
 |   Firefox ( Gecko)                |   61              |
+
+## Exportando um módulo
+
+Como vimos anteriormente, para exportar um módulo precisamos usar a palavra-chave `export`, mas existem algumas maneiras diferentes de utiliza-la, vamos abrir o arquivo `calculadora.js`
+
+Vamos criar uma função que irá multiplicar 2 valores:
+
+```js
+function multiplicar(valorA, valorB) {
+    const resultado =  valorA * valorB;
+    console.log(resultado);
+}
+```
