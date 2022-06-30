@@ -126,3 +126,24 @@ Como também podemos criar variáveis ou contantes e atribuir seu valor no momen
 ```js
 export const name4 = 'Nome 04', name5 = 'Nome 05', name6 = 'Nome 06';
 ```
+
+#### Podemos exportar funções
+
+```js
+export function myFunction() {
+    console.log('Minha Função');
+}
+```
+
+#### Podemos exportar classes
+
+```js
+export class MyClass {
+    constructor(text) {
+        this.text = text;
+    }
+    printMyClass() {
+        console.log(this.text);
+    }
+}
+```
