@@ -147,3 +147,31 @@ export class MyClass {
     }
 }
 ```
+
+#### Podemos exportar uma lista de exportações
+
+Se possuirmos vários dados para exporta, podemos fazer uma lista com todos os itens ao invés de exportar um por um, vamos fazer um exemplo usando as quatro operações matemática básica: somar, subtrair, multiplicar e dividir, para criar essa lista de exportações iremos adicionar os nomes de todos os conteúdos que desejamos exportar dentro de um par de chaves e separa-los usando vírgula:
+
+```js
+export { somar, subtrair, multiplicar, dividir };
+
+function somar(valorA, valorB) {
+    const resultado = valorA + valorB;
+    console.log(resultado);
+}
+
+function subtrair(valorA, valorB) {
+    const resultado = valorA - valorB;
+    console.log(resultado);
+}
+
+function multiplicar(valorA, valorB) {
+    const resultado = valorA * valorB;
+    console.log(resultado);
+}
+
+function dividir(valorA, valorB) {
+    const resultado = valorA / valorB;
+    console.log(resultado);
+}
+```
