@@ -251,3 +251,21 @@ Também podemos fazer a exportação usando as chaves, mas precisamos atribuir a
 const valorDefault = 'Valor Default 01';
 export { valorDefault as default};
 ```
+
+#### Exportando função em default
+
+Podemos fazer a exportação padrão no momento da criação da função:
+
+```js
+export default function myFunctionDefault() {
+    console.log('Minha Função Padrão')
+}
+```
+
+Também podemos fazer o uso de funções anônimas, pois só podemos ter uma exportação default por arquivo e na hora de fazer a importação em outro arquivo existe uma maneira diferente de fazer essa importação, então podemos ter acesso a essa função mesmo que ela não possua um nome:
+
+```js
+export default function () {
+    console.log('Minha Função Padrão')
+}
+```
