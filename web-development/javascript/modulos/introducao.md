@@ -123,7 +123,7 @@ export {valor01};
 const valor01 = 100;
 ```
 
-#### Podemos exportar variáveis e constantes
+#### Exportar variáveis e constantes
 
 Podemos criar as variáveis e depois atribuir o seu valor:
 
@@ -141,7 +141,7 @@ Como também podemos criar variáveis ou contantes e atribuir seu valor no momen
 export const name4 = 'Nome 04', name5 = 'Nome 05', name6 = 'Nome 06';
 ```
 
-#### Podemos exportar funções
+#### Exportar funções
 
 ```js
 export function myFunction() {
@@ -149,7 +149,7 @@ export function myFunction() {
 }
 ```
 
-#### Podemos exportar classes
+#### Exportar classes
 
 ```js
 export class MyClass {
@@ -162,7 +162,7 @@ export class MyClass {
 }
 ```
 
-#### Podemos exportar uma lista de exportações
+#### Exportar uma lista de exportações
 
 Se possuirmos vários dados para exporta, podemos fazer uma lista com todos os itens ao invés de exportar um por um, vamos fazer um exemplo usando as quatro operações matemática básica: somar, subtrair, multiplicar e dividir, para criar essa lista de exportações iremos adicionar os nomes de todos os conteúdos que desejamos exportar dentro de um par de chaves e separa-los usando vírgula:
 
@@ -190,7 +190,7 @@ function dividir(valorA, valorB) {
 }
 ```
 
-#### Podemos renomear as exportações
+#### Renomear as exportações
 
 Também podemos renomear as exportações quando usamos a lista de exportações, para fazer isso precisamos adicionar o nome do dado original, após o nome vamos adicionar a palavra-chave `as` e para finalizar iremos adicionar o novo nome para a exportação:
 
@@ -267,5 +267,33 @@ Também podemos fazer o uso de funções anônimas, pois só podemos ter uma exp
 ```js
 export default function () {
     console.log('Minha Função Padrão')
+}
+```
+
+#### Exportando classe em default
+
+Também podemos exportar uma classe no momento da sua criação:
+
+```js
+export default class MyClassDefault {
+    constructor(text) {
+        this.text = text;
+    }
+    printMyClass() {
+        console.log(this.text);
+    }
+}
+```
+
+E também podemos exportar uma classe sem nome como default:
+
+```js
+export default class {
+    constructor(text) {
+        this.text = text;
+    }
+    printMyClass() {
+        console.log(this.text);
+    }
 }
 ```
