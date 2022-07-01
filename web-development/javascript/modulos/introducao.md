@@ -233,3 +233,21 @@ export const {nome: name, marca: mark, modelo: model, cor: color} = myPhone;
 Diferente da exportação explícita, a exportação padrão só pode ser usada uma vez no mesmo arquivo e também podemos exportar vários tipos de dados.
 
 Para fazer a exportação `default` iremos precisar usar duas palavras-chave, a palavra `export` e a palavra `default`.
+
+#### Exportar variáveis e constantes usando default
+
+Diferente da exportação explícita, na exportação padrão não podemos exportar uma variável ou constante no momento de sua criação `export`:
+
+```js
+export default const valorDefault = 'Valor Default 01'; // Forma Errada
+
+const valorDefault = 'Valor Default 01';
+export default valorDefault; // Forma Certa
+```
+
+Também podemos fazer a exportação usando as chaves, mas precisamos atribuir a opção `default` ao nome do dado que desejamos exportar usando a palavra-chave `as`, como o exemplo a seguir:
+
+```js
+const valorDefault = 'Valor Default 01';
+export { valorDefault as default};
+```
