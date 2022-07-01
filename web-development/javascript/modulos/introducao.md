@@ -297,3 +297,18 @@ export default class {
     }
 }
 ```
+
+#### Exportando uma função default em uma lista de exportação
+
+Também podemos exportar uma lista de exportação usando as chaves `{ }`, contendo uma exportação `default`, mas como foi dito antes, só podemos ter uma exportação `default` por arquivo.
+
+Para conseguirmos fazer isso precisamos adicionar o nome do dado que desejamos enviar como padrão e atribuir `default` usando a palavra-chave `as`, também vamos precisar usar esse método no momento em que fizermos a importação.
+
+```js
+const valorDefault01 = 'Valor Padrão 01';
+const texto01 = 'Texto 01';
+const texto02 = 'Texto 02';
+const texto03 = 'Texto 03';
+
+export {valorDefault01 as default, texto01, texto02, texto03};
+```
