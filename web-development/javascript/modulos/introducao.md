@@ -227,3 +227,9 @@ const myPhone = {
 };
 export const {nome: name, marca: mark, modelo: model, cor: color} = myPhone;
 ```
+
+### Exportação padrão (Default Exports)
+
+Diferente da exportação explícita, a exportação padrão só pode ser usada uma vez no mesmo arquivo e também podemos exportar vários tipos de dados.
+
+Para fazer a exportação `default` iremos precisar usar duas palavras-chave, a palavra `export` e a palavra `default`.
