@@ -200,3 +200,30 @@ export { constante01 as resultado01, constante02 as resultado02 };
 const constante01 = 'Aprovado';
 const constante02 = 'Reprovado';
 ```
+
+#### Exportação através da atribuição de desestruturação de objeto
+
+Podemos fazer a exportação usando a atribuição de desestruturação, caso não lembre como a atribuição de desestruturação é feita, precisamos criar uma variável ou constante em seguida usamos um par de chaves `{ }`, dentro do par de chaves iremos adicionar os nomes das propriedades do objeto em seguida iremos atribuir o objeto a essa variável ou constante e para exportar iremos adicionar a palavra-chave `export` no inicio:
+
+```js
+const myObject = {
+    nome: 'Smartphone',
+    marca: 'Samsung',
+    modelo: 'S20 FE',
+    cor: 'Preto'
+}; // Objeto
+
+export const {nome, marca, modelo, cor} = myObject;
+```
+
+Também podemos renomear os nomes das propriedades, para fazer isso precisamos usar dois pontos `:` após o nome da propriedade e em seguida adicionar o novo nome da propriedade:
+
+```js
+const myPhone = {
+    nome: 'Smartphone',
+    marca: 'Samsung',
+    modelo: 'S10 FE',
+    cor: 'Azul'
+};
+export const {nome: name, marca: mark, modelo: model, cor: color} = myPhone;
+```
