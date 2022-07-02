@@ -312,3 +312,9 @@ const texto03 = 'Texto 03';
 
 export {valorDefault01 as default, texto01, texto02, texto03};
 ```
+
+### Importando módulos
+
+A declaração estática `import` é usada para importar vínculos que são exportados por um outro módulo. Os módulos importados estão em `strict mode`,  declarado como tal ou não. A declaração `import` não pode ser usada em scripts embutidos, a menos que tal script tenha um `type="module"`.
+
+Há também uma função dinâmica `import()`, que não requer scripts de `type="module"`.
