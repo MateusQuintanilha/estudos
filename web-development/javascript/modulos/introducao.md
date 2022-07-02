@@ -99,7 +99,7 @@ A seguir veremos uma tabela com as versões das engines que passaram a dar supor
 |   Microsoft Edge ( ChakraCore)    |   17              |
 |   Firefox ( Gecko)                |   61              |
 
-## Exportando e importando um módulo
+## Exportando módulos
 
 Existem algumas formas de exporta e importar arquivos e vamos ver algumas dessas formas, iremos usar o arquivo `module.js` para criar alguns códigos e exporta-los para o arquivo `main.js`.
 
