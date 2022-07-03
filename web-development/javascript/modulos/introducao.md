@@ -318,3 +318,7 @@ export {valorDefault01 as default, texto01, texto02, texto03};
 A declaração estática `import` é usada para importar vínculos que são exportados por um outro módulo. Os módulos importados estão em `strict mode`,  declarado como tal ou não. A declaração `import` não pode ser usada em scripts embutidos, a menos que tal script tenha um `type="module"`.
 
 Há também uma função dinâmica `import()`, que não requer scripts de `type="module"`.
+
+Agora vamos ver algumas maneiras de fazer a importação de exportações de módulos.
+
+***NOTA: Os exemplos utilizados da importação das exportações dos módulos serão dos mesmo exemplos criados na explicação sobre as exportações***
