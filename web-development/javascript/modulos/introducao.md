@@ -350,3 +350,27 @@ import { name1, name2, name3 } from "./module.js";
 
 console.log(name1, name2, name3); // saída: Nome 01 Nome 02 Nome 03
 ```
+
+#### Importar todas as exportações disponíveis em um módulo
+
+Podemos importar todas as exportações de um módulo usando o símbolo `*` e a palavra-chave `as`.
+
+Sintaxe:
+
+```js
+import * as nomeQueRepresentaOMódulo from "caminhoDoMódulo/nomeDoMódulo.js";
+```
+
+Para conseguirmos acessar as exportações iremos usar o nome que escolhemos para representar o módulo que inserimos após o `as` e vamos ter acesso as exportações como se fossem métodos através da notação por ponto:
+
+```js
+nomeQueRepresentaOMódulo.NomeDaExportação
+```
+
+Exemplo:
+
+```js
+import * as myModule from "./module.js";
+
+console.log( myModule.name1 ); // saída: Nome 01
+```
