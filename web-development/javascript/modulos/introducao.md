@@ -340,3 +340,13 @@ import { name1 } from "./module.js";
 
 console.log(name1); // saída: Nome 01
 ```
+
+#### Importar de várias exportações de um módulo de forma explicita
+
+Também podemos fazer a importação de várias exportações de forma explicita usando vírgula na hora de adicionar os nomes das exportações dentro das chaves:
+
+```js
+import { name1, name2, name3 } from "./module.js";
+
+console.log(name1, name2, name3); // saída: Nome 01 Nome 02 Nome 03
+```
