@@ -322,3 +322,21 @@ Há também uma função dinâmica `import()`, que não requer scripts de `type=
 Agora vamos ver algumas maneiras de fazer a importação de exportações de módulos.
 
 ***NOTA: Os exemplos utilizados da importação das exportações dos módulos serão dos mesmo exemplos criados na explicação sobre as exportações***
+
+#### Importar uma única exportação de um módulo de forma explicita
+
+Para fazer uma importação de um exportação de um módulo precisamos usar a palavra-chave `import`, também iremos precisar do nome da exportação, caminho do arquivo do módulo e o nome do módulo.
+
+Sintaxe:
+
+```js
+import {nomeDaExportação} from "caminhoDoMódulo/nomeDoMódulo.js";
+```
+
+Exemplo:
+
+```js
+import { name1 } from "./module.js";
+
+console.log(name1); // saída: Nome 01
+```
