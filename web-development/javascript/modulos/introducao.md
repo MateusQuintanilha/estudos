@@ -374,3 +374,21 @@ import * as myModule from "./module.js";
 
 console.log( myModule.name1 ); // saída: Nome 01
 ```
+
+#### Alterando o nome da exportação no arquivo de importação
+
+Vimos como alterar o nome de uma exportação quando vimos sobre como fazer as exportações, mas também podemos alterar o nome da exportação no arquivo de importação, como podemos ver a seguir:
+
+```js
+import { name1 as nome } from "./module.js";
+
+console.log(nome); // saída: Nome 01
+```
+
+Também podemos renomear várias exportações em uma única importação, só precisamos separa-los com vírgula:
+
+```js
+import { name1 as nome01, name2 as nome02 } from "./module.js";
+
+console.log(nome01, nome02); // saída: Nome 01 Nome 02
+```
