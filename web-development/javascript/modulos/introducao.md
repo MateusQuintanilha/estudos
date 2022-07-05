@@ -392,3 +392,29 @@ import { name1 as nome01, name2 as nome02 } from "./module.js";
 
 console.log(nome01, nome02); // saída: Nome 01 Nome 02
 ```
+
+#### Importar exportação Default (Padrão)
+
+A importação de exportação Default é bem parecida com a importação explicita, a principal diferença é que não utilizamos as chaves e também podemos adicionar qualquer nome para a exportação.
+
+Sintaxe:
+
+```js
+import nomeDaExportação from "caminhoDoMódulo/nomeDoMódulo.js";
+```
+
+Exemplo:
+
+```js
+// Arquivo module.js
+const valorDefault01 = 'Valor Padrão 01';
+
+export default valorDefault01;
+```
+
+```js
+//Arquivo main.js
+import valueDefault from "./module.js";
+
+console.log(valueDefault); // saída: Valor Padrão 01
+```
