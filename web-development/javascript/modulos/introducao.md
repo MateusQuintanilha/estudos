@@ -473,3 +473,16 @@ console.log(texto01); // saída: Texto 01
 console.log(texto02); // saída: Texto 02
 console.log(texto03); // saída: Texto 03
 ```
+
+2º Exemplo
+
+Podemos adicionar o valor default em seguida usar o asterisco `*` e adicionar um nome para representar as exportações explícitas para poder fazer todas as exportações do módulo:
+
+```js
+import valorDefault01, * as myModule from "./module.js";
+
+console.log(valorDefault01); // saída: Valor Padrão 01
+console.log(myModule.texto01); // saída: Texto 01
+console.log(myModule.texto02); // saída: Texto 02
+console.log(myModule.texto03); // saída: Texto 03
+```
