@@ -336,6 +336,12 @@ import {nomeDaExportação} from "caminhoDoMódulo/nomeDoMódulo.js";
 Exemplo:
 
 ```js
+// Arquivo module.js
+export const name1 = 'Nome 01';
+```
+
+```js
+//Arquivo main.js
 import { name1 } from "./module.js";
 
 console.log(name1); // saída: Nome 01
@@ -346,6 +352,12 @@ console.log(name1); // saída: Nome 01
 Também podemos fazer a importação de várias exportações de forma explicita usando vírgula na hora de adicionar os nomes das exportações dentro das chaves:
 
 ```js
+// Arquivo module.js
+export const  name1 = 'Nome 01', name2 = 'Nome 02', name3 = 'Nome 03';
+```
+
+```js
+//Arquivo main.js
 import { name1, name2, name3 } from "./module.js";
 
 console.log(name1, name2, name3); // saída: Nome 01 Nome 02 Nome 03
@@ -370,9 +382,26 @@ nomeQueRepresentaOMódulo.NomeDaExportação
 Exemplo:
 
 ```js
+// Arquivo module.js
+export const  name1 = 'Nome 01', name2 = 'Nome 02', name3 = 'Nome 03';
+
+const texto01 = 'Texto 01';
+const texto02 = 'Texto 02';
+const texto03 = 'Texto 03';
+
+export {texto01, texto02, texto03};
+```
+
+```js
+//Arquivo main.js
 import * as myModule from "./module.js";
 
-console.log( myModule.name1 ); // saída: Nome 01
+console.log( myModule.name1); // saída: Nome 01
+console.log( myModule.name2); // saída: Nome 01
+console.log( myModule.name3); // saída: Nome 01
+console.log( myModule.texto01); // saída: Texto 01
+console.log( myModule.texto02); // saída: Texto 02
+console.log( myModule.texto03); // saída: Texto 03
 ```
 
 #### Alterando o nome da exportação no arquivo de importação
@@ -380,6 +409,12 @@ console.log( myModule.name1 ); // saída: Nome 01
 Vimos como alterar o nome de uma exportação quando vimos sobre como fazer as exportações, mas também podemos alterar o nome da exportação no arquivo de importação, como podemos ver a seguir:
 
 ```js
+// Arquivo module.js
+export const name1 = 'Nome 01';
+```
+
+```js
+//Arquivo main.js
 import { name1 as nome } from "./module.js";
 
 console.log(nome); // saída: Nome 01
@@ -388,6 +423,13 @@ console.log(nome); // saída: Nome 01
 Também podemos renomear várias exportações em uma única importação, só precisamos separa-los com vírgula:
 
 ```js
+// Arquivo module.js
+export const name1 = 'Nome 01';
+export const name2 = 'Nome 02';
+```
+
+```js
+//Arquivo main.js
 import { name1 as nome01, name2 as nome02 } from "./module.js";
 
 console.log(nome01, nome02); // saída: Nome 01 Nome 02
