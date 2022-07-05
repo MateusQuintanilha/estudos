@@ -460,3 +460,21 @@ import valueDefault from "./module.js";
 
 console.log(valueDefault); // saída: Valor Padrão 01
 ```
+
+#### Importando exportação Default junto com exportações explícitas
+
+Também podemos fazer somente uma importação para várias exportações incluindo a exportação default, podemos fazer isso de algumas formas diferentes, vamos ver algumas:
+
+Vamos usar essa parte de exportação em todos os exemplos
+
+```js
+// Arquivo module.js
+const valorDefault01 = 'Valor Padrão 01';
+const texto01 = 'Texto 01';
+const texto02 = 'Texto 02';
+const texto03 = 'Texto 03';
+
+export { valorDefault01 as default, texto01, texto02, texto03 };
+```
+
+Agora vamos aos exemplos:
