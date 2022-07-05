@@ -486,3 +486,16 @@ console.log(myModule.texto01); // saída: Texto 01
 console.log(myModule.texto02); // saída: Texto 02
 console.log(myModule.texto03); // saída: Texto 03
 ```
+
+3º Exemplo
+
+Podemos adiciona a exportação default dentro das chaves, usando as palavras-chave `default` e `as` para definir um nome para a exportação default e em seguida adicionar as exportações explícitas, separando todas com vírgula:
+
+```js
+import { default as valorDefault01, texto01, texto02, texto03 } from "./module.js";
+
+console.log(valorDefault01); // saída: Valor Padrão 01
+console.log(texto01); // saída: Texto 01
+console.log(texto02); // saída: Texto 02
+console.log(texto03); // saída: Texto 03
+```
