@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>App de Finanças</title>
+</head>
+<body>
+    <header>
+        <h1>Controle Financeiro</h1>
+    </header>
+    <main>
+        <section id="info">
+            <div class="deposit-money">
+                <div class="title-bar">
+                    <h2>Entrada</h2>
+                </div>
+                <div class="content-bar">
+                    <img src="assets/img/icons/icon-entrada.svg" alt="">
+                    <span class="value">R$ 2500</span>
+                </div>
+            </div>
+            <div class="out-money">
+                <div class="title-bar">
+                    <h2>Saída</h2>
+                </div>
+                <div class="content-bar">
+                    <img src="assets/img/icons/icon-saida.svg" alt="">
+                    <span class="value">R$ 500</span>
+                </div>
+            </div>
+            <div class="total-money">
+                <div class="title-bar">
+                    <h2>Total</h2>
+                </div>
+                <div class="content-bar">
+                    <div class="icon-bar">
+                        <img src="assets/img/icons/icon-total.svg" alt="">
+                    </div>
+                    <span class="value">R$ 2000</span>
+                </div>
+            </div>
+        </section>
+        <section id="register">
+            <form action="#" id="form-register">
+                <input type="text" name="description" id="register-description" placeholder="Descrição" required>
+                <input type="number" name="value" id="register-value" placeholder="Valor" required>
+                <div id="select">
+                    <div class="radio-container">
+                        <input type="radio" name="group-type" id="deposit" value="entry" required>
+                    <label for="deposit">Entrada</label>
+                    </div>
+                    <div class="radio-container">
+                        <input type="radio" name="group-type" id="out" value="out">
+                        <label for="out">Saída</label>
+                    </div>
+                </div>
+                <button id="btn-addMoney" type="submit">Adicionar</button>
+            </form>
+        </section>
+        <section id="list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Tipo</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="table-list">
+                    <tr>
+                        <td>Salário</td>
+                        <td class="deposit">R$ 3058</td>
+                        <td><img src="assets/img/icons/icon-entrada.svg" alt=""></td>
+                        <td>Excluir</td>
+                    </tr>
+                    <tr>
+                        <td>Energia</td>
+                        <td class="out">R$ 280</td>
+                        <td><img src="assets/img/icons/icon-saida.svg" alt=""></td>
+                        <td>Excluir</td>
+                    </tr>
+                    <tr>
+                        <td>Aluguel</td>
+                        <td class="out">R$ 1080</td>
+                        <td><img src="assets/img/icons/icon-saida.svg" alt=""></td>
+                        <td>Excluir</td>
+                    </tr>
+                    <tr>
+                        <td>Energia</td>
+                        <td class="out">R$ 280</td>
+                        <td><img src="assets/img/icons/icon-saida.svg" alt=""></td>
+                        <td>Excluir</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script type="module" src="assets/js/script.js"></script>
+</body>
+</html>
