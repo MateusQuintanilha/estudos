@@ -74,3 +74,102 @@ main {
 .total-money .title-bar {
     background: #7D9EE8;
 }
+
+#register {
+    height: 100%;
+    margin-top: 20px;
+    border: 0.911773px solid #E7E8F2;
+    border-radius:9.11773px;
+}
+#register form {
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#register form input {
+    height: 28px;
+    border: 0.911773px solid #E7E8F2;
+    border-radius: 4px;
+    padding: 5px 5px 0px 10px;
+    outline: none;
+}
+#register form input::placeholder {
+    opacity: .4;
+}
+#register form #select {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#register form #select > div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+#register form button {
+    padding: 8px 15px;
+    border: 0.911773px solid #E7E8F2;
+    border-radius: 6px;
+    background: #0075FF;
+    font: 400 14px/21px 'Poppins', sans-serif;
+    text-transform: uppercase;
+    color: #FFF;
+}
+#register form button:hover {
+    background: hsl(212, 99%, 41%);
+}
+#list {
+    height: 100%;
+    margin-top: 10px;
+    border: 0.911773px solid #E7E8F2;
+    border-radius:9.11773px;
+    padding: 8px;
+}
+#list table img {
+    width: 10px;
+}
+.deposit,
+.out {
+   font-weight: 600;
+}
+.deposit {
+    color: #01058A;
+}
+.out {
+    color: #FC5A5A;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+    font: 400 14px/21px 'Poppins', sans-serif;
+}
+th, td{
+    padding: 10px;
+    text-align: left;
+    border-collapse: collapse;
+}
+thead {
+    background-color: #E7E8F2;
+}
+th{
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #E7E8F2;
+}
+tr th:nth-child(3n),
+tr td:nth-child(3n) {
+    text-align: center;
+    width: 240px;
+    font-weight: 700;
+}
+tr th:nth-child(4n),
+tr td:nth-child(4n) {
+    text-align: center;
+    width: 240px;
+}
