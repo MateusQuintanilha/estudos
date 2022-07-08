@@ -48,3 +48,63 @@
                 </div>
             </div>
         </section>
+        <section id="register">
+            <form action="#" id="register-form">
+                <div class="input-field">
+                    <input type="text" name="description" id="register-descripiton" placeholder="Descrição" autocomplete="off">
+                </div>
+                <div class="input-field">
+                    <input type="number" name="value" id="register-value" placeholder="Valor" autocomplete="off">
+                </div>
+                <div class="radio-container">
+                    <div class="radio-field">
+                        <input type="radio" name="register-ratio-group" id="radio-entry" value="entry">
+                        <label for="radio-entry">Entrada</label>
+                    </div>
+                    <div class="radio-field">
+                        <input type="radio" name="register-ratio-group" id="radio-out" value="out">
+                        <label for="radio-out">Saída</label>
+                    </div>
+                </div>
+                <button type="submit" id="register-button">Adicionar</button>
+            </form>
+        </section>
+        <section id="table-register">
+            <table id="table-list">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Tipo</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="table-content">
+                    <tr>
+                        <td>Salário</td>
+                        <td>R$ 2500</td>
+                        <td>
+                            <img src="assets/img/icons/icon-entry.svg" alt="">
+                        </td>
+                        <td>
+                            <button>Editar</button>
+                            <button>Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Aluguel da friboy do seará</td>
+                        <td>R$ 500.000.000.000,00</td>
+                        <td>
+                            <img src="assets/img/icons/icon-out.svg" alt="">
+                        </td>
+                        <td>
+                            <button>Editar</button>
+                            <button>Excluir</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
