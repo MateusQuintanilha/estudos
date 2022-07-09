@@ -51,26 +51,26 @@
         <section id="register">
             <form action="#" id="register-form">
                 <div class="input-field">
-                    <input type="text" name="description" id="register-descripiton" placeholder="Descrição" autocomplete="off">
+                    <input type="text" name="description" id="register-description" placeholder="Descrição" autocomplete="off" required>
                 </div>
                 <div class="input-field">
-                    <input type="number" name="value" id="register-value" placeholder="Valor" autocomplete="off">
+                    <input type="number" name="value" id="register-value" placeholder="Valor" autocomplete="off" required>
                 </div>
                 <div class="radio-container">
                     <div class="radio-field">
-                        <input type="radio" name="register-ratio-group" id="radio-entry" value="entry">
+                        <input type="radio" name="register-radio-group" id="radio-entry" value="entry" required>
                         <label for="radio-entry">Entrada</label>
                     </div>
                     <div class="radio-field">
-                        <input type="radio" name="register-ratio-group" id="radio-out" value="out">
+                        <input type="radio" name="register-radio-group" id="radio-out" value="out">
                         <label for="radio-out">Saída</label>
                     </div>
                 </div>
-                <button type="submit" id="register-button">Adicionar</button>
+                <button type="submit" id="btn-register">Adicionar</button>
             </form>
         </section>
-        <section id="table-register">
-            <table id="table-list">
+        <section id="table-container">
+            <table>
                 <thead>
                     <tr>
                         <th>Descrição</th>
@@ -92,8 +92,19 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Aluguel da friboy do seará</td>
-                        <td>R$ 500.000.000.000,00</td>
+                        <td>Aluguel</td>
+                        <td>R$ 500</td>
+                        <td>
+                            <img src="assets/img/icons/icon-out.svg" alt="">
+                        </td>
+                        <td>
+                            <button>Editar</button>
+                            <button>Excluir</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Aluguel Para comer</td>
+                        <td>R$ 500</td>
                         <td>
                             <img src="assets/img/icons/icon-out.svg" alt="">
                         </td>
@@ -105,6 +116,7 @@
                 </tbody>
             </table>
         </section>
+        <script type="module" src="assets/js/main.js"></script>
     </main>
 </body>
 </html>
