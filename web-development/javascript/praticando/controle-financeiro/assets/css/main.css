@@ -131,14 +131,17 @@ input[type=number]::-webkit-inner-spin-button {
     font: 400 16px/24px 'Poppins', sans-serif;
     color: #FFF;
 }
-#register-button {
+#btn-register {
     padding: 13px 40px;
     background: #636360;
     border-radius: 8px;
     font: 400 16px/24px 'Poppins', sans-serif;
     color: #FFF;
+    transition: .2s;
 }
-
+#btn-register:hover {
+    background: #b1b1ae;
+}
 #table-container {
     margin-top: 10px;
     padding: 30px;
