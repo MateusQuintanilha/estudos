@@ -12,11 +12,50 @@ body {
     display: flex;
     background: #1D1D1B;
 }
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
 #menu-aside {
     width: 246px;
     height: 100%;
     background: #292927;
     border: 1px solid #313130;
+    text-align: center;
+}
+#menu-aside .title {
+    padding: 5px;
+}
+#menu-aside .title h1 {
+    font: 600 24px/42px 'Poppins', sans-serif;
+    color: #FFF;
+}
+#menu-aside .menu {
+    padding: 10px;
+}
+#menu-aside .menu li {
+    padding: 6px 20px;
+    display: flex;
+    align-items: center;
+}
+#menu-aside .menu li a {
+    opacity: 25%;
+    display: flex;
+    gap: 15px;
+}
+#menu-aside .menu li:hover {
+    background: #777777;
+    border-radius: 4px;
+}
+#menu-aside .menu li:hover > a {
+    opacity: 75%;
+}
+#menu-aside .menu a {
+    font: 400 16px/24px 'Poppins', sans-serif;
+    letter-spacing: 0.02em;
+    color: #FFF;
 }
 main {
     width: 100%;
@@ -31,10 +70,6 @@ main {
     padding: 10px;
     display: flex;
     align-items: center;
-}
-#top-bar h1 {
-    font: 600 28px/42px 'Poppins', sans-serif;
-    color: #FFF;
 }
 #cards {
     margin-top: 10px;
@@ -73,6 +108,9 @@ main {
     justify-content: center;
     gap: 10px;
     padding: 20px 0;
+}
+.card-content img {
+    width: 20px;
 }
 .card-content span {
     font: 600 28px/42px 'Poppins', sans-serif;
