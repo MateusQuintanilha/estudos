@@ -1,0 +1,23 @@
+/*=============== CLOCK HTML IMPORT =============*/
+import {} from "./modules/clock.js";
+
+/*=============== CLOCK =============*/
+const clockHour = document.getElementById('clock_hour'),
+    clockMinutes = document.getElementById('clock_minutes'),
+    clockSeconds = document.getElementById('clock_seconds');
+
+    const clock = () => {
+        let date = new Date();
+
+        let hour = date.getHours(),
+            minutes = date.getMinutes(),
+            seconds = date.getSeconds();
+            console.log(seconds)
+        
+        // We add a rotation to the elements
+        clockHour.style.transform = `rotateZ(${(hour * 30) + minutes / 12}deg)`;
+        clockMinutes.style.transform = `rotateZ(${minutes * 6}deg)`;
+        clockSeconds.style.transform = `rotateZ(${seconds * 6}deg)`;
+    }
+
+    setInterval(clock, 1000);
