@@ -1,0 +1,195 @@
+/*==================== GOOGLE FONTS  ====================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+    /*========== Colors =========*/
+    --hue-color: 222; /* Blue 240 - Green 154 - Orange 25 */
+
+    --first-color: hsla(var(--hue-color), 58%, 20%, 1);
+    --second-color: hsla(var(--hue-color), 47%, 25%, 1);
+
+    --seconds-clock-color: hsla(355, 70%, 52%, 1);
+    --minutes-clock-color: #FFF;
+    --hour-clock-color: #FFF;
+    
+    --text-color: hsla(var(--hue-color), 58%, 20%, 1);
+    --body-color: hsla(var(--hue-color), 68%, 20%, 1);
+
+    --white-color: #FFF;
+
+    /*========== Font and typography =========*/
+    --body-font: 'Poppins', sans-serif;;
+    --biggest-font-size: 3rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    --tiny-font-size: .625rem;
+
+    /*========== Font weight =========*/
+    --font-medium: 500;
+
+    /*========== Margens Bottom =========*/
+    --mb-0-25: .25rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2-5: 2.5rem;
+
+    /*========== Z index =========*/
+    --z-normal: 1;
+    --z-tooltip: 10;
+}
+
+@media screen and (min-width: 968px) {
+    :root {
+        --biggest-font-size: 3.5rem;
+        --small-font-size: .875rem;
+        --smaller-font-size: .813rem;
+        --tiny-font-size: .75rem;
+    }
+}
+
+
+/*==================== Variables Dark theme ====================*/
+
+
+/*==================== Button Dark/Light ====================*/
+
+
+/*==================== Box shadow Dark theme ====================*/
+
+
+/*==================== BASE ====================*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border:0;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background: var(--body-color);
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+.container{
+    max-width: 968px;
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+}
+
+.grid {
+    display: grid;
+}
+
+/*==================== CLOCK ====================*/
+.clock-container {
+    height: 100vh;
+    grid-template-rows: 1fr max-content;
+}
+
+#clock-circle {
+    width: 200px;
+    height: 200px;
+    background: var(--first-color);
+    box-shadow: 36px 14px 30px 9px rgba(23, 47, 106, 0.6),
+                -44px -7px 40px 15px rgba(75, 75, 75, 0.25);
+    border-radius: 50%;
+    justify-self: center;
+}
+.clock-content {
+    align-self: center;
+    justify-self: center;
+    row-gap: 3.5rem;
+}
+.clock-circle-intern {
+    position: relative;
+    width: 75%;
+    height: 75%;
+    background: var(--second-color);
+    border-radius: 50%;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.border-row {
+    position: absolute;
+    inset: -12px;
+    color: #51638D;
+    font-size: 4px;
+    font-weight: 700;
+    text-align: center;
+    transform: rotate(calc(6deg * var(--i)));
+}
+.ponto {
+    display: inline-block;
+    width: 2px;
+    height: 4px;
+    background-color: #51638D;
+}
+
+.br-60 .ponto, .br-5 .ponto, .br-10 .ponto,
+.br-15 .ponto, .br-20 .ponto, .br-25 .ponto,
+.br-30 .ponto, .br-35 .ponto, .br-40 .ponto,
+.br-45 .ponto, .br-50 .ponto, .br-55 .ponto {
+    height: 8px;
+}
+.clock-rounder {
+    width: .55rem;
+    height: .55rem;
+    background: var(--seconds-clock-color);
+    border-radius: 50%;
+    border: 2px solid var(--seconds-clock-color);
+    z-index: var(--z-tooltip);
+}
+.clock-hour,
+.clock-minutes,
+.clock-seconds {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+.clock-hour {
+    width: 105px;
+    height: 105px;
+}
+.clock-hour::before {
+    content: '';
+    position: absolute;
+    background: var(--hour-clock-color);
+    width: .20rem;
+    height: 3.2rem;
+    border-radius: 0.75rem;
+    z-index: var(--z-normal);
+}
+.clock-minutes {
+    width: 136px;
+    height: 136px;
+}
+.clock-minutes::before {
+    content: '';
+    position: absolute;
+    background: var(--minutes-clock-color);
+    width: .20rem;
+    height: 4.2rem;
+    border-radius: .75rem;
+    z-index: var(--z-normal);
+}
+.clock-seconds {
+    width: 130px;
+    height: 130px;
+}
+.clock-seconds::before {
+    content: '';
+    position: absolute;
+    background: var(--seconds-clock-color);
+    width: .125rem;
+    height: 5rem;
+    border-radius: .75rem;
+    z-index: var(--z-normal);
+}
+/*==================== MEDIA QUERIES ====================*/
+/* For Large Devices */
