@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --body-color: #18191a;
+    --sidebar-color: hsla(60, 2%, 16%, 1);
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+body {
+    width: 100%;
+    height: 100vh;
+}
+.sidebar {
+    width: 250px;
+    height: 100%;
+    padding: 30px 0 30px 16px;
+    background: var(--sidebar-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.profile {
+    display: flex;
+    gap: 6px;
+}
+.profile-avatar {
+    width: 44px;
+    height: 44px;
+    padding: 11px 0;
+    text-align: center;
+    border-radius: 8px;
+    background: #A492FF;
+    font: 700 16px/22px 'Poppins', sans-serif;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.profile-info .user-name {
+    font: 700 16px/22px 'Poppins', sans-serif;
+} 
+.profile-info .user-email {
+    font: 400 14px/19px 'Poppins', sans-serif;
+}
+.menu {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.menu-link a, 
+.light-mode {
+    padding: 6px 16px;
+}
+.menu-link {
+    opacity: .8;
+    list-style: none;
+}
+.menu-link a {
+    text-decoration: none;
+    font: 600 13px/24px 'Poppins', sans-serif;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.menu-link:hover, .ative{
+    border-radius: 8px 0px 0px 8px;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.2);;
+}
+.light-mode {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 16px;
+}
